@@ -1,3 +1,4 @@
+(function(){
 angular.module("app",["ngSanitize","ngCookies"])
 .controller("myContral",function($scope){
 	$scope.name = "zhangsan";
@@ -50,6 +51,22 @@ angular.module("app",["ngSanitize","ngCookies"])
 		template:"<h3>这是一个模板，可以公用</h3>"
 	}
 })
+.directive("myTest",function(){
+	return {
+		restrict:"AEC",
+		replace:true,
+		templateUrl:"myTest.html",
+		controller:function($scope){
+			$scope.data = "ht very good";
+		},
+		link:function(scope,element,attrs){
+			//console.log(element)
+			scope.test = function(){
+				console.log(element);
+			}
+		}
+	}
+})
 .controller("childCtral",function($scope){
 	$scope.data = {name:"HT"}
 })
@@ -90,6 +107,7 @@ angular.module("app",["ngSanitize","ngCookies"])
 	}
 })
 .controller("directive",function($scope,$cookies,$http,$q,$cookieStore,getData,$q){
+	console.log($scope.name);
 	$http({
 		method:"post",
 		url:"data.json",
@@ -124,4 +142,9 @@ angular.module("app",["ngSanitize","ngCookies"])
 	})
 
 })
+.controller("myForm",function($scope){
+
+})	
+})()
+
 
