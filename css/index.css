@@ -1,0 +1,25 @@
+body {
+  padding-bottom: 100px;
+}
+a,
+.link {
+  color: #428bca;
+}
+a:hover {
+  color: #3071a9;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .ads {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .ads {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ads {
+    display: none;
+  }
+}

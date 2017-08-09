@@ -1,10 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+   <title>Try Bootstrap Online</title>
+   <meta charset="utf-8"/>
+   <meta name="description" content="跨境电商ERP，外贸电商ERP，外贸管理软件"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <link href="bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="bootstrap-select.css">
+   <link rel="stylesheet" type="text/css" href="css/index.css">
+   
+   <style type="text/css">
+	.active{
+		background:blue;
+	}
+   </style>
 </head>
-<body>
-123
+
+<body ng-app="app">
+
+<ul id="myTab" class="nav nav-tabs">
+   <li class="active">
+   	<a href="#home" data-toggle="tab">Tutorial Point Home</a>
+   </li>
+   <li><a href="#ios" data-toggle="tab">iOS</a></li>
+   <li class="dropdown">
+      <a href="#" id="myTabDrop1" class="dropdown-toggle"data-toggle="dropdown">Java <b class="caret"></b></a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+         <li>
+         	<a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a>
+         </li>
+         <li>
+         	<a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a>
+         </li>
+      </ul>
+   </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+   <div class="tab-pane fade in active" id="home">
+      <p>Tutorials Point is a place for beginners in all technical areas. 
+         This website covers most of the latest technoligies and explains 
+         each of the technology with simple examples. You also have a 
+         <b>tryit</b> editor, wherein you can edit your code and 
+         try out different possibilities of the examples.</p>
+   </div>
+   <div class="tab-pane fade" id="ios">
+      <p>iOS is a mobile operating system developed and distributed by Apple 
+         Inc. Originally released in 2007 for the iPhone, iPod Touch, and 
+         Apple TV. iOS is derived from OS X, with which it shares the 
+         Darwin foundation. iOS is Apple's mobile version of the 
+         OS X operating system used on Apple computers.</p>
+   </div>
+   <div class="tab-pane fade" id="jmeter">
+      <p>jMeter is an Open Source testing software. It is 100% pure 
+      Java application for load and performance testing.</p>
+   </div>
+   <div class="tab-pane fade" id="ejb">
+      <p>Enterprise Java Beans (EJB) is a development architecture 
+         for building highly scalable and robust enterprise level    
+         applications to be deployed on J2EE compliant 
+         Application Server such as JBOSS, Web Logic etc.
+      </p>
+   </div>
+</div>
+<div ng-controller="myContral">
+	<input type="text" ng-model="name"></input>
+	{{name}}
+	<span ng-class="{'active':showname}" ng-if="showname">123</span>
+	<button type="button" class="btn btn-primary" ng-click="change()">原始按钮</button>
+	<input ng-model="data.name"></input>
+	<span>{{data.name}}</span>
+	<div ng-controller="childCtral">
+		<input ng-model="data.name"></input>
+		{{data.name}}
+	</div>
+
+	<div ng-controller="childCtra2">
+		<input ng-model="data.name" ng-change="change()"></input>
+		{{data.name}}
+	</div>
+
+	<div ng-controller="childCtra3">
+		<input ng-model="name"></input>
+		{{name}}
+		<p ng-bind-html="template"></p>
+	</div>
+
+	<div ng-controller="childCtra4">
+		<input ng-model="name"></input>
+		{{name}}
+	</div>
+</div>
+<div ng-controller="content">
+	{{name}}
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<caption>响应式表格布局</caption>
+			<thead>
+				<tr>
+					<th>产品</th>
+					<th>付款日期</th>
+					<th>状态</th>
+					<th>产品</th>
+					<th>付款日期</th>
+					<th>状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in users">
+					<td ng-bind="user.name | uppercase"></td>
+					<td ng-bind="user.country | myFilter"></td>
+					<td>待发货</td>
+					<td>产品1</td>
+					<td>23/11/2013</td>
+					<td>待发货</td>
+				</tr>
+			</tbody>
+	</table>
+</div>
+<div ng-controller="directive">
+	<my-directive></my-directive>
+	<p my-directive></p>
+	<p class="my-directive"></p>
+	<ul class="list-group">
+		<li class="list-group-item" ng-repeat="user in users" ng-bind="user.user + user.id"></li>
+	</ul>
+</div> 
+</div>
+
+<nav>
+	<ul>
+		<li ng-click="tap=1">1</li>
+		<li ng-click="tap=2">2</li>
+		<li ng-click="tap=3">3</li>
+	</ul>
+</nav>
+<div ng-show="tap==1">1</div>
+<div ng-show="tap==2">2</div>
+<div ng-show="tap==3">3</div>
+
+
+<div id="main">
+	<iframe scrolling="yes" frameborder="0" src="aaa.html"></iframe>
+</div>
+
+<label for="id_select"></label>
+<select id="id_select" class="selectpicker bla bla bli" multiple data-live-search="false">
+    <option>cow</option>
+    <option>bull</option>
+    <option>ASD</option>
+    <option selected>Bla</option>
+    <option>Ble</option>
+    </optgroup>
+</select>
+
+
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+  <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
+</div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.js"></script>
+<script src="bootstrap-3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bootstrap-select.js"></script>
+<script src="angular-1.5.8/angular.min.js"></script>
+<script src="angular-1.5.8/angular-cookies.js"></script>
+<script src="https://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script>
+<script>
+   $(function () {
+      $('#myTab li:eq(1) a').tab('show');
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      	var activeTab = $(e.target).text(); 
+   	  });
+   	  $("#home").on("click",function(){
+   	  	$("#main").find("iframe").attr("src","aaa1.html")
+   	  })
+   	   $('.selectpicker').selectpicker({
+        'selectedText': 'cat'
+ 	  });
+   });
+</script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
