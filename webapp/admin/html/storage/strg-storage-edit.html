@@ -1,0 +1,190 @@
+<!--
+ * 本文件是入库单编辑html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>入库单编辑</title>
+</head>
+<body>
+
+<div class="pt-10">
+    <div id="table-box" class="table-box">
+
+        <table id='libAdd' class="form-table table table-border table-bordered table-bg">
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>入库单名称：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="storelistName">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>入库单编号：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" disabled con_name="storelistCode">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+
+                <td class="table-key" colspan="5"><span class="c-red">*</span>入库人：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="storelistRecorder">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>入库日期：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" con_name="storelistRecordTime" datatype="date" nullmsg=" " errormsg=" " onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>所属库房：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls">
+                        <select class="input-text input-type" disabled datatype="*" nullmsg=" " errormsg=" " con_name="storageId">
+
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>入库类型：</td>
+                <td colspan="15" class="has-tip" >
+                    <div class="formControls">
+                        <select class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="storelistType">
+
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>入库来源：</td>
+                <td colspan="15" class="has-tip" >
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" readonly datatype="*" nullmsg=" " errormsg=" " con_name="sourceId">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">发货人：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" ignore="ignore" datatype="*" nullmsg=" " errormsg=" " con_name="shipper">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5">发货人电话：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" ignore="ignore" datatype="m|phone" nullmsg=" " errormsg=" " con_name="shipperPhone">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">发货地址：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" ignore="ignore" datatype="*" nullmsg=" " errormsg=" " con_name="sendAddr">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">发货日期：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" con_name="sendTime" datatype="date" ignore="ignore" nullmsg=" " errormsg=" " onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'datemax\')}'})" id="datemin" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5">到货日期：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" con_name="receiveTime" datatype="date" ignore="ignore" nullmsg=" " errormsg=" " onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">验货人：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" ignore="ignore" datatype="*" nullmsg=" " errormsg=" " con_name="checker">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5">验货人电话：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" ignore="ignore" datatype="m|phone" nullmsg=" " errormsg=" " con_name="checkerPhone">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">入库说明：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls">
+                        <textarea rows="3" con_name="storelistRemark" class="textarea"  dragonfly="true" datatype="*" ignore="ignore" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="pd-10 text-c">
+            <button class="btn btn-success radius mr-10 save">
+                <i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存
+            </button>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/strg-storage-edit.js"></script>
+</body>
+</html>

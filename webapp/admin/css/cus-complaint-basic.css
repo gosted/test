@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/**
+ * 本文件是售后服务基本信息样式文件
+ * @author
+ */
+.complaintLevel, .state, .faultLevel, .problemLevel {
+  background: #FFFFFF;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none; }
+
+/*# sourceMappingURL=cus-complaint-basic.css.map */

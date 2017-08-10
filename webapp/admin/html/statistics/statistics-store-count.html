@@ -1,0 +1,123 @@
+﻿<!--
+ * 本文件是库存数量统计html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="../../images/favicon.ico" >
+<LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+  <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/statistics-store-count.css" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../lib/html5.js"></script>
+<script type="text/javascript" src="../../lib/respond.min.js"></script>
+<script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+<![endif]-->
+
+<!--[if IE 6]>
+<script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>库存数量统计</title>
+</head>
+<body>
+  <nav class="breadcrumb">
+    <i class="Hui-iconfont clr-blue">&#xe67f;</i> 首页
+    <span class="c-gray en">&gt;</span> 支撑统计
+    <span class="c-gray en">&gt;</span>
+    <span class="clr-blue">库存数量统计</span>
+    <a class="btn btn-success radius r mr-20 refresh" href="javascript:location.replace(location.href);" title="刷新" >
+      <i class="Hui-iconfont">&#xe68f;</i>
+    </a>
+  </nav>
+  <div class="pl-20 pr-20">
+    <!--条件检索区-->
+    <div class="row cl search-area">
+
+      <div class="l cl mr-20 pt-10">
+        <label class="form-label l label-key">库房区域：</label>
+        <div class="formControls l input-tree areaId">
+          <input type="text" class="input-text" readonly con_name="areaId" value="中国">
+          <ul class="tree">
+
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="l cl mr-20 pt-10">
+        <label class="form-label l label-key">库房：</label>
+        <div class="formControls l">
+          <select style="width: 140px;" class="input-text" con_name="storageId">
+            <option value="">全部</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="l cl mr-20 pt-10">
+        <label class="form-label l label-key">设备分类：</label>
+        <div class="formControls l input-tree equipmentId">
+          <input type="text" class="input-text" readonly con_name="equipmentId" value="全部">
+          <ul class="tree">
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="l cl mr-20 pt-10">
+        <label class="form-label l label-key">开始日期：</label>
+        <div class="formControls l">
+          <input type="text" con_name="startTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'datemax\')}'})" id="datemin" class="input-text Wdate">
+        </div>
+      </div>
+
+      <div class="l cl pt-10">
+        <label class="form-label l label-key">结束日期：</label>
+        <div class="formControls l">
+          <input type="text" con_name="endTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate">
+        </div>
+      </div>
+
+      <div class="r pt-10">
+        <a href="javascript:;" class="btn btn-success radius f-r mr-5 find-btn">
+          <i class="Hui-iconfont">&#xe665;</i>
+          查询
+        </a>
+      </div>
+    </div>
+    <!--echarts图表区-->
+    <div class="cnt-count cl">
+      <div class="echarts-content l" id="reuse"></div>
+      <div class="cnt-list-count">
+        <h6 class="gray-bg mt-h">【库存数量统计】</h6>
+        <p><span class="w-one">入库设备数量<i con_name="storeCount"></i></span><span>出库设备数量<i con_name="outCount"></i></span></p>
+        <p class="gray-bg"><span class="w-one">资产入库数量<i con_name="assetStoreCount"></i></span><span>资产出库数量<i con_name="assetOutCount"></i></span></p>
+        <p><span class="w-one">非资产入库数量<i con_name="notAssetStoreCount"></i></span><span>非资产出库数量<i con_name="notAssetOutCount"></i></span></p>
+        <h6 class="gray-bg">【库存价值统计】</h6>
+        <p><span class="w-one">入库总价值<i con_name="storeValue"></i></span><span>出库总价值<i con_name="outValue"></i></span></p>
+      </div>
+    </div>
+    <!--echarts图表区结束-->
+  </div>
+  <script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js"></script>
+  <script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+  <script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+  <script type="text/javascript" src="../../lib/echarts.min.js"></script>
+  <script type="text/javascript" src="../../js/H-ui.js"></script>
+  <script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+  <script type="text/javascript" src="../../js/commen.js"></script>
+  <script type="text/javascript" src="../../js/statistics-store-count.js"></script>
+</body>
+</html>

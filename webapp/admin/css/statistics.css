@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/**
+ * 本文件是统计样式文件
+ *@author 王步华
+ */
+.search .label-key {
+  min-width: 60px;
+  max-width: 100px;
+  text-align: right; }
+.search .areas {
+  overflow: hidden; }
+  .search .areas span {
+    display: inline-block;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    background: #eeeeee;
+    padding: 0 10px;
+    cursor: pointer; }
+  .search .areas .sky-span {
+    background: skyblue;
+    color: #ffffff; }
+  .search .areas .default-span {
+    background: #006FBB;
+    color: #ffffff; }
+  .search .areas .areas-content {
+    margin-left: 70px; }
+.search .products-areas {
+  overflow: hidden; }
+  .search .products-areas .products-content {
+    margin-left: 70px; }
+    .search .products-areas .products-content .form-label-l {
+      text-align: left; }
+    .search .products-areas .products-content label input {
+      margin-right: 3px; }
+
+.echarts-box {
+  width: 100%; }
+  .echarts-box .echarts-content {
+    width: 50%;
+    height: 400px; }
+  .echarts-box .echarts-content-one {
+    width: 100%;
+    height: 400px; }
+  .echarts-box .echarts-content-line {
+    width: 100%;
+    height: 400px; }
+
+.monthpicker {
+  width: 180px; }
+
+.assigner {
+  width: 150px; }
+
+.echartss {
+  position: relative; }
+
+.bombBox {
+  position: absolute;
+  right: 20px; }
+  .bombBox tr {
+    border-color: #eee; }
+    .bombBox tr th {
+      padding: 3px;
+      text-align: center; }
+
+/*# sourceMappingURL=statistics.css.map */

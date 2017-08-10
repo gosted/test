@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/**
+ * 本文件是受理样式文件
+ *@author 鲍哲
+ */
+.accept-textarea {
+  padding: 1px; }
+  .accept-textarea textarea {
+    width: 600px; }
+
+#file_table {
+  height: 30px; }
+
+.row {
+  margin-top: 20px; }
+
+#accept_ipt {
+  width: 150px;
+  margin-right: 5px; }
+
+#checkbox label {
+  margin-right: 40px; }
+  #checkbox label input {
+    margin-right: 10px; }
+
+.file_c .file_container {
+  width: 100%;
+  height: 100%;
+  overflow: auto; }
+  .file_c .file_container ul {
+    margin: 2px 0 0 0; }
+    .file_c .file_container ul li {
+      height: 30px;
+      text-align: left;
+      line-height: 30px; }
+      .file_c .file_container ul li img {
+        float: left;
+        display: inline-block;
+        padding-top: 8px; }
+      .file_c .file_container ul li button {
+        background: transparent;
+        border: 0px solid transparent; }
+
+.ann-diad-div {
+  position: relative;
+  height: 30px; }
+  .ann-diad-div .ann-diad {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    text-align: center;
+    line-height: 30px;
+    width: 80px;
+    color: #ffffff;
+    background: #5eb95e; }
+  .ann-diad-div .ann-diad:hover {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    text-align: center;
+    line-height: 30px;
+    width: 80px;
+    color: #ffffff;
+    background: #37a737; }
+  .ann-diad-div .ann-diad-input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    z-index: 10;
+    height: 30px;
+    width: 80px;
+    cursor: pointer; }
+  .ann-diad-div .ann-diad-show {
+    width: 300px;
+    height: 32px;
+    margin-left: 80px;
+    text-align: left; }
+
+/*# sourceMappingURL=support-accept-list.css.map */

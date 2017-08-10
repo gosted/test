@@ -1,0 +1,204 @@
+﻿<!--
+ * 本文件是我的支撑html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="../images/favicon.ico" >
+<LINK rel="Shortcut Icon" href="../images/favicon.ico" />
+
+<link href="../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/self-info.css" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../lib/html5.js"></script>
+<script type="text/javascript" src="../lib/respond.min.js"></script>
+<script type="text/javascript" src="../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+<![endif]-->
+
+<!--[if IE 6]>
+<script type="text/javascript" src="../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>个人信息</title>
+</head>
+<body>
+<div class="pl-20 pr-20 pt-10">
+    <div class="table-box">
+        <table class="form-table table table-border table-bordered table-bg">
+            <tr>
+                <td class="table-key" colspan="5">用户名：</td>
+                <td colspan="10" con_name="userName" class="readonly">
+
+                </td>
+                <td class="table-key" colspan="4">真实姓名：</td>
+                <td colspan="9" con_name="userRealName" class="readonly">
+
+                </td>
+                <td class="table-key" colspan="4"><span class="c-red">*</span>性别：</td>
+                <td colspan="8" class="has-tip">
+                    <div class="formControls cl">
+                        <div class="radio_box l col-6">
+                            <input type="radio" id="sex-1" name="userSex" datatype="*" con_name="userSex" nullmsg=" " errormsg=" " value="0">
+                            <label for="sex-1">男</label>
+                        </div>
+                        <div class="radio_box l col-6">
+                            <input type="radio" id="sex-2" name="userSex" value="1">
+                            <label for="sex-2">女</label>
+                        </div>
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">主机构：</td>
+                <td colspan="35" con_name="unitName" class="readonly">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">邮件：</td>
+                <td colspan="10" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" ignore="ignore" datatype="e" con_name="userEmail" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+                <td class="table-key" colspan="4">手机：</td>
+                <td colspan="9" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" con_name="userMobilePhone" ignore="ignore" datatype="m" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+                <td class="table-key" colspan="4">出生日期：</td>
+                <td colspan="8" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" con_name="userBirthday" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" ignore="ignore" nullmsg=" " errormsg=" " class="input-text input-type Wdate" datatype="date" _type="date">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">工号：</td>
+                <td colspan="23" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" con_name="userJobNumber" ignore="ignore" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+                <!--<td class="table-key" colspan="4">用户类型：</td>
+                <td colspan="9" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" con_name="userType" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>-->
+                <td class="table-key" colspan="4">工作年限：</td>
+                <td colspan="8" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" con_name="userWorkYear" ignore="ignore" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">职位：</td>
+                <td colspan="10" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" con_name="userJob" ignore="ignore" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+                <td class="table-key" colspan="4">学历：</td>
+                <td colspan="9" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" con_name="userEdu" ignore="ignore" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+                <td class="table-key" colspan="4">政治面貌：</td>
+                <td colspan="8" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" con_name="userPoliticsStatus" ignore="ignore" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">地址：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" con_name="userAddress" ignore="ignore" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">兴趣爱好：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" con_name="userHobby" ignore="ignore" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">用户角色：</td>
+                <td colspan="35" con_name="roleName" class="readonly">
+                </td>
+            </tr>
+            <tr class="power-box">
+                <td class="table-key" colspan="5">数据权限：</td>
+                <td colspan="35">
+                    <div class="formControls cl">
+                        <table class="form-table table table-border table-bordered table-bg power">
+                            <tr>
+                                <td class="th cont-type">关联类型</td>
+                                <td class="th">地区</td>
+                                <td class="th yes-or-no">是否向下兼容</td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">上次登录时间：</td>
+                <td colspan="35" con_name="userLastLoginTime" _type="timesec" class="readonly">
+
+                </td>
+            </tr>
+        </table>
+        <!--按钮-->
+        <div class="row cl mt-20 mb-10">
+            <div class="btns-group">
+                <button href="javascript:;" class="btn btn-primary radius save" value="0">
+                    <i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>
+                    保存
+                </button>
+            </div>
+        </div>
+        <!--按钮结束-->
+    </div>
+</div>
+<script type="text/javascript" src="../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/H-ui.js"></script>
+<script type="text/javascript" src="../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../js/commen.js"></script>
+<script type="text/javascript" src="../js/self-info.js"></script>
+</body>
+</html>

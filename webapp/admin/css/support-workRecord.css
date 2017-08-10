@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/*
+* 工作记录页面-新增页面样式文件
+*@author 王步华
+*/
+body, th, td, button, input, select, textarea {
+  color: #000; }
+
+.dosptMdlPro .btn-area i {
+  font-size: 18px; }
+
+/*# sourceMappingURL=support-workRecord.css.map */

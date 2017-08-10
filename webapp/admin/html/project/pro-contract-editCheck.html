@@ -1,0 +1,219 @@
+<!--
+ * 本文件是合同查看html文件
+ * @author 彭佳明
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/pro-manage-add.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>合同添加</title>
+</head>
+<body>
+<div class="contract-wrap pt-10">
+    <div id="table-box" class="table-box contract-box">
+        <table class="providerAdd contractContent  form-table table table-border table-bordered table-bg">
+            <tr>
+                <td class="table-key" colspan="5">合同名称：</td>
+                <td con_name="contractName" colspan="15" class="has-tip">
+
+                </td>
+                <td class="table-key" colspan="5">合同编号：</td>
+                <td con_name="contractCode" colspan="15" class="has-tip contractCode">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">甲方：</td>
+                <td colspan="15" con_name="contractA" class="has-tip">
+
+                </td>
+                <td class="table-key" colspan="5">乙方：</td>
+                <td colspan="15" con_name="contractB" class="has-tip">
+
+                </td>
+            </tr>
+
+            <tr>
+
+                <td class="table-key" colspan="5"><span class="c-red">*</span>合同履行时间：</td>
+                <td con_name="performTime" colspan="15" class="has-tip">
+
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>终止时间：</td>
+                <td con_name="endTime" colspan="15" class="has-tip">
+
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left:0;" class="table-key" colspan="5">币种：</td>
+                <td colspan='15' class="has-tip currency">
+
+                </td>
+
+                <td style="padding-left:0;" class="table-key" colspan="5">增值税率：(%)</td>
+                <td colspan="15" class="taxBox has-tip tax">
+
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left:0;" class="table-key" colspan="5">含税合同金额：</td>
+                <td colspan="15" con_name="contractAmont" class="has-tip">
+
+                </td>
+
+                <td style="padding-left:0;" class="table-key" colspan="5">不含税金额：</td>
+                <td  con_name="amontNoTax" colspan="15" class="has-tip">
+
+                </td>
+
+
+            </tr>
+
+
+            <tr>
+                <td class="table-key" colspan="5">备注：</td>
+                <td con_name="contractIntro" colspan="35" class="has-tip">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="5">附件：</td>
+                <td colspan="35" class="formControls file-list">
+
+                </td>
+            </tr>
+        </table>
+        <div class="tabBar cl detail-tap">
+                <span class="equipment">
+                    <a href="javascript:;">
+                        <strong>
+                            设备清单
+                        </strong>
+                    </a>
+                    <i class="tip-num">0</i>
+                </span><em class="l">|</em>
+            <span class="server">
+                    <a href="javascript:;">
+                        <strong>
+                            服务清单
+                        </strong>
+                    </a>
+                <i class="tip-num">0</i>
+                </span>
+            <em class="l">|</em>
+            <span class="other">
+                    <a href="javascript:;">
+                        <strong>
+                            其他清单
+                        </strong>
+                    </a>
+                <i class="tip-num">0</i>
+                </span>
+        </div>
+        <div class="mt-10 equ">
+            <table con_self="equipment" class="table  table-border table-bordered table-bg contractList addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="120">设备名称</th>
+                    <th width="120">规格型号</th>
+                    <th width="70">厂商</th>
+                    <th width="50">单位</th>
+                    <th width="70">单价</th>
+                    <th width="50">数量</th>
+                    <th width="70">总价</th>
+                    <th width="150">说明</th>
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+
+
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="mt-10 ser" con_self="server">
+            <table col_self="server" class="table  table-border table-bordered table-bg serList  addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="200"><span class="c-red">*</span>服务名称</th>
+                    <th width="150">开始时间</th>
+                    <th width="150">结束时间</th>
+                    <th width="50">数量</th>
+                    <th width="30">单位</th>
+                    <th width="260">说明</th>
+
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+
+
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="mt-10 oth">
+            <table col_self="other" class="table  table-border table-bordered table-bg othList  addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="150"><span class="c-red">*</span>清单名称</th>
+                    <th width="50">数量</th>
+                    <th width="50">单位</th>
+                    <th width="300">描述</th>
+
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="pd-10 text-c">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/pro-contract-editCheck.js"></script>
+</body>
+</html>

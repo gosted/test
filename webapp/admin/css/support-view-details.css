@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/**
+ * 本文件是所有详情页样式文件
+ * @author 张欢
+ */
+html,
+body,
+.body-cnt {
+  width: 100%;
+  height: 100%;
+}
+
+.HuiTab {
+  height: 100%;
+  overflow: hidden;
+}
+
+.tabCon-iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.tabCon-iframe iframe {
+  box-sizing: border-box;
+  padding-bottom: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  overflow-y: auto;
+}
+
+/*标签*/
+.tabBar {
+  border-bottom-color: #006fbb;
+  margin-right: 3px;
+}
+
+.tabBar span {
+  width: 85px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-right: 3px;
+  padding: 0;
+  font-weight: 100;
+  font-size: 14px;
+  background: #9bc5ff;
+  background: -webkit-linear-gradient(#b8e6fc, #9bc5ff);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#b8e6fc, #9bc5ff);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#b8e6fc, #9bc5ff);
+  /* Firefox 3.6 - 15 */
+  -pie-background: linear-gradient(#b8e6fc, #9bc5ff);
+  background: linear-gradient(#b8e6fc, #9bc5ff);
+  /* 标准的语法 */
+  behavior: url(../../lib/PIE-2.0beta1/PIE.htc);
+}
+
+.tabBar .other {
+  background: #ff9f17;
+  background: -webkit-linear-gradient(#fbd16c, #ff9f17);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#fbd16c, #ff9f17);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#fbd16c, #ff9f17);
+  /* Firefox 3.6 - 15 */
+  -pie-background: linear-gradient(#fbd16c, #ff9f17);
+  background: linear-gradient(#fbd16c, #ff9f17);
+  /* 标准的语法 */
+  behavior: url(../../lib/PIE-2.0beta1/PIE.htc);
+}
+
+.tabBar span.current {
+  background: #026eb3;
+  background: -webkit-linear-gradient(#00ecef, #026eb3);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#00ecef, #026eb3);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#00ecef, #026eb3);
+  /* Firefox 3.6 - 15 */
+  -pie-background: linear-gradient(#00ecef, #026eb3);
+  background: linear-gradient(#00ecef, #026eb3);
+  /* 标准的语法 */
+  behavior: url(../../lib/PIE-2.0beta1/PIE.htc);
+}
+
+/*标签结束*/
+
+/*# sourceMappingURL=support-view-details.css.map */

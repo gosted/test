@@ -1,0 +1,935 @@
+<!--
+ * 本文件是合同添加html文件
+ * @author 彭佳明
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/pro-manage-add.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>合同添加</title>
+</head>
+<body>
+<div class="barWarp">
+    <div class="tabBar cl detail-tap">
+                <span class="contractPage equipment" co_name="HTFL-HT">
+                    <a href="javascript:;">
+                        <strong>
+                            合同
+                        </strong>
+                    </a>
+                </span><em class="l">|</em>
+        <span class="agreementPage server" co_name="HTFL-XY">
+                    <a href="javascript:;">
+                        <strong>
+                            协议
+                        </strong>
+                    </a>
+                </span>
+        <em class="l">|</em>
+        <span class="workPage other" co_name="HTFL-GD">
+                    <a href="javascript:;">
+                        <strong>
+                            工单
+                        </strong>
+                    </a>
+                </span>
+    </div>
+</div>
+<div class="contract-wrap pt-10">
+    <div id="table-box" class="table-box contract-box">
+            <table class="providerAdd contractContent  form-table table table-border table-bordered table-bg">
+                <tr>
+                    <td class="table-key" colspan="5"><span class="c-red">*</span>合同名称：</td>
+                    <td colspan="15" class="has-tip">
+                        <div class="formControls cl">
+                            <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="contractName">
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+                    <td class="table-key" colspan="5"><span class="c-red">*</span>合同编号：</td>
+                    <td colspan="15" class="has-tip has-contractCode">
+                        <div class="formControls cl">
+                            <input type="text" class="input-text input-type contractCode" datatype="*" nullmsg=" " errormsg=" " con_name="contractCode">
+                        </div>
+                        <div class="msg-tip contractCode-tip" title="请正确填写"> </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-key" colspan="5"><span class="c-red">*</span>甲方：</td>
+                    <td colspan="15" class="has-tip">
+                        <div class="formControls cl">
+                            <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="contractA">
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+                    <td class="table-key" colspan="5"><span class="c-red">*</span>乙方：</td>
+                    <td colspan="15" class="has-tip">
+                        <div class="formControls cl">
+                            <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="contractB">
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+                </tr>
+
+                <tr>
+                   <!-- <td class="table-key" colspan="5"><span class="c-red">*</span>合同履行时间：</td>
+                    <td colspan="15" class="has-tip">
+                        <div class="formControls cl">
+                            <input type="text" con_name="performTime" datatype="*" nullmsg=" " errormsg=""   onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="input-text Wdate" id="datemin">
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+                    <td class="table-key" colspan="5"><span class="c-red">*</span>终止时间：</td>
+                    <td colspan="15" class="has-tip">
+                        <div class="formControls cl">
+                            <input type="text" con_name="endTime" datatype="*" nullmsg=" " errormsg="" ignore="ignore" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate">
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>-->
+
+                    <td class="table-key" colspan="5"><span class="c-red">*</span>合同履行时间：</td>
+                    <td colspan="15" class="has-tip">
+                        <div class="formControls">
+                            <input type="text" con_name="performTime" datatype="date" nullmsg=" " errormsg=" " onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'datemax0\')}'})" id="datemin" class="input-text Wdate">
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+                    <td class="table-key" colspan="5"><span class="c-red">*</span>终止时间：</td>
+                    <td colspan="15" class="has-tip">
+                        <div class="formControls">
+                            <input type="text" con_name="endTime" datatype="date" nullmsg=" " errormsg=" " onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax0" class="input-text Wdate">
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:0;" class="table-key" colspan="5">币种：</td>
+                    <td colspan='15' class="has-tip">
+                        <select  con_name="currency" class="input-text currency" ignore="ignore" readonly con_name="currency"  datatype="*" nullmsg=" " errormsg=" " >
+                            <option value="人民币">人民币</option>
+                        </select>
+                        <div class="msg-tip" title="请选择"> </div>
+                    </td>
+
+                    <td style="padding-left:0;" class="table-key" colspan="5">增值税率：(%)</td>
+                    <td colspan='15' class="taxBox has-tip">
+                        <select  con_name="currency" class="input-text tax" ignore="ignore" readonly con_name="tax"  datatype="*" nullmsg=" " errormsg=" " >
+                            <option value="0">0</option>
+                        </select>
+                        <div class="msg-tip" title="请选择"> </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left:0;" class="table-key" colspan="5"><span class="c-red">*</span>含税合同金额：</td>
+                    <td colspan="15" class="has-tip">
+                        <div class="formControls cl">
+                            <input placeholder="" type="text" class="amontNoTax input-text input-type" datatype="Number"  nullmsg=" " errormsg=" "   con_name="contractAmont">
+                        </div>
+                        <div class="msg-tip" title="请填写0-9999999999999.99位数字的合同金额"> </div>
+                    </td>
+
+                    <td style="padding-left:0;" class="table-key" colspan="5">不含税金额：</td>
+                    <td colspan="15" class="has-tip">
+                        <div class="formControls cl">
+                            <input placeholder="" type="text" class="input-text contractAmont input-type" datatype="Number" nullmsg=" " ignore="ignore" errormsg=" "   con_name="amontNoTax">
+                        </div>
+                        <div class="msg-tip" title="请填写0-9999999999999.99位数字的合同金额"> </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="table-key" colspan="5"><span class="c-red"></span>附件：</td>
+                    <td colspan="35" class="formControls">
+                        <form id="upload" class="upload-form" enctype ="multipart/form-data">
+                            <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+                            <input type="file" name="file" class="upload-file upload-file0">
+                        </form>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="table-key" colspan="5"></td>
+                    <td colspan="35" class="formControls file-list file-list0">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-key" colspan="5">备注：</td>
+                    <td colspan="35" class="has-tip">
+                        <div class="formControls cl con_textarea">
+                            <textarea rows="3" con_name="contractIntro" style="width:663px;" class="textarea"  dragonfly="true" datatype="*" ignore="ignore" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"></textarea>
+                            <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+                </tr>
+            </table>
+       <!-- <div class="table-key selfDefine"><span class="c-red"></span>自定义：</div>
+        <table class="table table-border table-bordered table-bg addTable addSelf">
+            <thead>
+            <tr class="text-c thead">
+                <th getAttr="parDetlType" width="50"><span class="c-red">*</span>名称</th>
+                <th getAttr="parDetlInfo" width="50"><span class="c-red">*</span>内容</th>
+                <th width="80">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="firstTr selfTr">
+                <td><div contenteditable="true" class="needChoose change widthChange" ></div></td>
+                <td><div contenteditable="true" class="needChoose change widthChange" ></div></td>
+                <td class="addBtn selfBtn" style="text-align: center;">
+                    <i title="添加" class="Hui-iconfont btn-add">&#xe604;</i>
+                </td>
+            </tr>
+            </tbody>
+        </table>-->
+        <!--<div class="import">
+            <div class="table-key selfDefine">清单：</div>
+
+        </div>-->
+        <div class="tabBar cl detail-tap">
+                <span class="equipmen equipment" con_na = "equ">
+                    <a href="javascript:;">
+                        <strong>
+                            设备清单
+                        </strong>
+                        <i class="tip-num">0</i>
+                    </a>
+                </span><em class="l">|</em>
+            <span class="serve server" con_na = "ser">
+                    <a href="javascript:;">
+                        <strong>
+                            服务清单
+                        </strong>
+                        <i class="tip-num">0</i>
+                    </a>
+                </span>
+            <em class="l">|</em>
+            <span class="othe other" con_na = "oth">
+                    <a href="javascript:;">
+                        <strong>
+                            其他清单
+                        </strong>
+                        <i class="tip-num">0</i>
+                    </a>
+                </span>
+            <div class="mr-10 f-r">
+                <form id="load" class="upload-form" enctype ="multipart/form-data">
+                    <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>Excel导入</a>
+                    <input type="file" name="file" class="upload-file load-file">
+                </form>
+            </div>
+        </div>
+        <div class="mt-10 equ">
+            <table col_self="equipmen" class="table table-border table-bordered table-bg contractList addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="150"><span class="c-red">*</span>设备名称</th>
+                    <th width="150">规格型号</th>
+                    <th width="120">厂商</th>
+                    <th width="50"><span class="c-red">*</span>单位</th>
+                    <th width="80">单价</th>
+                    <th width="70"><span class="c-red">*</span>数量</th>
+                    <th width="100">总价</th>
+                    <th width="180">说明</th>
+                    <th width="60">操作</th>
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+                    <td><div contenteditable="true"  con_name="detailName" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailModel" class=" change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailCompany" class=" change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailUnit" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailPrice" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailCount" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailTotal" class="change widthChange countTotal"></div></td>
+                    <td><div contenteditable="true"  con_name="detailRemark" class="change widthChange"></div></td>
+                    <td class="addBtn getList" style="text-align: center;">
+                        <i title="添加" detailType="QDLX-SB" class="fa fa-plus-square fa-lg btn-add btnList"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="mt-10 ser">
+            <table col_self="serve" class="table table-border table-bordered table-bg serList  addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="100"><span class="c-red">*</span>服务名称</th>
+                    <th width="80">开始时间</th>
+                    <th width="100">结束时间</th>
+                    <th width="50">数量</th>
+                    <th width="50">单位</th>
+                    <th width="160">说明</th>
+                    <th width="60">操作</th>
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+                    <td><div contenteditable="true"  con_name="detailName" class="needChoose change widthChange"></div></td>
+                    <td>
+                        <div contenteditable="true"  con_name="detailStartDate" onfocus="WdatePicker()"  class="Wdate change widthChange"></div>
+                    </td>
+                    <td>
+                        <div contenteditable="true"  con_name="detailEndDate" onfocus="WdatePicker()"  class="Wdate change widthChange"></div>
+                    </td>
+                    <td><div contenteditable="true"  con_name="detailCount" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailUnit" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailRemark" class="change widthChange"></div></td>
+                    <td class="addBtn getList" style="text-align: center;">
+                        <i title="添加" detailType="QDLX-FW" class="fa fa-plus-square fa-lg btn-add serbtnList"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="mt-10 oth">
+            <table col_self="othe" class="table table-border table-bordered table-bg othList  addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="140"><span class="c-red">*</span>清单名称</th>
+                    <th width="140">数量</th>
+                    <th width="50">单位</th>
+                    <th width="300">描述</th>
+                    <th width="60">操作</th>
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+                    <td><div contenteditable="true"  con_name="detailName" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailCount" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailUnit" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailRemark" class="change widthChange"></div></td>
+                    <td class="addBtn getList" style="text-align: center;">
+                        <i title="添加" detailType="QDLX-QT" class="fa fa-plus-square fa-lg btn-add othbtnList"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn btn-success radius mr-10  save contract">
+                <i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存
+            </button>
+        </div>
+    </div>
+</div>
+<div class="pt-10 agreeWrap">
+    <div id="table-box1" class="table-box agree-box">
+        <table class="providerAdd contractContent  form-table table table-border table-bordered table-bg">
+            <tr>
+                <td class="table-key" colspan="6"><span class="c-red">*</span>协议名称：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="contractName">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="6"><span class="c-red">*</span>协议编号：</td>
+                <td colspan="14" class="has-tip has-contractCode">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type contractCode" datatype="*" nullmsg=" " errormsg=" " con_name="contractCode">
+                    </div>
+                    <div class="msg-tip contractCode-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="6"><span class="c-red">*</span>甲方：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="contractA">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="6"><span class="c-red">*</span>乙方：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="contractB">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="6"><span class="c-red">*</span>协议履行时间：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" con_name="performTime" datatype="date" nullmsg=" " errormsg=" " onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'datemax3\')}'})" id="datemin3" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="6"><span class="c-red">*</span>终止时间：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" con_name="endTime" datatype="date" nullmsg=" " errormsg=" " onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'datemin3\')}'})" id="datemax3" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="6">协议金额：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="Number" nullmsg=" " errormsg=" " ignore="ignore" con_name="contractAmont">
+                    </div>
+                    <div class="msg-tip" title="金额为 0~9999999999999.99元之间"> </div>
+                </td>
+                <td colspan="20" class="has-tip">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="6"><span class="c-red"></span>附件：</td>
+                <td colspan="34" class="formControls">
+                    <form id="upload1" class="upload-form" enctype ="multipart/form-data">
+                        <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+                        <input type="file" name="file" class="upload-file upload-file1">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="6"></td>
+                <td colspan="34" class="formControls file-list file-list1">
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="6">备注：</td>
+                <td colspan="34" class="has-tip">
+                    <div class="formControls cl con_textarea">
+                        <textarea rows="3" con_name="contractIntro" style="width:648px;" class="textarea"  dragonfly="true" datatype="*" ignore="ignore" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+
+
+        </table>
+        <!-- <div class="table-key selfDefine"><span class="c-red"></span>自定义：</div>
+         <table class="table table-border table-bordered table-bg addTable addSelf">
+             <thead>
+             <tr class="text-c thead">
+                 <th getAttr="parDetlType" width="50"><span class="c-red">*</span>名称</th>
+                 <th getAttr="parDetlInfo" width="50"><span class="c-red">*</span>内容</th>
+                 <th width="80">操作</th>
+             </tr>
+             </thead>
+             <tbody>
+             <tr class="firstTr selfTr">
+                 <td><div contenteditable="true" class="needChoose change widthChange" ></div></td>
+                 <td><div contenteditable="true" class="needChoose change widthChange" ></div></td>
+                 <td class="addBtn selfBtn" style="text-align: center;">
+                     <i title="添加" class="Hui-iconfont btn-add">&#xe604;</i>
+                 </td>
+             </tr>
+             </tbody>
+         </table>-->
+        <div class="tabBar cl detail-tap">
+                <span class="equipmen equipment" con_na = "equ">
+                    <a  href="javascript:;">
+                        <strong>
+                            设备清单
+                        </strong>
+                        <i class="tip-num">0</i>
+                    </a>
+                </span><em class="l">|</em>
+            <span class="serve server" con_na="ser">
+                    <a href="javascript:;">
+                        <strong>
+                            服务清单
+                        </strong>
+                        <i class="tip-num">0</i>
+                    </a>
+                </span>
+            <em class="l">|</em>
+            <span class="othe other" con_na="oth">
+                    <a href="javascript:;">
+                        <strong>
+                            其他清单
+                        </strong>
+                        <i class="tip-num">0</i>
+                    </a>
+                </span>
+            <div class="mr-10 f-r">
+                <form id="load1" class="upload-form" enctype ="multipart/form-data">
+                    <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>Excel导入</a>
+                    <input type="file" name="file" class="upload-file load-file1">
+                </form>
+            </div>
+        </div>
+        <div class="mt-10 equ">
+            <table col_self="equipmen" class="table table-border table-bordered table-bg contractList addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="150"><span class="c-red">*</span>设备名称</th>
+                    <th width="150">规格型号</th>
+                    <th width="120">厂商</th>
+                    <th width="50"><span class="c-red">*</span>单位</th>
+                    <th width="80">单价</th>
+                    <th width="70"><span class="c-red">*</span>数量</th>
+                    <th width="100">总价</th>
+                    <th width="180">说明</th>
+                    <th width="60">操作</th>
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+                    <td><div contenteditable="true"  con_name="detailName" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailModel" class=" change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailCompany" class=" change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailUnit" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailPrice" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailCount" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailTotal" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailRemark" class="change widthChange"></div></td>
+                    <td class="addBtn getList" style="text-align: center;">
+                        <i title="添加" detailType="QDLX-SB" class="fa fa-plus-square fa-lg btn-add btnList"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="mt-10 ser">
+            <table col_self="serve" class="table table-border table-bordered table-bg serList  addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="100"><span class="c-red">*</span>服务名称</th>
+                    <th width="80">开始时间</th>
+                    <th width="100">结束时间</th>
+                    <th width="50">数量</th>
+                    <th width="50">单位</th>
+                    <th width="160">说明</th>
+                    <th width="60">操作</th>
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+                    <td><div contenteditable="true"  con_name="detailName" class="needChoose change widthChange"></div></td>
+                    <td>
+                        <div contenteditable="true"  con_name="detailStartDate" onfocus="WdatePicker()"  class="Wdate change widthChange"></div>
+                    </td>
+                    <td>
+                        <div contenteditable="true"  con_name="detailEndDate" onfocus="WdatePicker()"  class="Wdate change widthChange"></div>
+                    </td>
+                    <td><div contenteditable="true"  con_name="detailCount" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailUnit" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailRemark" class="change widthChange"></div></td>
+                    <td class="addBtn getList" style="text-align: center;">
+                        <i title="添加" detailType="QDLX-FW" class="fa fa-plus-square fa-lg btn-add serbtnList"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="mt-10 oth">
+            <table col_self="othe" class="table table-border table-bordered table-bg othList  addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="140"><span class="c-red">*</span>清单名称</th>
+                    <th width="140">数量</th>
+                    <th width="50">单位</th>
+                    <th width="300">描述</th>
+                    <th width="60">操作</th>
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+                    <td><div contenteditable="true"  con_name="detailName" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailCount" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailUnit" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailRemark" class="change widthChange"></div></td>
+                    <td class="addBtn getList" style="text-align: center;">
+                        <i title="添加" detailType="QDLX-QT" class="fa fa-plus-square fa-lg btn-add othbtnList"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn btn-success radius mr-10 agree">
+                <i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存
+            </button>
+        </div>
+    </div>
+</div>
+<div class="pt-10 workWrap">
+    <div id="table-box2" class="table-box work-box">
+        <table class="providerAdd contractContent  form-table table table-border table-bordered table-bg">
+            <tr>
+                <td class="table-key" colspan="6"><span class="c-red">*</span>工单名称：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="contractName">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="6"><span class="c-red">*</span>工单编号：</td>
+                <td colspan="14" class="has-tip has-contractCode">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type contractCode" datatype="*" nullmsg=" " errormsg=" " con_name="contractCode">
+                    </div>
+                    <div class="msg-tip contractCode-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" style="padding-left:0;" colspan="6"><span class="c-red">*</span>预计任务开始时间：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" con_name="performTime" datatype="date" nullmsg=" " errormsg=" " onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'datemax4\')}'})" id="datemin4" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="6"><span class="c-red">*</span>预计任务结束时间：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" con_name="endTime" datatype="date" nullmsg=" " errormsg=" " onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'datemin4\')}'})" id="datemax4" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+
+               <!-- <td style="padding-left:0;" class="table-key" colspan="6"><span class="c-red">*</span>预计任务开始时间：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" con_name="performTime" datatype="*" nullmsg=" " errormsg=""  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" id="datemin1" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="6"><span class="c-red">*</span>预计任务结束时间：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" con_name="endTime" datatype="*" nullmsg=" " errormsg="" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'datemin1\')}'})" id="datemax" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>-->
+            </tr>
+            <tr>
+                <td class="table-key" colspan="6"><span class="c-red">*</span>结算分公司：</td>
+                <td colspan="14" class="has-tip major">
+                    <div class="formControls company-tree input-tree ">
+                        <input type="text" class="input-text userMajorUnit" userMajorUnit="" readonly con_name="settleBranch">
+                        <ul class="tree" style="z-index: 1">
+
+                        </ul>
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+                <td class="table-key" colspan="6">部门：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " ignore="ignore" con_name="baseDepartment">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="6">基地联系人：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " ignore="ignore" con_name="baseContact">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="6">联系电话：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="phone|m" nullmsg=" " errormsg=" " ignore="ignore" con_name="basePhone">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+
+            <tr>
+            <td class="table-key" colspan="6">结算确认人：</td>
+            <td colspan="14" class="has-tip">
+                <div class="formControls cl">
+                    <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="settleConfirm" ignore="ignore">
+                </div>
+                <div class="msg-tip" title="请正确填写"> </div>
+            </td>
+            <td class="table-key" colspan="6">联系电话：</td>
+            <td colspan="14" class="has-tip">
+                <div class="formControls cl">
+                    <input type="text" class="input-text input-type" datatype="phone|m" nullmsg=" " errormsg=" " con_name="settlePhone" ignore="ignore">
+                </div>
+                <div class="msg-tip" title="请正确填写"> </div>
+            </td>
+        </tr>
+
+            <tr>
+                <td class="table-key" colspan="6">支撑人员数量：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="Number" nullmsg=" " errormsg=" " con_name="supportNum" ignore="ignore">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="6">参与人月数：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="Number" nullmsg=" " errormsg=" " con_name="manMonth" ignore="ignore">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" style="" colspan="6">预计总结算费用:</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="Number" nullmsg=" " errormsg=" " con_name="contractAmont" ignore="ignore">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="6">付款方式：</td>
+                <td colspan="14" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="paymentMode" ignore="ignore">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="6">任务摘要：</td>
+                <td colspan="34" class="has-tip">
+                    <div class="formControls cl con_textarea">
+                        <textarea rows="3" con_name="taskSummary" style="width:644px;" class="textarea"  dragonfly="true" datatype="*" ignore="ignore" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="6">工作内容：</td>
+                <td colspan="34" class="has-tip">
+                    <div class="formControls cl con_textarea">
+                        <textarea rows="3" con_name="workContent" style="width:644px;" class="textarea"  dragonfly="true" datatype="*" ignore="ignore" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="6">备注：</td>
+                <td colspan="34" class="has-tip">
+                    <div class="formControls cl con_textarea">
+                        <textarea rows="3" con_name="contractIntro" style="width:644px;" class="textarea"  dragonfly="true" datatype="*" ignore="ignore" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="6"><span class="c-red"></span>附件：</td>
+                <td colspan="34" class="formControls">
+                    <form id="upload2" class="upload-form" enctype ="multipart/form-data">
+                        <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+                        <input type="file" name="file" class="upload-file upload-file2">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"></td>
+                <td colspan="35" class="formControls file-list file-list2">
+
+                </td>
+            </tr>
+        </table>
+        <!-- <div class="table-key selfDefine"><span class="c-red"></span>自定义：</div>
+         <table class="table table-border table-bordered table-bg addTable addSelf">
+             <thead>
+             <tr class="text-c thead">
+                 <th getAttr="parDetlType" width="50"><span class="c-red">*</span>名称</th>
+                 <th getAttr="parDetlInfo" width="50"><span class="c-red">*</span>内容</th>
+                 <th width="80">操作</th>
+             </tr>
+             </thead>
+             <tbody>
+             <tr class="firstTr selfTr">
+                 <td><div contenteditable="true" class="needChoose change widthChange" ></div></td>
+                 <td><div contenteditable="true" class="needChoose change widthChange" ></div></td>
+                 <td class="addBtn selfBtn" style="text-align: center;">
+                     <i title="添加" class="Hui-iconfont btn-add">&#xe604;</i>
+                 </td>
+             </tr>
+             </tbody>
+         </table>-->
+        <div class="tabBar cl detail-tap">
+                <span class="equipmen equipment" con_na = "equ">
+                    <a href="javascript:;">
+                        <strong>
+                            设备清单
+                        </strong>
+                    </a>
+                    <i class="tip-num">0</i>
+                </span>
+            <em class="l">|</em>
+            <span class="serve server" con_na="ser">
+                    <a href="javascript:;">
+                        <strong>
+                            服务清单
+                        </strong>
+                    </a>
+                 <i class="tip-num">0</i>
+                </span>
+            <em class="l">|</em>
+            <span class="othe other" con_na = "oth">
+                    <a href="javascript:;">
+                        <strong>
+                            其他清单
+                        </strong>
+                    </a>
+                 <i class="tip-num">0</i>
+                </span>
+            <div class="mr-10 f-r">
+                <form id="load2" class="upload-form" enctype ="multipart/form-data">
+                    <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>Excel导入</a>
+                    <input type="file" name="file" class="upload-file load-file2">
+                </form>
+            </div>
+        </div>
+        <div class="mt-10 equ">
+            <table col_self="equipmen" class="table table-border table-bordered table-bg contractList addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="150"><span class="c-red">*</span>设备名称</th>
+                    <th width="150">规格型号</th>
+                    <th width="120">厂商</th>
+                    <th width="50"><span class="c-red">*</span>单位</th>
+                    <th width="80">单价</th>
+                    <th width="70"><span class="c-red">*</span>数量</th>
+                    <th width="100">总价</th>
+                    <th width="180">说明</th>
+                    <th width="60">操作</th>
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+                    <td><div contenteditable="true"  con_name="detailName" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailModel" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailCompany" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailUnit" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailPrice" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailCount" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailTotal" class="change widthChange countTotal"></div></td>
+                    <td><div contenteditable="true"  con_name="detailRemark" class="change widthChange"></div></td>
+                    <td class="addBtn getList" style="text-align: center;">
+                        <i title="添加" detailType="QDLX-SB" class="fa fa-plus-square fa-lg btn-add btnList"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="mt-10 ser">
+            <table col_self="serve" class="table table-border table-bordered table-bg serList  addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="200"><span class="c-red">*</span>服务名称</th>
+                    <th width="140">开始时间</th>
+                    <th width="140">结束时间</th>
+                    <th width="50">数量</th>
+                    <th width="30">单位</th>
+                    <th width="260">说明</th>
+                    <th width="60">操作</th>
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+                    <td><div contenteditable="true"  con_name="detailName" class="needChoose change widthChange"></div></td>
+                    <td>
+                        <div contenteditable="true"  con_name="detailStartDate" onfocus="WdatePicker()"  class="Wdate change widthChange"></div>
+                    </td>
+                    <td>
+                        <div contenteditable="true"  con_name="detailEndDate" onfocus="WdatePicker()"  class="Wdate change widthChange"></div>
+                    </td>
+                    <td><div contenteditable="true"  con_name="detailCount" class=" change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailUnit" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailRemark" class=" change widthChange"></div></td>
+                    <td class="addBtn getList" style="text-align: center;">
+                        <i title="添加" detailType="QDLX-FW" class="fa fa-plus-square fa-lg btn-add serbtnList"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="mt-10 oth">
+            <table col_self="othe" class="table table-border table-bordered table-bg othList  addTable tableList">
+                <thead>
+                <tr class="text-c">
+                    <th width="140"><span class="c-red">*</span>清单名称</th>
+                    <th width="140">数量</th>
+                    <th width="50">单位</th>
+                    <th width="300">描述</th>
+                    <th width="60">操作</th>
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                <tr class="firstTr listTr">
+                    <td><div contenteditable="true"  con_name="detailName" class="needChoose change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailCount" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailUnit" class="change widthChange"></div></td>
+                    <td><div contenteditable="true"  con_name="detailRemark" class="change widthChange"></div></td>
+                    <td class="addBtn getList" style="text-align: center;">
+                        <i title="添加" detailType="QDLX-QT" class="fa fa-plus-square fa-lg btn-add othbtnList"></i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="no-data">暂无数据</div>
+        </div>
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn btn-success radius mr-10 work">
+                <i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存
+            </button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/pro-contract-add.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!--
+* 工作记录页面-编辑页面文件
+*@author 王步华
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="admin/images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="admin/images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/icheck/icheck.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../skin/default/skin.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../../lib/layer/2.1/skin/layer.css" />
+    <link rel="stylesheet" href="../../lib/My97DatePicker/skin/WdatePicker.css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../../css/support-workRecord-add.css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js" ></script>
+    <script type="text/javascript" src="../../lib/respond.min.js" ></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js" ></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>工作记录-编辑</title>
+    <style>
+        .con-recor{
+            width: 100px;
+        }
+        .con-recodd{
+            width: 75px;
+        }
+    </style>
+</head>
+<body>
+<div class="workAdd">
+    <div class="workAdd_main pd-10">
+        <div class="workAdd_main_btn table-box">
+            <table action="" method="post" class=" form-table table table-border table-bordered table-bg accessory" id="form-article-add">
+                <tr>
+                    <td colspan='6' class=" table-key"><span class="c-red">*</span>概述：</td>
+                    <td colspan='34' class="planRemark  has-tip recordSupSummary">
+                        <div class="formControls">
+                            <input type="text" class="input-text table-input input-type" value="" placeholder=""  name="member-tel" datatype="*1-400" nullmsg=" " errormsg=" ">
+                        </div>
+                        <div class="msg-tip" title="请输入长度小于400位"> </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='6' class=" table-key"><span class="c-red">*</span>工作量（人天）：</td>
+                    <td colspan='7' class="recordWorkload has-tip">
+                        <div class="formControls ">
+                            <input type="text" class="input-text table-input input-type" value="" placeholder="" name="member-tel" datatype="n1-100" nullmsg=" " errormsg=" ">
+                        </div>
+                        <div class="msg-tip" title="请输入长度小于100位"> </div>
+                    </td>
+
+                    <td colspan='6' class=" table-key"><span class="c-red">*</span>开始时间：</td>
+                    <td colspan='7' class="recordStartTime has-tip">
+                        <div class="formControls ">
+                            <input class="input-text table-input Wdate input-type" type="text" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'datemax\')}'})" id="datemin" datatype="*" nullmsg=" " errormsg=" "  class="input-text Wdate" style="" con_name="reqSupTime">
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+
+                    <td colspan='5' class=" table-key"><span class="c-red">*</span>结束时间：</td>
+                    <td colspan='9' class="recordEndTime has-tip">
+                        <div class="formControls ">
+                            <input class="input-text table-input Wdate input-type" type="text" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax"  datatype="*" nullmsg=" " errormsg=" "  class="input-text Wdate" style="" con_name="reqSupTime">
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan='6' class=" table-key">现场支撑：</td>
+                    <td colspan='7' class="skin-minimal">
+                        <div class="formControls col-3 skin-minimal">
+                            <div class="radio_box">
+                                <input type="radio" id="sex-1" name="construction" con_name="" value="0" >
+                                <label for="sex-1">是</label>
+                            </div>
+                        </div>
+                        <div class="formControls col-3 skin-minimal">
+                            <div class="radio_box">
+                                <input type="radio" id="sex-2" name="construction" con_name="" value="1">
+                                <label for="sex-2">否</label>
+                            </div>
+                        </div>
+                        <div class="msg-tip" title="请选择"> </div>
+                    </td>
+
+
+                    <td colspan='6' class=" table-key"><span class="c-red">*</span>费用报销（元）：</td>
+                    <td colspan='7' class="recordCost has-tip">
+                        <div class="formControls ">
+                            <input type="text" class="input-text table-input input-type fybx" value="" placeholder=""  name="member-tel" datatype="floatnum" nullmsg=" " errormsg=" ">
+                        </div>
+                        <div class="msg-tip" title="请输入正确金额，0～9999999999999.99元之间"> </div>
+                    </td>
+
+                    <td colspan='5' class=" table-key"><span class="c-red">*</span>支撑人：</td>
+                    <td colspan='9' class="recordSupUserId has-tip">
+                        <div class="formControls ">
+                            <input type="text" class="input-text table-input input-type" value="" placeholder=""  name="member-tel" datatype="*1-500"  nullmsg=" " errormsg=" ">
+                        </div>
+                        <div class="msg-tip" title="请输入长度小于500位"> </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='6' class=" table-key"><span class="c-red">*</span>支撑地点：</td>
+                    <td colspan='34' class="recordSupAddress has-tip">
+                        <div class="formControls ">
+                            <input type="text" class="input-text table-input input-type" value="" placeholder=""  name="member-tel" datatype="*1-100"  nullmsg=" " errormsg=" ">
+                        </div>
+                        <div class="msg-tip" title="请输入长度小于100位"> </div>
+                    </td>
+                </tr>
+                <tr class="contract-all">
+                    <td colspan='6' class=" table-key"><span class="c-red">*</span>合同状态：</td>
+                    <td colspan='10' class="recordContractState has-tip">
+                        <div class="formControls workrecadd">
+
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+
+                    <td colspan='5' class=" table-key"><span class="c-red">*</span><span class="contract-date">预计签订日期：</span></td>
+                    <td colspan='7' class="recordContractTime has-tip">
+                        <div class="formControls">
+                            <input class="input-text table-input Wdate input-type" type="text" onfocus="WdatePicker()" datatype="*" nullmsg=" " errormsg=" "  class="input-text Wdate" con_name="reqSupTime">
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+
+                    <td colspan='6' class=" table-key"><span class="c-red">*</span><span class="contract-money">预计金额（元）：</span></td>
+                    <td colspan='6' class="recordContractSum has-tip">
+                        <div class="formControls">
+                            <input type="text" class="input-text table-input input-type htjr" value="" placeholder=""  name="member-tel" datatype="floatnum" nullmsg=" " errormsg=" ">
+                        </div>
+                        <div class="msg-tip" title="请输入正确金额，0～9999999999999.99元之间"> </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='6' class=" table-key"><span class="c-red">*</span>详细说明：</td>
+                    <td colspan='34' class="planRemark recordSupDetail has-tip">
+                        <div class="formControls col-12">
+                            <textarea name="" cols="" rows="" class="textarea table-input" placeholder="" datatype="*1-2000" dragonfly="true" nullmsg=" " errormsg=" " onkeyup="textarealength(this,2000)"></textarea>
+                            <p class="textarea-numberbar con_text-p"  style="right: 10px; "><em class="textarea-length">0</em>/2000</p>
+                        </div>
+                        <div class="msg-tip" title="请输入长度小于2000位"> </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan='6' class=" table-key"><span class="c-red"></span>备注：</td>
+                    <td colspan='34' class="planRemark recordRemark has-tip">
+                        <div class="formControls col-12">
+                            <textarea name="" cols="" rows="" class="textarea table-input" placeholder="" datatype="*0-500" dragonfly="true" nullmsg=" " onkeyup="textarealength(this,500)"></textarea>
+                            <p class="textarea-numberbar con_text-p" style="right: 10px; "><em class="textarea-length">0</em>/500</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="table-key" colspan="6"><span class="c-red"></span>附件：</td>
+                    <td colspan="34" class="formControls">
+                        <form id="upload" class="upload-form" enctype ="multipart/form-data">
+                            <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+                            <input type="file" name="file" class="upload-file">
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-key" colspan="6"></td>
+                    <td colspan="34" class="formControls file-list">
+
+                    </td>
+                </tr>
+            </table>
+            <div class="con_hint">
+                <div class="con_hint_l">说明：</div>
+                <div class="con_hint_r">
+                    <p>每个附件大小不能超过50MB</p>
+                </div>
+            </div>
+            <div class="pd-10 text-c ProgramSubmitbot">
+                <div>
+                    <a href="javascript:;" class="btn con-ProgramLibrary radius ProgramSubmitButton"><i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js" ></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js" ></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js" ></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/commen.js" ></script>
+<script type="text/javascript" src="../../js/support-WorkRecord-Edit.js" ></script>
+
+</body>
+</html>

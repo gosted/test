@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/**
+ * 本文件是系统消息样式文件
+ * @author 张欢
+ */
+.news-list {
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.news-list li:hover {
+  background: #ffe2a9;
+}
+.news-list .bg-gray {
+  background: #EFEEEC;
+}
+.news-list .no-read {
+  color: #f60000;
+}
+.news-list i {
+  color: #444;
+  font-style: normal;
+}
+.news-list p {
+  line-height: 18px;
+  text-indent: 18px;
+  color: #444;
+  margin: 0;
+  padding-left: 18px;
+}
+
+/*# sourceMappingURL=sys-news.css.map */

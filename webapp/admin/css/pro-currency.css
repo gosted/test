@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/**
+ * 本文件是施工工单退回样式文件
+ * @author 王步华
+ */
+/*列表*/
+.according {
+  display: none; }
+
+.table-bordered th, .table-bordered td {
+  background-color: #fff; }
+
+.table-bg {
+  table-layout: fixed; }
+  .table-bg tr td {
+    width: auto; }
+  .table-bg tr .according-type {
+    width: 90px; }
+  .table-bg tr .acc-code {
+    width: 120px; }
+  .table-bg tr .deal {
+    width: 60px; }
+  .table-bg tr:nth-child(2n+1) {
+    background: #eee; }
+  .table-bg tr:nth-child(2n) {
+    background: #fff; }
+  .table-bg .th {
+    text-align: center;
+    background: #cfe6ff; }
+  .table-bg tr.editable {
+    background-color: #f50; }
+    .table-bg tr.editable.editable-show {
+      background-color: #fff; }
+
+#roleAdd .apprOption {
+  width: 663px; }
+
+.relevant-type {
+  width: 100px;
+  margin-top: 1px; }
+
+.HuiTab {
+  background-color: #f6f6f6;
+  overflow: inherit; }
+
+.form-table {
+  margin-bottom: 0; }
+
+.tabBar {
+  height: 32px;
+  border-bottom: 1px solid #939393;
+  background-color: #fff;
+  margin-top: 15px;
+  margin-bottom: 12px; }
+  .tabBar span {
+    width: 112px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: none;
+    position: relative; }
+    .tabBar span.current {
+      background-color: #cfe6ff; }
+      .tabBar span.current a {
+        color: #006fbb; }
+      .tabBar span.current .tip-num {
+        display: none !important; }
+    .tabBar span a {
+      display: inline-block;
+      height: 32px;
+      padding-left: 25px; }
+    .tabBar span .tip-num {
+      display: none;
+      width: 25px;
+      height: 20px;
+      position: absolute;
+      right: 5px;
+      top: 0;
+      font-style: normal;
+      line-height: 20px;
+      font-size: 12px;
+      text-align: center;
+      text-indent: 3px;
+      white-space: nowrap;
+      color: #fff;
+      background: url("../images/commen/list_tip.png") no-repeat left top; }
+  .tabBar em {
+    font-style: normal;
+    font-size: 19px;
+    color: #006fbb; }
+  .tabBar .equipment a {
+    background: url("../images/commen/equ.png") no-repeat left 6px; }
+  .tabBar .server a {
+    background: url("../images/commen/server.png") no-repeat left 6px; }
+  .tabBar .other a {
+    background: url("../images/commen/other.png") no-repeat left 6px; }
+
+.tbody .div-text {
+  text-align: center;
+  border: none;
+  background: white; }
+.tbody .inp-text {
+  text-align: center;
+  border: none;
+  background: white; }
+
+.tbody1 .div-text {
+  text-align: center;
+  border: none;
+  background: white; }
+.tbody1 .inp-text {
+  text-align: center;
+  border: none;
+  background: white; }
+
+.editable .div-text {
+  background: white;
+  border: 1px solid #ccc;
+  min-height: 31px;
+  background: #FFFFFF; }
+.editable .inp-text {
+  background: white;
+  border: 1px solid #ccc; }
+.editable td {
+  position: relative; }
+.editable .onfocus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: auto; }
+
+.tabCon .div-text {
+  line-height: 31px; }
+.tabCon .inp-text {
+  line-height: 31px; }
+
+.tbody .textarea {
+  position: relative;
+  z-index: 1;
+  height: 32px;
+  text-align: center;
+  padding: 0;
+  line-height: 28px;
+  vertical-align: top;
+  overflow: auto; }
+
+/*# sourceMappingURL=pro-currency.css.map */

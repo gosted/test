@@ -1,0 +1,269 @@
+@charset "UTF-8";
+/*
+* 出库-出库单查看页面样式文件
+*@author 王步华
+*/
+.file-list p {
+  height: 30px;
+  text-align: left;
+  line-height: 30px; }
+.file-list img {
+  float: left;
+  display: inline-block;
+  padding-top: 8px; }
+.file-list span {
+  margin-left: 10px; }
+.file-list button {
+  background: transparent;
+  border: none; }
+
+.form-table {
+  margin: 0px auto 0 auto; }
+
+.express {
+  background-color: #f6f6f6; }
+  .express .express-mian {
+    width: 800px;
+    margin: 0 auto; }
+
+.detailedList {
+  background-color: #ffffff; }
+  .detailedList .detailedList-mian {
+    width: 800px;
+    margin: 0 auto; }
+
+.equipmentList {
+  background-color: #f6f6f6; }
+  .equipmentList .equipmentList-mian {
+    width: 800px;
+    margin: 0 auto; }
+    .equipmentList .equipmentList-mian .strgTitle {
+      width: 100%;
+      background: #ffffff;
+      height: 30px;
+      line-height: 30px;
+      text-align: left;
+      border-bottom: 1px solid #e4e4e4; }
+    .equipmentList .equipmentList-mian .mian-soso {
+      height: 31px; }
+      .equipmentList .equipmentList-mian .mian-soso span {
+        line-height: 31px; }
+      .equipmentList .equipmentList-mian .mian-soso .mian-soso-input {
+        min-width: 233px; }
+
+.widthChange {
+  min-height: 30px;
+  width: 97%;
+  border-radius: 1px;
+  border: 1px solid #ddd;
+  position: relative;
+  top: -1px; }
+
+.needChoose {
+  min-height: 30px;
+  border-radius: 1px;
+  border: 1px solid #ddd;
+  position: relative;
+  top: -1px;
+  margin: 1px auto; }
+
+.needChoose:hover {
+  border: 1px solid #006BFF; }
+
+.addBtn {
+  cursor: pointer; }
+
+.selfDefine {
+  width: 100%;
+  background: #ffffff;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  border-bottom: 1px solid #e4e4e4; }
+
+.selfDefines {
+  width: 100%;
+  background: #f8f8f8;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  border-bottom: 1px solid #e4e4e4; }
+
+.changePos {
+  line-height: 30px; }
+
+.import {
+  float: left;
+  margin-top: 8px; }
+
+.import .table-key {
+  float: left; }
+
+.import .text-c {
+  float: left; }
+
+.import .text-c button {
+  margin-left: 4px; }
+
+.addList .input-text:hover {
+  border: 1px solid #006BFF; }
+
+.strg-block {
+  width: 6px;
+  height: 20px;
+  background-color: #ff7200;
+  display: inline-block;
+  margin-top: 5px;
+  float: left; }
+
+.strg-size {
+  display: inline-block;
+  line-height: 30px;
+  margin: 0 5px;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000; }
+
+.deviceList .deviceList-li .deviceList-li-top {
+  background-color: #e3f0fe;
+  overflow: hidden;
+  clear: both; }
+  .deviceList .deviceList-li .deviceList-li-top .lineHeight {
+    line-height: 35px;
+    color: #999999; }
+    .deviceList .deviceList-li .deviceList-li-top .lineHeight .del {
+      font-size: 18px; }
+    .deviceList .deviceList-li .deviceList-li-top .lineHeight .edit {
+      font-size: 18px; }
+  .deviceList .deviceList-li .deviceList-li-top img {
+    width: 24px;
+    height: 24px; }
+  .deviceList .deviceList-li .deviceList-li-top .colors {
+    color: #000; }
+  .deviceList .deviceList-li .deviceList-li-top .li-top-si {
+    width: 35px;
+    height: 35px;
+    background-color: #bdddff;
+    line-height: 35px;
+    display: inline-block;
+    position: relative;
+    padding: 0 6px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.22);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 0 30px 30px 0;
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29), inset 1px 1px 1px rgba(255, 255, 255, 0.44);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29), inset 1px 1px 1px rgba(255, 255, 255, 0.44);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29), inset 1px 1px 1px rgba(255, 255, 255, 0.44);
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    transition: all 0.15s ease; }
+.deviceList .deviceList-li .deviceList-li-bot {
+  overflow: hidden;
+  clear: both;
+  height: 60px;
+  background-color: #fff; }
+  .deviceList .deviceList-li .deviceList-li-bot .equipmentNumber {
+    width: 170px;
+    height: 58px;
+    border: 1px solid #e8e8e8; }
+    .deviceList .deviceList-li .deviceList-li-bot .equipmentNumber .equipmentNumber-div {
+      height: 25px;
+      width: 100%;
+      margin-top: 5px;
+      line-height: 25px; }
+    .deviceList .deviceList-li .deviceList-li-bot .equipmentNumber .equipmentNumber-p {
+      text-align: center;
+      color: #999999; }
+  .deviceList .deviceList-li .deviceList-li-bot .assetNumber {
+    width: 171px;
+    height: 58px;
+    border: 1px solid #e8e8e8; }
+    .deviceList .deviceList-li .deviceList-li-bot .assetNumber .equipmentNumber-div {
+      height: 25px;
+      width: 100%;
+      margin-top: 5px;
+      line-height: 25px; }
+    .deviceList .deviceList-li .deviceList-li-bot .assetNumber .equipmentNumber-p {
+      text-align: center;
+      color: #999999; }
+  .deviceList .deviceList-li .deviceList-li-bot .shelfPosition {
+    width: 198px;
+    height: 58px;
+    border: 1px solid #e8e8e8; }
+    .deviceList .deviceList-li .deviceList-li-bot .shelfPosition .equipmentNumber-div {
+      height: 25px;
+      width: 100%;
+      margin-top: 5px;
+      line-height: 25px; }
+    .deviceList .deviceList-li .deviceList-li-bot .shelfPosition .equipmentNumber-p {
+      text-align: center;
+      color: #999999; }
+  .deviceList .deviceList-li .deviceList-li-bot .number {
+    width: 90px;
+    height: 58px;
+    border: 1px solid #e8e8e8; }
+    .deviceList .deviceList-li .deviceList-li-bot .number .equipmentNumber-div {
+      height: 50%; }
+      .deviceList .deviceList-li .deviceList-li-bot .number .equipmentNumber-div .equipmentNumber-divs {
+        overflow: hidden;
+        clear: both;
+        margin: 0 auto;
+        display: table;
+        padding-top: 11px; }
+        .deviceList .deviceList-li .deviceList-li-bot .number .equipmentNumber-div .equipmentNumber-divs .equipmentNumber-div-left {
+          width: 24px;
+          height: 24px;
+          background-color: #dcdcdc;
+          display: none; }
+        .deviceList .deviceList-li .deviceList-li-bot .number .equipmentNumber-div .equipmentNumber-divs .equipmentNumber-div-main {
+          height: 22px;
+          min-width: 30px;
+          max-width: 60px; }
+        .deviceList .deviceList-li .deviceList-li-bot .number .equipmentNumber-div .equipmentNumber-divs .equipmentNumber-div-right {
+          width: 24px;
+          height: 24px;
+          background-color: #dcdcdc;
+          display: none; }
+    .deviceList .deviceList-li .deviceList-li-bot .number .equipmentNumber-p {
+      color: #999999; }
+  .deviceList .deviceList-li .deviceList-li-bot .remarks {
+    width: 160px;
+    height: 58px;
+    border: 1px solid #e8e8e8; }
+    .deviceList .deviceList-li .deviceList-li-bot .remarks .outDetailRemark {
+      border: 1px solid #e8e8e8;
+      width: 96%;
+      height: 52px;
+      margin: 2px 2px;
+      overflow: auto; }
+
+.parentDiv {
+  position: relative; }
+
+.bombBox {
+  width: 100%;
+  max-height: 410px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
+  display: none; }
+  .bombBox .bombBox-mian {
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    background-color: #fff; }
+
+.b-white {
+  background-color: #fff; }
+
+/*# sourceMappingURL=strg-storage-outstock-see.css.map */

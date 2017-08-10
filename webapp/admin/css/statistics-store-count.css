@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/**
+ * 本文件是库存统计样式文件
+ * @author 张欢
+ */
+.cnt-count {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+.cnt-count .echarts-content {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cnt-count .cnt-list-count {
+  overflow: hidden;
+  margin-left: 420px;
+}
+.cnt-count .cnt-list-count h6 {
+  color: #006fbb;
+  font-size: 14px;
+  text-indent: 20px;
+  font-weight: 900;
+}
+.cnt-count .cnt-list-count h6.mt-h {
+  margin-top: 80px;
+}
+.cnt-count .cnt-list-count .gray-bg {
+  height: 32px;
+  line-height: 32px;
+  background-color: #EFEEEC;
+}
+.cnt-count .cnt-list-count p {
+  padding-left: 15px;
+}
+.cnt-count .cnt-list-count p span {
+  display: inline-block;
+  width: 140px;
+}
+.cnt-count .cnt-list-count p span.w-one {
+  width: 200px;
+}
+.cnt-count .cnt-list-count p i {
+  margin-left: 5px;
+  font-style: normal;
+  color: #FFA325;
+}
+
+/*# sourceMappingURL=statistics-store-count.css.map */

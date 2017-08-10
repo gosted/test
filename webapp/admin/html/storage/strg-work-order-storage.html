@@ -1,0 +1,336 @@
+﻿<!--
+ * 本文件是工单入库html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <LINK rel="Bookmark" href="../../images/favicon.ico" >
+  <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+  <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/strg-contract-storage.css" rel="stylesheet" type="text/css" />
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../lib/html5.js"></script>
+  <script type="text/javascript" src="../../lib/respond.min.js"></script>
+  <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+  <![endif]-->
+
+  <!--[if IE 6]>
+  <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+  <script>DD_belatedPNG.fix('*');</script>
+  <![endif]-->
+  <title>工单入库</title>
+</head>
+<body>
+
+<div class="form-content pd-20">
+  <!--合同基本信息-->
+  <div class="basic mt-10">
+    <div class="title-box">
+      <span>工单信息</span>
+    </div>
+    <div class="table-box">
+      <table class="form-table table table-border table-bordered">
+        <tr>
+          <td colspan='5' class="table-key">工单名称：</td>
+          <td colspan='15' con_name="workOrderName"></td>
+          <td colspan='5' class="table-key">工单编号：</td>
+          <td colspan='15' con_name="workOrderNum"></td>
+        </tr>
+        <tr>
+          <td class="table-key" colspan="5">所属项目：</td>
+          <td colspan="15" con_name="project"></td>
+          <td class="table-key" colspan="5">所属工地：</td>
+          <td colspan="15" con_name="site"></td>
+        </tr>
+        <tr>
+          <td colspan='5' class=" table-key">联系人：</td>
+          <td colspan='15' con_name="contract"></td>
+          <td colspan='5' class=" table-key">联系电话：</td>
+          <td colspan='15' con_name="contractNumber"></td>
+        </tr>
+        <tr>
+          <td colspan='5' class=" table-key">指定人：</td>
+          <td colspan='35' con_name="assigner"></td>
+        </tr>
+        <tr>
+          <td class="table-key" colspan="5">备注：</td>
+          <td colspan="35" con_name="remark"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!--合同基本信息结束-->
+  <!--合同清单-->
+    <div class="contract-details">
+      <div class="title-box">
+        <span>工单清单</span>
+      </div>
+      <div class="table-list">
+        <table class="table table-border table-bordered table-bg table-hover">
+          <thead>
+          <tr class="text-c">
+            <th width="150">设备名称</th>
+            <th width="110">规格型号</th>
+            <th>厂商</th>
+            <th width="80">单价（元）</th>
+            <th width="70">单位</th>
+            <th width="95">未入库/数量</th>
+            <th width="80">操作</th>
+          </tr>
+          </thead>
+          <tbody class="tbody">
+
+          </tbody>
+        </table>
+        <div class="no-data">暂无数据</div>
+      </div>
+    </div>
+  <!--合同清单结束-->
+  <!--设备清单-->
+  <div class="equipment-details">
+    <div class="title-box">
+      <span>设备清单</span>
+    </div>
+    <div class="tabBar cl">
+      <span class="now">
+          确认入库
+      </span>
+      <span class="history">
+          已入库
+      </span>
+    </div>
+    <div class="con_hint">
+      <div class="con_hint_l">说明：</div>
+      <div class="con_hint_r">
+        <p>没有确认入库的设备清单不会进行入库！</p>
+      </div>
+    </div>
+    <div id="hide-box" class="hidden">
+      <div class="cl edit-able">
+        <div class="li-header cl">
+          <div class="order"></div>
+          <div class="equ-logo"></div>
+          <label class="inline-label input-tree equ-type">
+            <span class="c-gray"><span class="c-red">*</span>设备分类：</span>
+            <input class="input-text" readonly con_name="equipmentId">
+            <ul class="tree">
+
+            </ul>
+          </label>
+
+          <label class="inline-label">
+            <span class="c-gray">设备名称：</span>
+            <span class="edit-disabled text-overflow" con_name="assetName"></span>
+          </label>
+
+          <label class="inline-label">
+            <span class="c-gray">型号：</span>
+            <textarea class="textarea" con_name="specifications"></textarea>
+          </label>
+
+          <label class="inline-label">
+            <span class="c-gray">厂商：</span>
+            <textarea class="textarea" con_name="manufacturer"></textarea>
+          </label>
+
+          <a class="ml-5 mr-10 delete r c-warning" href="javascript:;" title="删除">
+            <i class="Hui-iconfont">&#xe6e2;</i>
+          </a>
+          <a class="ml-5 sure r" href="javascript:;" title="确定">
+            <i class="Hui-iconfont">&#xe676;</i>
+          </a>
+
+        </div>
+        <div class="li-body cl">
+          <div class="div-td" cls="deviceCode">
+            <textarea class="textarea" con_name="deviceCode"></textarea>
+          </div>
+
+          <div class="div-td" cls="assetCode">
+            <textarea class="textarea" con_name="assetCode"></textarea>
+          </div>
+
+          <div class="div-td input-tree shelf-position" cls="shelfId">
+            <input class="input-text" readonly con_name="shelfId">
+            <ul class="tree">
+
+            </ul>
+          </div>
+
+          <div class="div-td" cls="price">
+            <textarea class="textarea" con_name="price"></textarea>
+          </div>
+
+          <div class="div-td" cls="quantity">
+            <textarea class="textarea" con_name="quantity"></textarea>
+          </div>
+
+          <div class="div-td" cls="unit">
+            <textarea class="textarea" con_name="unit"></textarea>
+          </div>
+
+          <div class="div-td width-auto" cls="remark">
+            <textarea class="textarea" con_name="remark"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="cl edit-disable">
+        <div class="cl">
+          <div class="li-header cl">
+            <div class="order"></div>
+            <div class="equ-logo"></div>
+            <label class="inline-label">
+              <span class="c-gray"><span class="c-red">*</span>设备分类：</span>
+              <span class="edit-disabled text-overflow" con_name="equipmentId"></span>
+            </label>
+            <label class="inline-label">
+              <span class="c-gray">设备名称：</span>
+              <span class="edit-disabled text-overflow" con_name="assetName"></span>
+            </label>
+            <label class="inline-label">
+              <span class="c-gray">型号：</span>
+              <span class="edit-disabled text-overflow" con_name="specifications"></span>
+            </label>
+            <label class="inline-label">
+              <span class="c-gray">厂商：</span>
+              <span class="edit-disabled text-overflow" con_name="manufacturer"></span>
+            </label>
+            <a class="ml-5 mr-10 delete r c-warning" href="javascript:;" title="删除">
+              <i class="Hui-iconfont">&#xe6e2;</i>
+            </a>
+            <a class="ml-5 deal r" href="javascript:;" title="编辑">
+              <i class="Hui-iconfont">&#xe70c;</i>
+            </a>
+            <a class="print r" href="javascript:;" title="打印标签">
+              <i class="fa fa-print mr-5" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="li-body cl">
+          <div class="div-td" cls="deviceCode">
+            <p class="text-overflow" con_name="deviceCode"></p>
+          </div>
+          <div class="div-td" cls="assetCode">
+            <p class="text-overflow" con_name="assetCode"></p>
+          </div>
+          <div class="div-td" cls="shelfId">
+            <p class="text-overflow" con_name="shelfId"></p>
+          </div>
+          <div class="div-td" cls="price">
+            <p class="text-overflow" con_name="price"></p>
+          </div>
+          <div class="div-td" cls="quantity">
+            <p class="text-overflow" con_name="quantity"></p>
+          </div>
+          <div class="div-td" cls="unit">
+            <p class="text-overflow" con_name="unit"></p>
+          </div>
+          <div class="div-td width-auto" cls="remark">
+            <p con_name="remark" title=""></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabCon">
+      <div class="table-title">
+        <div class="border-l"><span class="c-red">*</span>设备编号</div>
+        <div>基地资产编号</div>
+        <div cls="shelfId"><span class="c-red">*</span>货架</div>
+        <div cls="price"><span class="c-red">*</span>单价（元）</div>
+        <div cls="quantity"><span class="c-red">*</span>数量</div>
+        <div cls="unit">单位</div>
+        <div cls="remark">说明</div>
+      </div>
+      <ul class="equ-det-list list-now">
+
+      </ul>
+      <div class="no-data">暂无数据</div>
+    </div>
+
+    <div class="tabCon">
+      <!--搜索区-->
+      <div class="row cl search-area">
+        <div class="l cl mr-20">
+          <label class="form-label l label-key">名称：</label>
+          <div class="formControls l">
+            <input type="text" class="input-text" con_name="storedetailName">
+          </div>
+        </div>
+
+        <!--<div class="l cl">
+          <label class="form-label l label-key">编号：</label>
+          <div class="formControls l">
+            <input type="text" class="input-text" con_name="storedetailCode">
+          </div>
+        </div>-->
+
+        <div class="r">
+          <button class="print-all btn btn-success radius ml-10 r">
+            <i class="fa fa-print mr-5" aria-hidden="true"></i>
+            打印标签
+          </button>
+          <button class="btn btn-success radius r find-btn">
+            <i class="Hui-iconfont mr-5">&#xe665;</i>
+            查询
+          </button>
+        </div>
+      </div>
+      <!--搜索区结束-->
+      <div class="table-title">
+        <div class="border-l"><span class="c-red">*</span>设备编号</div>
+        <div>基地资产编号</div>
+        <div cls="shelfId"><span class="c-red">*</span>货架</div>
+        <div cls="price"><span class="c-red">*</span>单价（元）</div>
+        <div cls="quantity"><span class="c-red">*</span>数量</div>
+        <div cls="unit">单位</div>
+        <div cls="remark">说明</div>
+      </div>
+      <ul class="equ-det-list list-history">
+
+      </ul>
+      <div class="no-data">暂无数据</div>
+      <!--分页-->
+      <div class="pagination-box">
+        <div class="pagination cl">
+          <div id="pagination" class="l"></div>
+        </div>
+      </div>
+      <!--分页结束-->
+    </div>
+  </div>
+  <!--设备清单结束-->
+  <!--按钮-->
+  <!--<div class="row cl mt-20 mb-10">
+    <div class="btns-group text-c">
+      <button href="javascript:;" class="btn btn-success radius save" value="0">
+        <i class="Hui-iconfont mr-5">&#xe632;</i>
+        保存
+      </button>
+    </div>
+  </div>-->
+  <!--按钮结束-->
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/strg-work-order-storage.js"></script>
+</body>
+</html>

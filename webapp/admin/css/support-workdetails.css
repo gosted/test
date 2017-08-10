@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/**
+ * 本文件是流程详情页样式文件
+ *@author 陈安
+ */
+#DataTables_Table_0_wrapper .childdiv {
+  text-align: center;
+  height: 30px;
+  line-height: 30px; }
+#DataTables_Table_0_wrapper .parentdiv {
+  text-align: center;
+  background-color: #006fbb;
+  color: #fff;
+  height: 30px;
+  line-height: 30px; }
+#DataTables_Table_0_wrapper button {
+  line-height: 26px;
+  height: 24px;
+  background: #f0f0f0; }
+
+/*# sourceMappingURL=support-workdetails.css.map */

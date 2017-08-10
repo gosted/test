@@ -1,0 +1,299 @@
+﻿<!--
+ * 本文件是首页html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="images/favicon.ico" >
+<LINK rel="Shortcut Icon" href="images/favicon.ico" />
+
+<link href="css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="skin/default/skin.css" rel="stylesheet" type="text/css" id="skin" />
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<script type="text/javascript" src="lib/PIE-2.0beta1/PIE_IE678.js"></script>
+<![endif]-->
+
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>智慧工地业务营销支撑平台</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+</head>
+<body>
+<header class="Hui-header cl">
+	<h1 class="logo-box l cl">
+		<a class="logo" title="" href="index.html">
+			<img src="images/commen/logo_04.png" alt="logo">
+		</a>
+		<a class="logo logo-title" title="" href="index.html">
+			智慧工地业务营销支撑平台
+		</a>
+	</h1>
+
+	<ul class="Hui-userbar">
+		<li>您好！</li>
+		<li class="dropDown dropDown_hover"><a href="#" class="dropDown_A" id="user"><i class="Hui-iconfont">&#xe6d5;</i></a>
+			<ul class="dropDown-menu radius box-shadow">
+				<li><a href="javascript:void(0);" id="selfInfo">个人信息</a></li>
+				<li><a href="javascript:void(0);" id="editPsw">修改密码</a></li>
+				<li><a href="javascript:void(0);" id="logout">退出</a></li>
+			</ul>
+		</li>
+		<!-- <li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">1</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
+		<li id="Hui-skin" class="dropDown right dropDown_hover"><a href="javascript:;" title="换肤"><i class="Hui-iconfont" style="font-size:18px">&#xe62a;</i></a>
+			<ul class="dropDown-menu radius box-shadow">
+				<li><a href="javascript:;" data-val="default" title="默认（蓝色）">默认（蓝色）</a></li>-->
+				<!--<li><a href="javascript:;" data-val="blue" title="蓝色">蓝色</a></li>-->
+				<!--<li><a href="javascript:;" data-val="green" title="绿色">绿色</a></li>
+				<li><a href="javascript:;" data-val="red" title="红色">红色</a></li>
+				<li><a href="javascript:;" data-val="yellow" title="黄色">黄色</a></li>
+				<li><a href="javascript:;" data-val="orange" title="绿色">橙色</a></li>
+			</ul>
+		</li>-->
+	</ul>
+	<a href="javascript:;" class="Hui-nav-toggle Hui-iconfont" aria-hidden="false">&#xe667;</a> </header>
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<dl id="menuNews">
+			<dt class="cl">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">系统消息</span>
+				<span class="news-num">0</span>
+			</dt>
+			<dd>
+				<ul style="display: none;">
+					<li><a _href="html/sys-news.html" data-title="系统消息" href="javascript:void(0)">系统消息</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menuPreSupt">
+			<dt class="cl selected">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">前期支撑</span>
+				<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+			</dt>
+			<dd style="display: block;">
+				<ul>
+
+				</ul>
+			</dd>
+		</dl>
+		
+		<dl id="menuSupportCount">
+			<dt class="cl">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">支撑统计</span>
+				<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+			</dt>
+			<dd>
+				<ul>
+					
+				</ul>
+			</dd>
+		</dl>
+
+		<dl id="menuProjectManage">
+			<dt class="cl">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">项目管理</span>
+				<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+			</dt>
+			<dd>
+				<ul>
+
+				</ul>
+			</dd>
+		</dl>
+
+		<dl id="menuStorageManage">
+			<dt class="cl">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">库存管理</span>
+				<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+			</dt>
+			<dd>
+				<ul>
+
+				</ul>
+			</dd>
+		</dl>
+
+		<dl id="menuAssetManage">
+			<dt class="cl">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">资产管理</span>
+				<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+			</dt>
+			<dd>
+				<ul>
+
+				</ul>
+			</dd>
+		</dl>
+
+		<dl id="menuProviderManage">
+			<dt class="cl">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">合作伙伴</span>
+				<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+			</dt>
+			<dd>
+				<ul>
+
+				</ul>
+			</dd>
+		</dl>
+
+		<dl id="menuNewsManage">
+			<dt class="cl">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">业务门户维护</span>
+				<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+			</dt>
+			<dd>
+				<ul>
+
+				</ul>
+			</dd>
+		</dl>
+
+		<dl id="menuSystem">
+			<dt class="cl">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">系统管理</span>
+				<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+			</dt>
+			<dd>
+				<ul>
+
+				</ul>
+			</dd>
+		</dl>
+
+		<dl id="menuDataStatistics">
+			<dt class="cl">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">数据统计</span>
+				<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+			</dt>
+			<dd>
+				<ul>
+
+				</ul>
+			</dd>
+		</dl>
+
+		<dl id="menuService">
+			<dt class="cl">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">售后服务</span>
+				<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+			</dt>
+			<dd>
+				<ul>
+
+				</ul>
+			</dd>
+		</dl>
+
+		<dl id="menuProblem">
+			<dt class="cl">
+				<i class="Hui-iconfont menu-logo"></i>
+				<span class="menu-txt">系统帮助</span>
+				<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+			</dt>
+			<dd>
+				<ul>
+					<li><a _href="html/problem.html" data-title="常见问题" href="javascript:void(0)">常见问题</a></li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</aside>
+<div class="dislpayArrow"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+	<div id="Hui-tabNav" class="Hui-tabNav">
+		<div class="Hui-tabNav-wp">
+			<ul id="min_title_list" class="acrossTab cl">
+				<li class="active"><span title="首页" data-href="welcome.html">首页</span><em></em></li>
+			</ul>
+		</div>
+		<div class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d4;</i></a><a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d7;</i></a></div>
+	</div>
+	<div id="iframe_box" class="Hui-article">
+		<div class="show_iframe">
+			<div style="display:none" class="loading"></div>
+			<iframe scrolling="yes" frameborder="0" src="html/welcome-new.html"></iframe>
+		</div>
+	</div>
+</section>
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/H-ui.js"></script> 
+<script type="text/javascript" src="js/H-ui.admin.js"></script> 
+<script type="text/javascript">
+/*资讯-添加*/
+function article_add(title,url){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+/*图片-添加*/
+function picture_add(title,url){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+/*产品-添加*/
+function product_add(title,url){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+/*用户-添加*/
+function member_add(title,url,w,h){
+	layer_show(title,url,w,h);
+}
+</script> 
+<!--<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s)})();
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
+
+</script>-->
+	<script type="text/javascript" src="js/commen.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

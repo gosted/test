@@ -1,0 +1,247 @@
+<!--
+ * 本文件是资产登记状态变更html文件
+ * @author 彭佳明
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/pro-manage-add.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>资产查看</title>
+</head>
+<body>
+
+<div class="pt-10">
+    <div id="table-box1" class="table-box asset">
+
+        <table  class="assetRegister form-table table table-border table-bordered table-bg">
+            <tr>
+                <td class="table-key" colspan="5">设备名称：</td>
+                <td colspan="15" class="has-tip has-partnerCode" con_name="assetName"></td>
+                <td class="table-key" colspan="5">设备编号：</td>
+                <td colspan="15" class="has-tip" con_name="deviceCode"></td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">设备分类：</td>
+                <td colspan="15" class="has-tip equipmentName"></td>
+                <td class="table-key" colspan="5">规格型号：</td>
+                <td colspan="15" class="has-tip" con_name="specifications"></td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">资产编号：</td>
+                <td colspan="15" class="has-tip" con_name="assetCode"></td>
+                <td class="table-key" colspan="5">资产状态：</td>
+                <td style="padding-left:0;" colspan="15" class="has-tip">
+                    <div class="formControls cl" style="border-right:1px solid #ddd;">
+                        <select datatype="*" nullmsg=" "  errormsg=" "  name="" class="input-text assetStatus">
+                            <option value="ZCZT-SY">使用中</option>
+                            <option value="ZCZT-WSY">未使用</option>
+                            <option value="ZCZT-WX">维修</option>
+                            <option value="ZCZT-BF">报废</option>
+                            <option value="ZCZT-DS">丢失</option>
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">位置状态：</td>
+                <td colspan="15" class="has-tip positionStatus"></td>
+                <td class="table-key" colspan="5">设备状态：</td>
+                <td colspan="15" class="has-tip equStatus"></td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">单价：</td>
+                <td colspan="15" class="has-tip" con_name="price"></td>
+                <td class="table-key" colspan="5">公司编号：</td>
+                <td colspan="15" class="has-tip" con_name="companyCode"></td>
+            </tr>
+
+
+            <tr>
+                <td style="padding-left:0;" class="table-key" colspan="5">单位：</td>
+                <td colspan="15" class="has-tip" con_name="unit"></td>
+                <td style="padding-left:0;" class="table-key" colspan="5">厂商：</td>
+                <td colspan="15" class="has-tip" con_name="manufacturer"></td>
+            </tr>
+            <tr>
+                <td colspan='5' class=" table-key">折旧期限(月)：</td>
+                <td colspan='15' class="recordStartTime has-tip" con_name="durableYears"></td>
+                <td colspan='5' class=" table-key">残值率(%)：</td>
+                <td colspan='15' class="recordStartTime has-tip" con_name="residualRate"></tr>
+            <tr>
+                <td colspan='5' class=" table-key">月折旧比(%)：</td>
+                <td colspan='15' class="recordStartTime has-tip" con_name="depreciationRate"></td>
+                <td colspan="20"></td>
+            </tr>
+            <tr class="hideEle">
+                <td style="background:#fff;padding:10px 0;border-left:0;border-right:0;" colspan="39"><span style="border-left:3px solid #ff7200;padding-right:4px;"></span>现场设备</td>
+            </tr>
+            <tr class="hideEle">
+                <td class="table-key" colspan="5"><span class="c-red">*</span>所在项目：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl" style="border-right:1px solid #ddd;">
+                        <select  datatype="*" nullmsg=" "  errormsg=" " name="" class="input-text projectId">
+                            <option value="choose">请选择</option>
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>子项目：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl" style="border-right:1px solid #ddd;">
+                        <select datatype="*" nullmsg=" "  errormsg=" " name="" class="input-text subProject">
+                            <option value="choose">请选择</option>
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr class="hideEle">
+                <td class="table-key" colspan="5"><span class="c-red">*</span>所在工地：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl" style="border-right:1px solid #ddd;">
+                        <select datatype="*" nullmsg=" "  errormsg=" " name="" class="input-text workSite">
+                            <option value="choose">请选择</option>
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>安装位置：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl">
+                        <input style="width:264px;" type="text" class="input-text input-type assetPosition" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+
+            </tr>
+
+            <tr class="hideEle">
+                <td class="table-key" colspan="5"><span class="c-red">*</span>安装人：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl">
+                        <input style="width:264px;"  type="text" class="input-text input-type installPeople" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td style="padding-left:0;" class="table-key" colspan="5"><span class="c-red">*</span>安装时间：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls l cl" style="width: 264px;">
+                        <input class="input-text table-input Wdate over-date input-type newsEditData installTime" type="text" datatype="*" nullmsg=" " errormsg=" " onfocus="WdatePicker()" con_na="userMajorUnit">
+                    </div>
+                    <div class="msg-tip" title="请填写安装时间"> </div>
+                </td>
+            </tr>
+            <tr class="hideEle">
+                <td class="table-key" colspan="5">附件：</td>
+                <td colspan="35" class="formControls">
+                    <form id="upload" class="upload-form" enctype ="multipart/form-data">
+                        <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传附件</a>
+                        <input type="file" name="file" class="upload-file upload-file0">
+                    </form>
+                </td>
+            </tr>
+
+            <tr class="hideEle">
+                <td class="table-key" colspan="5"></td>
+                <td colspan="35" class="formControls file-list">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="remarkTop" colspan="39"><div ><span></span>备注： <a href="javascript:;"><i  title="添加" class="fa fa-plus-circle fa-lg btn-add"></i></a></div></td>
+            </tr>
+            <tr class="remarkTitle">
+                <td class="table-key" colspan="5"><i style="display:none" title="收缩" class="fa  fa-minus-circle fa-lg btn-tap"></i><i style="display:none" title="删除" class="fa fa-times-circle btn-del"></i>姓名：</td>
+                <td colspan="10" class="has-tip">
+                    <div class="formControls cl">
+                        <input  type="text" class="input-text input-type name" datatype="*" ignore="ignore"  nullmsg=" " errormsg=" "  con_na="name">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="3">电话：</td>
+                <td colspan="10" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type phone" ignore="ignore" datatype="m|phone"  nullmsg=" " errormsg=" " con_na="phone">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+
+                <td style="padding-left:0;" class="table-key" colspan="3">时间：</td>
+                <td colspan="9" class="has-tip">
+                    <div class="formControls l cl">
+                        <input class="input-text table-input Wdate over-date input-type newsEditData time" type="text" onfocus="WdatePicker()" ignore="ignore" con_na="time">
+                    </div>
+                    <div class="msg-tip" title="请正确填写时间"> </div>
+                </td>
+            </tr>
+            <tr class="remarkContent">
+                <td class="table-key" colspan="5">内容：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls cl con_textarea">
+                        <textarea rows="3"  style="width:663px;" class="textarea content"  dragonfly="true" datatype="*" ignore="ignore" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr class="remarkAttach">
+                <td class="table-key" colspan="5">附件：</td>
+                <td colspan="35" class="formControls">
+                    <form id="upload-form1" class="upload-form" enctype ="multipart/form-data">
+                        <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传附件</a>
+                        <input type="file" name="file" class="upload-file upload-file1">
+                    </form>
+                </td>
+            </tr>
+            <tr class="remarkAttachContent">
+                <td class="table-key" colspan="5"></td>
+                <td colspan="35" class="formControls new-list file-list1">
+                </td>
+            </tr>
+        </table>
+
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn btn-success radius mr-10 save">
+                <i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存
+            </button>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/asset-register-editStatus.js"></script>
+</body>
+</html>

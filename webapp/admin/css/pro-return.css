@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/**
+ * 本文件是样式文件
+ * @author 王步华
+ */
+.oder {
+  height: 30px;
+  line-height: 30px;
+  padding: 3px 0;
+  box-shadow: 3px 3px 3px #dfdfdf;
+  -webkit-box-shadow: 3px 3px 3px #dfdfdf;
+  -moz-box-shadow: 3px 3px 3px #dfdfdf;
+  border-bottom: 1px solid #DFDFDF; }
+  .oder span {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    border-left: 3px solid orange;
+    padding-left: 10px; }
+
+.getList i {
+  font-size: 15px; }
+
+.widthChange {
+  width: 320px;
+  border: 1px solid #ddd;
+  position: relative;
+  top: -1px; }
+
+.tableList .widthChange {
+  width: 100%;
+  background: #FFFFFF; }
+
+.needChoose {
+  border: 1px solid #ddd;
+  position: relative;
+  top: -1px; }
+
+.needChoose:hover {
+  border: 1px solid #006BFF; }
+
+.addBtn {
+  cursor: pointer; }
+
+.firstTr td {
+  text-align: center; }
+
+.tableCenter td {
+  text-align: center; }
+
+.selfDefine {
+  width: 100px;
+  border: 1px solid #eee;
+  background: #FEF6F6;
+  height: 30px;
+  line-height: 30px;
+  text-align: right; }
+
+.btn-add {
+  font-size: 15px; }
+
+.changePos {
+  position: relative;
+  top: 2px; }
+
+.import {
+  float: left;
+  margin-top: 8px; }
+
+.import .table-key {
+  float: left; }
+
+.import .text-c {
+  float: left; }
+
+.import .text-c button {
+  margin-left: 4px; }
+
+.addList .input-text {
+  height: 22px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  position: relative;
+  top: -1px; }
+
+.addList .input-text:hover {
+  border: 1px solid #006BFF; }
+
+.parType {
+  overflow: auto;
+  display: none;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  max-height: 200px;
+  padding: 0;
+  background: -webkit-linear-gradient(#d9f0ff, #f0f7ff);
+  background: -o-linear-gradient(#d9f0ff, #f0f7ff);
+  background: -moz-linear-gradient(#d9f0ff, #f0f7ff);
+  background: linear-gradient(#d9f0ff, #f0f7ff); }
+
+.parType li {
+  padding-left: 8px; }
+
+/*# sourceMappingURL=pro-return.css.map */

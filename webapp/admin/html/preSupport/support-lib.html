@@ -1,0 +1,178 @@
+﻿<!--
+ * 本文件是支撑方案库html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="/favicon.ico" >
+<LINK rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../lib/html5.js"></script>
+<script type="text/javascript" src="../../lib/respond.min.js"></script>
+<script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+<![endif]-->
+<link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../../css/support-lib.css" rel="stylesheet" type="text/css" />
+
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>支撑方案为库</title>
+</head>
+<body>
+<nav class="breadcrumb">
+  <i class="Hui-iconfont clr-blue">&#xe67f;</i> 首页
+  <span class="c-gray en">&gt;</span> 前期支撑
+  <span class="c-gray en">&gt;</span>
+  <span class="clr-blue">支撑方案库</span>
+  <a class="btn btn-success radius r mr-20 refresh" href="javascript:location.replace(location.href);" title="刷新" >
+    <i class="Hui-iconfont">&#xe68f;</i>
+  </a>
+</nav>
+<div class="pr-20">
+  <div class="ctn-box">
+    <ul id="tree" class="tree">
+	</ul>
+    <div class="ctn">
+      <!--搜索区-->
+      <div class="search-area lib-search">
+        <div class="row cl pt-10">
+
+          <div class="l cl f-l">
+            <label class="form-label l label-key">方案名称：</label>
+            <div class="formControls l">
+              <input type="text" class="input-text" con_name="prName">
+            </div>
+          </div>
+
+
+
+       <!--   <div class="col-5 f-l">
+            <label class="form-label col-2">方案名称：</label>
+            <div class="formControls col-6">
+              <input type="text" class="input-text" con_name="prName">
+            </div>
+          </div>-->
+
+          <div class="l cl key-words">
+            <label class="form-label l label-key">关键字：</label>
+            <div class="formControls l">
+              <input type="text" class="input-text" con_name="prLabel">
+            </div>
+          </div>
+
+
+	<!--	<div class="col-5 f-l key-words">
+          <label class="form-label col-2">关键字：</label>
+          <div class="formControls col-6">
+            <input type="text" class="input-text" con_name="prLabel">
+          </div>
+        </div>-->
+
+
+          <div class="r">
+            <a href="javascript:;" class="btn btn-success radius f-r mr-5 btn-find">
+              <i class="Hui-iconfont">&#xe665;</i>
+              查询
+            </a>
+          </div>
+
+
+      <!--  <div class="col-2">
+          <a href="javascript:;" class="btn btn-success radius f-r mr-5 btn-find">
+            <i class="Hui-iconfont">&#xe665;</i>
+            查询
+          </a>
+        </div>-->
+        
+        </div>
+      </div>
+
+      <div class="row cl mt-5 lib-search">
+      
+              
+         <!-- <div class="col-1 pt-2">
+            <a href="javascript:;" class="btn btn-success radius f-r mr-5 btn-add">
+              <i class="Hui-iconfont">&#xe600;</i>
+              添加
+            </a>
+          </div>-->
+
+        <div class="l">
+          <a href="javascript:;" class="btn btn-success radius f-r mr-5 btn-add">
+            <i class="Hui-iconfont">&#xe600;</i>
+            添加
+          </a>
+        </div>
+        
+          <!-- div class="col-5 f-l">
+            <label class="form-label col-3">编号：</label>
+            <div class="formControls col-8">
+              <input type="text" class="input-text" con_name="planCode">
+            </div>
+          </div>
+        <div class="col-5 f-l">
+          <label class="form-label col-4">备注：</label>
+          <div class="formControls col-8">
+            <input type="text" class="input-text" con_name="prRemark">
+          </div>
+        </div -->
+
+
+      </div>
+      <!--搜索区结束-->
+      <!--列表区-->
+      <div class="mt-5">
+        <table class="table table-border table-bordered table-bg table-hover" style="table-layout: fixed;">
+          <thead>
+          <tr class="text-c">
+            <th width="25"><input type="checkbox" name="" value=""></th>
+            <th width="140">编号</th>
+            <th>方案名称</th>
+            <th width="100">关键字</th>
+            <!-- th width="120">分类</th -->
+            <th width="80">操作</th>
+          </tr>
+          </thead>
+          <tbody class="tbody">
+
+          </tbody>
+        </table>
+        <div class="no-data">暂无数据</div>
+      </div>
+      <!--列表区结束-->
+      <!--分页-->
+      <div class="pagination-box">
+        <div class="pagination cl">
+          <div id="pagination" class="l"></div>
+        </div>
+      </div>
+      <!--分页结束-->
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/support-lib.js"></script>
+
+<!--<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../../lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>-->
+</body>
+</html>

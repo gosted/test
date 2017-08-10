@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/**
+ * 本文件是需求详情页样式文件
+ * @author 张欢
+ */
+.tbody b {
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+}
+.tbody .td-down {
+  text-align: center;
+  cursor: pointer;
+}
+
+.doc {
+  background: url("../images/commen/icon_47.png") no-repeat;
+}
+
+.xls {
+  background: url("../images/commen/icon_50.png") no-repeat;
+}
+
+.ppt {
+  background: url("../images/commen/icon_44.png") no-repeat;
+}
+
+.pdf {
+  background: url("../images/commen/icon_54.png") no-repeat;
+}
+
+.other {
+  background: url("../images/commen/unknown.png") no-repeat;
+}
+
+.long-label {
+  height: 28px;
+  border-bottom: 2px solid #d2edff;
+}
+.long-label span {
+  display: inline-block;
+}
+.long-label .lab-cnt {
+  height: 28px;
+  line-height: 28px;
+  background: #d2edff;
+  padding: 0 14px;
+}
+.long-label .brdr {
+  width: 0;
+  height: 0;
+  border: 15px solid #d2edff;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.table-box {
+  width: 800px;
+  margin: 10px auto 0;
+}
+.table-box .form-table {
+  margin-top: 10px;
+}
+
+table p {
+  margin-bottom: 0;
+}
+
+b {
+  width: 18px;
+  height: 16px;
+  display: inline-block;
+  float: left;
+  margin-top: 6px;
+}
+
+.table-box .form-table .table-key {
+  background: #FEF6F6;
+}
+
+.need-infmt > div {
+  display: none;
+}
+
+/*# sourceMappingURL=support-details.css.map */

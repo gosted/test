@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/**
+ * 本文件是首页样式文件
+ * @author 鲍哲
+ */
+.div-header {
+  width: 822px;
+  overflow: hidden; }
+  .div-header > span {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    padding: 3px 0px 5px 3px;
+    background: #F8F8F8;
+    box-shadow: 0px 1px 2px #E4E4E4;
+    margin-bottom: 15px; }
+    .div-header > span .sup-stro {
+      padding-right: 5px;
+      border-right: 1px solid #0087E3;
+      font-size: 14px;
+      font-weight: 900; }
+    .div-header > span .pro-stro {
+      padding-right: 5px;
+      border-right: 1px solid #5EB95E;
+      font-size: 14px;
+      font-weight: 900; }
+    .div-header > span .pro-supr {
+      padding-right: 5px;
+      border-right: 1px solid #1AC2FF;
+      font-size: 14px;
+      font-weight: 900; }
+    .div-header > span .sto-stro {
+      padding-right: 5px;
+      border-right: 1px solid #F0A855;
+      font-size: 14px;
+      font-weight: 900; }
+    .div-header > span .type-support {
+      padding: 2px 15px;
+      display: inline-block;
+      border: 1px solid #FFFFFF;
+      background: #C6E1F4;
+      cursor: pointer; }
+    .div-header > span .type-project {
+      padding: 2px 15px;
+      display: inline-block;
+      border: 1px solid #FFFFFF;
+      background: #D9EBD9;
+      cursor: pointer; }
+    .div-header > span .type-storage {
+      padding: 2px 15px;
+      display: inline-block;
+      border: 1px solid #FFFFFF;
+      background: #F9EAE5;
+      cursor: pointer; }
+    .div-header > span .type-asse {
+      padding: 2px 15px;
+      display: inline-block;
+      border: 1px solid #FFFFFF;
+      background: #F6E8D7;
+      cursor: pointer; }
+    .div-header > span .type-port {
+      padding: 2px 15px;
+      display: inline-block;
+      border: 1px solid #FFFFFF;
+      background: #CCEDF9;
+      cursor: pointer; }
+
+.clearfloat {
+  width: 822px;
+  overflow: hidden; }
+  .clearfloat > div {
+    width: 122px;
+    height: 62px;
+    float: left;
+    margin-right: 18px;
+    margin-bottom: 15px; }
+    .clearfloat > div > span {
+      display: block;
+      text-align: center; }
+    .clearfloat > div > .title_span {
+      height: 27px;
+      line-height: 27px;
+      font-size: 12px;
+      color: #FFFFFF; }
+    .clearfloat > div > .content_span {
+      height: 34px;
+      line-height: 34px;
+      font-size: 20px; }
+  .clearfloat > .clearright {
+    margin-right: 0px; }
+  .clearfloat > .addleft {
+    margin-left: 0px; }
+
+.navblue {
+  color: #000000; }
+
+.navorange {
+  color: #c33d02; }
+
+.navgreen {
+  color: #1e7100; }
+
+.blue-box > div {
+  background: url(../images/index/shouye_blue.png) no-repeat center center; }
+
+.orange-box > div {
+  background: url(../images/index/shouye_green.png) no-repeat center center; }
+
+.green-box > div {
+  background: url(../images/index/shouye_orange.png) no-repeat center center; }
+
+.pink-box > div {
+  background: url(../images/index/shouye_pink.png) no-repeat center center; }
+
+.skylue-box > div {
+  background: url(../images/index/shouye_skyblue.png) no-repeat center center; }
+
+.cp {
+  background: #9FE2FB; }
+
+.none {
+  display: none; }
+
+/*# sourceMappingURL=welcome-new.css.map */

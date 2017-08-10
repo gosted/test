@@ -1,0 +1,166 @@
+﻿<!--
+ * 本文件是无依据入库查看html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <LINK rel="Bookmark" href="../../images/favicon.ico" >
+  <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+  <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/strg-contract-storage.css" rel="stylesheet" type="text/css" />
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../lib/html5.js"></script>
+  <script type="text/javascript" src="../../lib/respond.min.js"></script>
+  <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+  <![endif]-->
+
+  <!--[if IE 6]>
+  <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+  <script>DD_belatedPNG.fix('*');</script>
+  <![endif]-->
+  <title>无依据入库查看</title>
+</head>
+<body>
+
+<div class="form-content  pd-20">
+  <!--设备清单-->
+  <div class="equipment-details">
+    <div class="title-box">
+      <span>设备清单</span>
+    </div>
+    <div class="tabBar cl">
+      <span class="history">
+          已入库
+      </span>
+    </div>
+    <div id="hide-box" class="hidden">
+
+      <div class="cl edit-disable">
+        <div class="cl">
+          <div class="li-header cl">
+            <div class="order"></div>
+            <div class="equ-logo"></div>
+            <label class="inline-label">
+              <span class="c-gray">设备分类：</span>
+              <span class="edit-disabled text-overflow" con_name="equipmentId"></span>
+            </label>
+            <label class="inline-label">
+              <span class="c-gray">设备名称：</span>
+              <span class="edit-disabled text-overflow" con_name="assetName"></span>
+            </label>
+            <label class="inline-label">
+              <span class="c-gray">型号：</span>
+              <span class="edit-disabled text-overflow" con_name="specifications"></span>
+            </label>
+            <label class="inline-label">
+              <span class="c-gray">厂商：</span>
+              <span class="edit-disabled text-overflow" con_name="manufacturer"></span>
+            </label>
+            <a class="print r" href="javascript:;" title="打印标签">
+              <i class="fa fa-print mr-5" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="li-body cl">
+          <div class="div-td" cls="deviceCode">
+            <p class="text-overflow" con_name="deviceCode"></p>
+          </div>
+          <div class="div-td" cls="assetCode">
+            <p class="text-overflow" con_name="assetCode"></p>
+          </div>
+          <div class="div-td" cls="shelfId">
+            <p class="text-overflow" con_name="shelfId"></p>
+          </div>
+          <div class="div-td" cls="price">
+            <p class="text-overflow" con_name="price"></p>
+          </div>
+          <div class="div-td" cls="quantity">
+            <p class="text-overflow" con_name="quantity"></p>
+          </div>
+          <div class="div-td" cls="unit">
+            <p class="text-overflow" con_name="unit"></p>
+          </div>
+          <div class="div-td width-auto" cls="remark">
+            <p con_name="remark" title=""></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabCon">
+      <!--搜索区-->
+      <div class="row cl search-area">
+        <div class="l cl mr-20">
+          <label class="form-label l label-key">名称：</label>
+          <div class="formControls l">
+            <input type="text" class="input-text" con_name="storedetailName">
+          </div>
+        </div>
+
+        <!--<div class="l cl">
+          <label class="form-label l label-key">编号：</label>
+          <div class="formControls l">
+            <input type="text" class="input-text" con_name="storedetailCode">
+          </div>
+        </div>-->
+
+        <div class="r">
+          <button class="print-all btn btn-success radius ml-10 r">
+            <i class="fa fa-print mr-5" aria-hidden="true"></i>
+            打印标签
+          </button>
+          <button class="btn btn-success radius r find-btn">
+            <i class="Hui-iconfont mr-5">&#xe665;</i>
+            查询
+          </button>
+        </div>
+      </div>
+      <!--搜索区结束-->
+      <div class="table-title">
+        <div class="border-l">设备编号</div>
+        <div>基地资产编号</div>
+        <div cls="shelfId">货架</div>
+        <div cls="price">单价（元）</div>
+        <div cls="quantity">数量</div>
+        <div cls="unit">单位</div>
+        <div cls="remark">说明</div>
+      </div>
+      <ul class="equ-det-list list-history">
+
+      </ul>
+      <div class="no-data">暂无数据</div>
+      <!--分页-->
+      <div class="pagination-box">
+        <div class="pagination cl">
+          <div id="pagination" class="l"></div>
+        </div>
+      </div>
+      <!--分页结束-->
+    </div>
+  </div>
+  <!--设备清单结束-->
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/strg-unfounded-storage-view.js"></script>
+</body>
+</html>

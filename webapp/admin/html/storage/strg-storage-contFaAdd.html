@@ -1,0 +1,271 @@
+<!--
+* 固定资产合同-新增页面html文件
+*@author 王步华
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="admin/images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="admin/images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/strg-storage-contFaAdd.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js" ></script>
+    <script type="text/javascript" src="../../lib/respond.min.js" ></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js" ></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>固定资产合同添加</title>
+</head>
+<body>
+<div class="mt-20" id="parentDiv">
+    <div id="table-box" class="table-box">
+        <table  class="form-table table table-border table-bordered table-bg">
+            <tr>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>合同名称：</td>
+                <td colspan='15' class=" has-tip">
+                    <div class="formControls ">
+                        <input type="text" class="input-text input-type contractName" datatype="*" nullmsg=" " errormsg=" " con_name="contractName">
+                    </div>
+                    <div class="msg-tip contName-msg" title="请输入"></div>
+                </td>
+
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>合同编号：</td>
+                <td colspan='15' class="has-tip contractCode-has">
+                    <div class="formControls ">
+                        <input type="text" class="input-text input-type contractCode"  datatype="onlyCoding" nullmsg=" " errormsg=" "  con_name="contractCode">
+                    </div>
+                    <div class="contractCode-msg msg-tip" title="请输入1-20位"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>甲方：</td>
+                <td colspan='15' class=" has-tip">
+                    <div class="formControls ">
+                        <input type="text" class="input-text input-type contractA" datatype="*" nullmsg=" " errormsg=" " con_name="contractA">
+                    </div>
+                    <div class="msg-tip" title="请输入"></div>
+                </td>
+
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>乙方：</td>
+                <td colspan='15' class="has-tip">
+                    <div class="formControls ">
+                        <input type="text" class="input-text input-type contractB"  datatype="*" nullmsg=" " errormsg=" "  con_name="contractB">
+                    </div>
+                    <div class="msg-tip" title="请输入"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>合同履行时间：</td>
+                <td colspan='15' class="has-tip">
+                    <div class="formControls ">
+                        <input class="input-text table-input Wdate input-type contractSignTime" type="text" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'datemax\')}'})" id="datemin"  datatype="*" nullmsg=" " errormsg=" " con_name="performTime">
+                    </div>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+
+                <td colspan='5' class=" table-key">终止时间：</td>
+                <td colspan='15' class="has-tip">
+                    <div class="formControls ">
+                        <input class="input-text table-input Wdate input-type contractSignTime" type="text" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" con_name="endTime">
+                    </div>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan='5' class=" table-key">币种：</td>
+                <td colspan='15' class=" has-tip">
+                    <div class="formControls ">
+                        <select name="storageId" class="input-text currency"  readonly con_name="currency">
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+
+                <td colspan='5' class=" table-key">增值税率(%)：</td>
+                <td colspan='15' class=" has-tip">
+                    <div class="formControls ">
+                        <select name="storageId" class="input-text tax"  readonly con_name="tax">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>含税合同金额：</td>
+                <td colspan='15' class=" has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type contractAmont" placeholder="最多保留两位小数" con_name="contractAmont" datatype="money" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确金额,0~9,999,999,999,999.99元之间"> </div>
+                </td>
+
+                <td colspan='5' class=" table-key">不含税金额：</td>
+                <td colspan='15' class=" has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type amontNoTax" datatype="money" nullmsg=" " errormsg=" " ignore="ignore" con_name="amontNoTax">
+                    </div>
+                    <div class="msg-tip" title="请输入正确金额,0~9,999,999,999,999.99元之间"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="5">备注：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls cl">
+                        <textarea rows="3" con_name="contractIntro" class="textarea return-content contRemarks"  dragonfly="true"  onKeyUp="textarealength(this,500)"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red"></span>附件：</td>
+                <td colspan="35" class="formControls">
+                    <form id="upload" class="upload-form" enctype ="multipart/form-data">
+                        <a class="btn btn-success radius"><i class="Hui-iconfont mr-5">&#xe642;</i>上传文件</a>
+                        <input type="file" name="file" class="upload-file upload-Enclosure">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"></td>
+                <td colspan="35" class="formControls file-list">
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="express">
+        <div class="pt-10 pb-10 express-mian">
+            <div class="table-key selfDefine mb-10"><span class="strg-block"></span><p class="strg-size">自定义属性：</p></div>
+            <table class="table table-border table-bordered table-bg addTable">
+                <thead>
+                    <tr class="text-c thead">
+                        <th width="160" getAttr="parDetlType"><span class="c-red">*</span>名称</th>
+                        <th getAttr="parDetlInfo" ><span class="c-red">*</span>内容</th>
+                        <th width="50">操作</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <tr class="firstTr">
+                        <td><div class="needChoose widthChange pl-3" contenteditable="true"></div></td>
+                        <td><div class="needChoose widthChange pl-3" contenteditable="true"></div></td>
+                        <td class="addBtn" style="text-align: center;">
+                            <a href="javascript:;">
+                                <i title="添加" class="fa fa-plus-square fa-lg" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="detailedList">
+        <div class="pt-10 detailedList-mian">
+            <div class="table-key selfDefines mb-10"><span class="strg-block"></span><p class="strg-size">合同清单：</p></div>
+        </div>
+        <div id="tab-category" class="HuiTab">
+            <div class="cl detail-tap">
+                <div class="pt-5 pb-5">
+                    <form id="upload2" class="upload-form" enctype ="multipart/form-data">
+                        <a class="btn btn-success radius"><i class="Hui-iconfont mr-5">&#xe642;</i>导入</a>
+                        <input type="file" name="file" class="upload-file upload-renderList">
+                    </form>
+                </div>
+            </div>
+
+            <div ind="equipment" class="equipment-cnt">
+                <table class="table table-border table-bordered table-bg table-hover">
+                    <thead>
+                    <tr class="text-c">
+                        <th><span class="c-red">*</span>设备名称</th>
+                        <th width="120">规格型号</th>
+                        <th width="100">厂商</th>
+                        <th width="50"><span class="c-red">*</span>数量</th>
+                        <th width="50"><span class="c-red">*</span>单位</th>
+                        <th width="100">单价</th>
+                        <th width="100">总价</th>
+                        <th>备注</th>
+                        <th width="80">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tbody">
+                    <tr class="text-c editable hidden" delid="" detailType="QDLX-SB">
+                        <td><textarea class="textarea" con_name="detailName"></textarea></td>
+                        <td><textarea class="textarea" con_name="detailModel"></textarea></td>
+                        <td><textarea class="textarea" con_name="detailCompany"></textarea></td>
+                        <td><textarea class="textarea detailCount" con_name="detailCount"></textarea></td>
+                        <td><textarea class="textarea" con_name="detailUnit"></textarea></td>
+                        <td><textarea class="textarea detailPrice" con_name="detailPrice"></textarea></td>
+                        <td><textarea class="textarea detailTotal" con_name="detailTotal"></textarea></td>
+                        <td><textarea class="textarea" con_name="detailRemark"></textarea></td>
+                        <td class="btns">
+                            <a style="text-decoration:none" class="ml-5 sure" href="javascript:;" title="确定">
+                                <i class="Hui-iconfont">&#xe676</i>
+                            </a>
+                            <a style="text-decoration:none" class="ml-5 delete" href="javascript:;" title="删除">
+                                <i class="Hui-iconfont">&#xe6e2;</i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="text-c editable editable-show" delid="" detailType="QDLX-SB">
+                        <td><textarea class="textarea" con_name="detailName"></textarea></td>
+                        <td><textarea class="textarea" con_name="detailModel"></textarea></td>
+                        <td><textarea class="textarea" con_name="detailCompany"></textarea></td>
+                        <td><textarea class="textarea detailCount" con_name="detailCount"></textarea></td>
+                        <td><textarea class="textarea" con_name="detailUnit"></textarea></td>
+                        <td><textarea class="textarea detailPrice" con_name="detailPrice"></textarea></td>
+                        <td><textarea class="textarea detailTotal" con_name="detailTotal"></textarea></td>
+                        <td><textarea class="textarea" con_name="detailRemark"></textarea></td>
+                        <td class="btns">
+                            <a style="text-decoration:none" class="ml-5 add" href="javascript:;" title="添加">
+                                <i class="fa fa-plus-square fa-lg" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="pd-10 text-c">
+        <a href="javascript:;" class="btn btn-success btn-default btn-uploadstar upload-lib radius mr-10 ProgramSubmitButton"><i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存</a>
+    </div>
+
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/strg-storage-contFaAdd.js" ></script>
+</body>
+</html>

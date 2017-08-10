@@ -1,0 +1,230 @@
+.widthChange {
+     width: 320px;
+     border: 1px solid #ddd;
+     text-align:center;
+     height:30px;
+     line-height:30px;
+ }
+.tableCenter:hover{
+    background:#ffe2a9!important;
+}
+.widthChange:hover{
+   /* border: 1px solid #006BFF;*/
+    z-index:1000000;
+}
+.addBtn:hover{
+    background:#ffe2a9;
+}
+.btn-add{
+    color:#006fbb;
+    font-size:18px!important;
+}
+.edit{
+    color:#006fbb;
+}
+.tableList .widthChange{
+    width:98%;
+    text-indent:2px;
+}
+.needChoose{
+    border: 1px solid #ddd;
+    position:relative;
+    top:0;
+    max-width:230px;
+}
+/*.needChoose:hover {
+    border: 1px solid #006BFF;
+}*/
+.text-change{
+    position:absolute;
+    top:0;
+    min-height:30px;
+    z-index:100
+}
+.text-over{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.bg{
+    background:#fff;
+}
+.addBtn{
+    cursor:pointer;
+}
+.firstTr td {
+    text-align: center;
+}
+
+.tableCenter td {
+    text-align: center;
+}
+.selfDefine{
+    width:100px;
+    border:1px solid #eee;
+    background: #FEF6F6;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+}
+.btn-add{
+    font-size:15px;
+}
+.changePos{
+    position:relative;
+    top:2px;
+}
+.import {
+    float: left;
+    margin-top:8px;
+}
+.import .table-key{
+    float:left;
+}
+.import .text-c{
+    float:left;
+}
+.import .text-c button{
+    margin-left:4px;
+}
+.addList .input-text{
+    height: 22px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    position:relative;
+    top:-1px;
+}
+.addList .input-text:hover {
+    border: 1px solid #006BFF;
+}
+.barWarp{
+    width:800px;
+    margin:0 auto;
+}
+.tabBar {
+    height: 32px;
+    border-bottom: 1px solid #939393;
+    background-color: #fff;
+    margin-top: 15px;
+}
+.tabBar span {
+    width: 112px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: none;
+    position:relative;
+}
+.tabBar span .tip-num {
+    display: none;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    font-style: normal;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    text-indent: 3px;
+    white-space: nowrap;
+    color: #fff;
+    background: url(../images/commen/list_tip.png) no-repeat left top;
+}
+.tabBar span.current {
+    background-color: #cfe6ff;
+}
+.tabBar span.current a {
+    color: #006fbb;
+}
+.tabBar span a {
+    display: inline-block;
+    height: 32px;
+    padding-left: 25px;
+}
+.tabBar em {
+    font-style: normal;
+    font-size: 19px;
+    color: #006fbb;
+}
+.tabBar .equipment a {
+    background: url("../images/commen/equ.png") no-repeat left 6px;
+}
+.tabBar .server a {
+    background: url("../images/commen/server.png") no-repeat left 6px;
+}
+.tabBar .other a {
+    background: url("../images/commen/other.png") no-repeat left 6px;
+}
+.asset .remarkTop{
+    padding:15px 0;
+    border-left:0;
+}
+.asset .remarkTop div{
+    background:#eee;
+    width:800px;
+    border-left:0;
+    border-right:0;
+}
+.asset .remarkTop span{
+    border-left:3px solid #ff7200;
+    padding-right:4px;
+}
+.asset .remarkTop i{
+    float:right;
+    line-height:30px;
+    padding-right:10px;
+    color:cornflowerblue;
+    cursor: pointer;
+}
+.asset .remarkTop i:hover{
+    color:blueviolet;
+}
+.asset .btn-tap{
+    padding-right:12px;
+    font-size:15px;
+    color:cornflowerblue;
+    cursor: pointer;
+}
+.asset .btn-tap:hover{
+    color:blueviolet;
+}
+.asset .btn-del{
+    padding-right:12px;
+    font-size:15px;
+    color:cornflowerblue;
+    cursor: pointer;
+    position:relative;
+    top:2px;
+}
+.asset .btn-del:hover{
+    color:blueviolet;
+}
+.workC{
+    width:100%;
+    float:left;
+    height:auto;
+}
+.workC .woc{
+    float:left;
+    width:96%;
+    min-height:26px;
+    line-height:26px;
+    text-indent:4px;
+}
+.workC .sel{
+    float:right;
+    width:26px;
+    min-height:26px;
+    line-height:26px;
+    text-align:center;
+    cursor:pointer;
+}
+.workC .sel i{
+    font-size:16px;
+}
+.workC .sel:hover{
+    color:blueviolet;
+}
+
+

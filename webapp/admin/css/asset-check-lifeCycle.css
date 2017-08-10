@@ -1,0 +1,188 @@
+.lifeCycle{
+    width:95%;
+}
+.top{
+    height:182px;
+    border:1px solid #ddd;
+}
+.top .topTitle{
+    height:30px;
+    background:#e3f0fe;
+}
+.top .topTitle .le{
+    width:32%;
+    line-height:30px;
+    padding-left:1%;
+}
+.top .cb .cl .le{
+    width:32%;
+    padding-left:1%;
+    line-height:32px;
+}
+.sc{
+    color:#999999;
+    display:inline-block;
+    width:100px;
+    text-align:right;
+}
+b{
+    font-weight:normal;
+}
+.position{
+    margin-top:30px;
+    line-height:30px;
+    height:30px;
+    box-shadow: 1px 3px 9px #ddd;
+}
+.postion-bg{
+    background:#f8f8f8;
+    box-shadow: 1px 3px 9px #ccc;
+}
+.position .color{
+    width:8px;
+    color:#ff7200;
+    padding-right:8px;
+}
+.position span{
+    font-weight:700;
+    font-size:13px;
+}
+.table {
+    display: table;
+    width:100%;
+    margin-top:10px;
+}
+.row {
+    display: table-row;
+    text-align: center;
+}
+.cell {
+    display: table-cell;
+    border: 1px solid #ddd;
+    padding: 5px;
+    height:50px;
+    border-right:0;
+    vertical-align: middle;
+}
+.cell .ch{
+    height:20px;
+    margin-top:4px;
+}
+.table .fir{
+    background:#e3f0fe;
+    width:8%;
+    vertical-align: middle;
+    border-right:0;
+    font-weight:700;
+    font-size:13px;
+}
+.table .sc{
+    text-align: center;
+}
+.table .sed{
+    width:20%;
+}
+.table .thr{
+    width:15%;
+}
+.table .fou{
+    width:10%;
+}
+.table .fiv{
+    width:20%;
+}
+.table .last{
+    width:25%!important;
+    border-right:1px solid #ddd;
+}
+.table .last .file-list{
+    width: 100%;
+    height: auto;
+    margin: 4px auto 0;
+    text-align: center;
+}
+.file-list span{
+    margin:0;
+}
+.file-list p{
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+.file-list p img{
+    float:none;
+    padding-top:0;
+}
+.eqL{
+    width:100%;
+    margin-top:10px;
+    min-height:80px;
+    border:1px solid #ddd;
+    float:left;
+}
+.eqL .tp{
+    float:left;
+    background:#e3f0fe;
+    height:30px;
+    width:100%;
+}
+.eqL .tp div{
+    float:left;
+}
+.eqL .tp .squ{
+    width:30px;
+    height:30px;
+    background:#bdddff;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.eqL .tp .time{
+    width:12%;
+    background:#bdddff;
+    height:30px;
+    padding-left:13px;
+    line-height:30px;
+}
+.eqL .tp .time .ti{
+    position: relative;
+    left: 40px;
+}
+.eqL .tp .oper{
+    width:68%;
+    padding-left:11%;
+    height:30px;
+    line-height:30px;
+    color:#006fbb;
+    font-weight:700;
+}
+.eqL .bt{
+    width:100%;
+    float:left;
+    position:relative;
+}
+.eqL .bt .sc{
+    line-height:50px;
+}
+.eqL .bt div{
+    float:left;
+}
+.eqL .bt .bto{
+    width:19%;
+}
+.eqL .bt .bto .sc{
+    text-align:left;
+    width:56px;
+    padding-left:12px;
+}
+.eqL .bt .bto .person{
+    width:130px;
+    line-height:50px;
+    height:50px;
+}
+.eqL .bt .btr{
+    width:80%;
+}
+.eqL .bt .btr .remark{
+    width:86%;
+    padding:16px 0 0 4px;
+}

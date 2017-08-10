@@ -1,0 +1,110 @@
+﻿<!--
+ * 本文件是支撑需求单html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="../../images/favicon.ico" >
+<LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+<link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/icheck/icheck.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../../css/support-demand-list.css" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../lib/html5.js"></script>
+<script type="text/javascript" src="../../lib/respond.min.js"></script>
+<script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+<![endif]-->
+
+<!--[if IE 6]>
+<script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>支撑需求单</title>
+</head>
+<body>
+<div class="pt-10">
+  <div class="table-box">
+    <table class="form-table table table-border table-bordered table-bg">
+      <tr>
+        <td class="table-key" colspan="5">业务经理：</td>
+        <td colspan="15" con_name="apprApprover"></td>
+        <td class="table-key" colspan="5">时间：</td>
+        <td colspan="15" con_name="apprTime" _type="timesec"></td>
+      </tr>
+      <tr>
+        <td class="table-key" colspan="5">工作量：</td>
+        <td colspan="15" class="reqWorkload"></td>
+        <td class="table-key" colspan="5">标志：</td>
+        <td colspan="15" class="supr-type"></td>
+      </tr>
+      <tr class="task-info">
+        <td class="table-key" colspan="5">意见：</td>
+        <td colspan="35" con_name="apprOption"></td>
+      </tr>
+
+      <tr>
+        <td class="table-key" colspan="5"><span class="c-red">*</span>结果：</td>
+        <td colspan="35" class="has-tip">
+          <div class="formControls cl">
+            <div class="radio_box l col-1">
+              <input type="radio" id="res-1" name="1" ignore="ignore" datatype="*" nullmsg=" " errormsg=" " value="1" checked>
+              <label for="res-1">同意</label>
+            </div>
+            <div class="radio_box l col-1">
+              <input type="radio" id="res-2" name="1" value="-1">
+              <label for="res-2">不同意</label>
+            </div>
+          </div>
+          <div class="msg-tip" title="请选择"> </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="table-key" colspan="5"><span class="c-red">*</span>意见：</td>
+        <td colspan="35" class="has-tip">
+          <div class="formControls cl">
+            <textarea rows="3" class="textarea appr-option" datatype="*1-200" dragonfly="true" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)">同意</textarea>
+            <p class="textarea-numberbar"><em class="textarea-length">2</em>/200</p>
+          </div>
+          <div class="msg-tip" title="请正确填写"> </div>
+        </td>
+      </tr>
+    </table>
+    <!--按钮-->
+    <div class="row cl mt-20">
+      <div class="btns-group">
+        <button class="btn con-ProgramLibrary radius mr-10 submit">
+          <i class="Hui-iconfont mr-5">&#xe676;</i>
+          提交
+        </button>
+        <button href="javascript:;" class="btn con-ProgramLibrary radius return" value="0">
+          <i class="Hui-iconfont mr-5">&#xe63c;</i>
+          退回
+        </button>
+      </div>
+    </div>
+    <!--按钮结束-->
+  </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/support-demand-list.js"></script>
+
+</body>
+</html>

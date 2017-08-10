@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/**
+ * 本文件是人员管理查看样式文件
+ * @author 王步华
+ */
+.textarea {
+  height: auto; }
+
+.file_c .file_container {
+  overflow: auto; }
+  .file_c .file_container ul {
+    margin: 5px 0; }
+    .file_c .file_container ul li {
+      height: 30px;
+      text-align: left;
+      padding-left: 20px;
+      line-height: 30px; }
+      .file_c .file_container ul li img {
+        float: left;
+        display: inline-block;
+        padding-top: 8px; }
+      .file_c .file_container ul li span {
+        margin-left: 10px; }
+      .file_c .file_container ul li button {
+        float: right;
+        background: #D2EEFA;
+        border: 1px solid transparent;
+        width: 68px;
+        height: 26px;
+        margin-right: 35px; }
+
+.check-box, .radio-box {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+/*# sourceMappingURL=system-user-see.css.map */

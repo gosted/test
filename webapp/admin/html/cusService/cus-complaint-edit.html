@@ -1,0 +1,210 @@
+<!--
+ * 本文件是问题编辑html文件
+ * @author 鲍哲
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>编辑</title>
+</head>
+<body>
+<div>
+    <div id="table-box" class="table-box pt-20">
+        <table id='roleAdd' class="form-table table table-border table-bordered">
+            <tr>
+                <td colspan='7' class=" table-key"><span class="c-red">*</span>投诉名称：</td>
+                <td colspan='13' class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type workOrderName" datatype="*" nullmsg=" " errormsg=" " name="faultName" con_name="complaintName" >
+                    </div>
+                    <div class="msg-tip" title="工单名称"> </div>
+                </td>
+                <td colspan='7' class=" table-key">投诉等级：</td>
+                <td colspan='13' class="recordStartTime has-tip">
+                    <div class="formControls input-tree">
+                        <select  type="selected"  class="select input-text input-type complaintLevel" con_name="complaintLevel">
+
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='7' class=" table-key"><span class="c-red">*</span>投诉对象：</td>
+                <td colspan='33' class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type"  datatype="*" nullmsg=" " errormsg=" "  con_name="complaintObject">
+                    </div>
+                    <div class="msg-tip" title="请输入故障地点"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'><span class="c-red">*</span>所属项目：</td>
+                <td colspan='13' class="has-tip major">
+                    <div class="formControls input-tree">
+                        <select  type="selected" name="projectId" datatype="*" nullmsg=" " errormsg=" " class="select project input-text input-type" con_name="projectId">
+
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请选择所属项目"> </div>
+                </td>
+                <td class="table-key" colspan='7'><span class="c-red">*</span>子项目：</td>
+                <td colspan='13' class="has-tip major">
+                    <div class="formControls input-tree">
+                        <select type="selected" name="subProjectId"  class="select subProject input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="subProjectId">
+
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请选择子项目"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'><span class="c-red">*</span>所属工地：</td>
+                <td colspan='13' class="has-tip major">
+                    <div class="formControls input-tree">
+                        <select type="selected" name="workSiteId" datatype="*" nullmsg=" " errormsg=" " class="select worksite input-text input-type" con_name="workSiteId">
+
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请选择所属工地"> </div>
+                </td>
+                <td colspan='7' class=" table-key"><span class="c-red">*</span>状态：</td>
+                <td colspan='13' class="has-tip major">
+                    <div class="formControls input-tree">
+                        <select type="selected" name="state"  class="select state input-text input-type" con_name="state">
+
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请选择状态"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='7' class=" table-key"><span class="c-red">*</span>投诉人：</td>
+                <td colspan='13' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="complainant" >
+                    </div>
+                    <div class="msg-tip" title="请输入投诉人"> </div>
+                </td>
+                <td colspan='7' class=" table-key"><span class="c-red">*</span>投诉人联系方式：</td>
+                <td colspan='13' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="m|phone" nullmsg=" " errormsg=" " con_name="complaintPhone" >
+                    </div>
+                    <div class="msg-tip" title="请输入投诉人联系电话"> </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan='7' class=" table-key"><span class="c-red">*</span>投诉时间：</td>
+                <td colspan='13' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <input id="d123" type="text" onfocus="WdatePicker({isShowWeek:false})" datatype="*" nullmsg=" " errormsg=" " class="input-text Wdate complaintTime" con_name="complaintTime"/>
+                    </div>
+                    <div class="msg-tip" title="请输入投诉时间"> </div>
+                </td>
+                <td colspan='7' class=" table-key">登记人：</td>
+                <td colspan='13' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type"  nullmsg=" " errormsg=" " con_name="registrantPeople" disabled >
+                    </div>
+                    <div class="msg-tip" title="收货地址"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='7' class=" table-key"><span class="c-red">*</span>登记人联系方式：</td>
+                <td colspan='13' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="m|phone" nullmsg=" " errormsg=" " con_name="registrantPhone" disabled>
+                    </div>
+                    <div class="msg-tip" title=""> </div>
+                </td>
+                <td colspan='7' class=" table-key">登记日期：</td>
+                <td colspan='13' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <input id="d12" type="text" class="input-text registrantTime" con_name="registrantTime" disabled/>
+                    </div>
+                    <div class="msg-tip" title="请输入登记日期"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='7' class=" table-key">投诉陈述：</td>
+                <td colspan='33' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <textarea rows="3" name="complaintPresentation" class="textarea"   dragonfly="true" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)" con_name="complaintPresentation"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+
+                        <!--<input type="text" class="input-text input-type"  nullmsg=" " errormsg=" " con_name="complaintpresentation" >-->
+                    </div>
+                    <div class="msg-tip" title="收货地址"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'>备注：</td>
+                <td colspan='33' class="has-tip">
+                    <div class="formControls accept-textarea cl">
+                        <textarea rows="3" name="remark" class="textarea apprOption"   dragonfly="true" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)" con_name="remark"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                    </div>
+                    <div class="msg-tip" title="请输入您的意见"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'><span class="c-red"></span>附件：</td>
+                <td colspan='33' class="formControls">
+                    <form id="upload" class="upload-form" enctype ="multipart/form-data">
+                        <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+                        <input type="file" name="file" class="upload-files upload-file">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'></td>
+                <td colspan='33' class="formControls file-list">
+
+                </td>
+            </tr>
+        </table>
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn btn-success radius mr-10 save">
+                <i class="Hui-iconfont">&#xe676</i>保存
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/cus-complaint-edit.js" charset="utf-8"></script>
+</body>
+</html>

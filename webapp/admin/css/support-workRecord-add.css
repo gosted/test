@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/*
+* 工作记录页面-新增页面样式文件
+*@author 王步华
+*/
+.ann-diad-div {
+  position: relative;
+  height: 30px; }
+  .ann-diad-div .ann-diad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 30px;
+    width: 80px;
+    color: #ffffff;
+    background: #5eb95e; }
+  .ann-diad-div .ann-diadHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 30px;
+    width: 80px;
+    color: #ffffff;
+    background: #37a737; }
+  .ann-diad-div .ann-diad-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    -o-opacity: 0;
+    *opacity: 0;
+    _opacity: 0;
+    -webkit-opacity: 0;
+    /* Netscape and Older than Firefox 0.9 */
+    -moz-opacity: 0;
+    /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+    -khtml-opacity: 0;
+    /* IE9 + etc...modern browsers */
+    opacity: 0;
+    /* IE 4-9 */
+    filter: alpha(opacity=0);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /*IE4-IE9*/ }
+  .ann-diad-div .ann-diad-show {
+    width: 300px;
+    height: 32px;
+    margin-left: 80px;
+    text-align: left; }
+
+.file_c .file_container {
+  border: 1px solid #DCDCDC;
+  overflow: auto; }
+  .file_c .file_container ul {
+    margin: 5px 0; }
+    .file_c .file_container ul li {
+      height: 30px;
+      text-align: left;
+      padding-left: 20px;
+      line-height: 30px; }
+      .file_c .file_container ul li img {
+        float: left;
+        display: inline-block;
+        padding-top: 8px; }
+      .file_c .file_container ul li span {
+        margin-left: 10px; }
+      .file_c .file_container ul li button {
+        float: right;
+        background: #D2EEFA;
+        border: 1px solid transparent;
+        width: 68px;
+        height: 26px;
+        margin-right: 35px; }
+
+.file-list p {
+  height: 30px;
+  text-align: left;
+  line-height: 30px; }
+.file-list img {
+  float: left;
+  display: inline-block;
+  padding-top: 8px; }
+.file-list span {
+  margin-left: 10px; }
+.file-list button {
+  background: transparent;
+  border: none; }
+
+/*# sourceMappingURL=support-workRecord-add.css.map */

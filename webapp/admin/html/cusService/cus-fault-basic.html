@@ -1,0 +1,170 @@
+<!--
+ * 本文件是故障编辑html文件
+ * @author 鲍哲
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/cus-complaint-basic.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>故障登记</title>
+</head>
+<body>
+<div>
+    <div id="table-box" class="table-box pt-20">
+        <table id='roleAdd' class="form-table table table-border table-bordered">
+
+            <tr>
+                <td colspan='7' class=" table-key">故障名称：</td>
+                <td colspan='13' class="has-tip"  con_name="faultName">
+
+                </td>
+                <td colspan='7' class=" table-key">故障等级：</td>
+                <td colspan='13' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <select  type="selected" disabled name="faultLevel" class="select faultLevel input-type" con_name="faultLevel">
+
+                        </select>
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td colspan='7' class=" table-key">故障设备：</td>
+                <td colspan='13' class="has-tip" con_name="faultEquipment">
+                </td>
+                <td colspan='7' class=" table-key">故障时间：</td>
+                <td colspan='13' class="has-tip faultTime" con_name="faultTime">
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan='7' class=" table-key">故障地点：</td>
+                <td colspan='13' class="has-tip" con_name="faultSite">
+                </td>
+                <td colspan='7' class=" table-key">影响范围：</td>
+                <td colspan='13' class="recordStartTime has-tip" con_name="incidence">
+                </td>
+
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'>所属项目：</td>
+                <td colspan='13' class="has-tip major" con_name="projectName">
+
+                </td>
+                <td colspan='7' class=" table-key">子项目：</td>
+                <td colspan='13' class="recordStartTime has-tip input-tree"  con_name="subprojectName">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'>所属工地：</td>
+                <td colspan='13' class="has-tip major" con_name="workSiteName">
+
+                </td>
+                <td colspan='7' class=" table-key">状态：</td>
+                <td colspan='13' class="has-tip major">
+                    <div class="formControls input-tree">
+                        <select type="selected" name="state" disabled class="select state input-type" con_name="state">
+
+                        </select>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+
+                <td colspan='7' class=" table-key">故障申告人：</td>
+                <td colspan='13' class="recordStartTime has-tip" con_name="reportPeople">
+
+                </td>
+                <td colspan='7' class=" table-key">申告人联系方式：</td>
+                <td colspan='13' class="recordStartTime has-tip" con_name="reportPhone">
+
+                </td>
+
+            </tr>
+            <tr>
+
+                <td colspan='7' class=" table-key">申告日期：</td>
+                <td colspan='13' class="recordStartTime has-tip reportTime" con_name="reportTime">
+
+                </td>
+                <td colspan='7' class=" table-key">登记人：</td>
+                <td colspan='13' class="recordStartTime has-tip" con_name="registrantName">
+
+                </td>
+            </tr>
+            <tr>
+
+                <td colspan='7' class=" table-key">登记人联系方式：</td>
+                <td colspan='13' class="recordStartTime has-tip" con_name="registrantPhone">
+
+                </td>
+                <td colspan='7' class=" table-key">登记日期：</td>
+                <td colspan='13' class="has-tip registrantTime" con_name="registrantTime">
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan='7' class=" table-key"><span class="c-red">*</span>故障现象：</td>
+                <td colspan='33' class="has-tip" con_name="faultPhenomenon">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'>备注：</td>
+                <td colspan='33' class="has-tip" con_name="remark">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'><span class="c-red"></span>附件：</td>
+                <td colspan='33' class="formControls file-list">
+
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/cus-fault-basic.js" charset="utf-8"></script>
+</body>
+</html>

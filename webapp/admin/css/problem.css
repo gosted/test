@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/**
+ * 本文件是问题详情页面样式文件
+ * @author 陈安
+ */
+.font {
+  font-family: "微软雅黑"; }
+
+.prob {
+  border-bottom: 1px dashed #ffb2b2; }
+
+.prob_title {
+  color: #006fbb;
+  font-weight: 900;
+  font-size: 14px;
+  margin-top: 12px; }
+
+.prob_content {
+  font-size: 12px;
+  margin-bottom: 14px; }
+
+.table_browser {
+  width: 30%; }
+
+.H_tr30 {
+  text-align: center; }
+
+.ml-100 {
+  margin-left: 100px; }
+
+.catalogue {
+  overflow: hidden; }
+
+.catalogue ul {
+  float: left; }
+
+.level1 {
+  font-size: 14px;
+  color: #006fbb; }
+
+.rt {
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  width: 20px;
+  text-align: center;
+  height: 100px;
+  cursor: pointer;
+  background: #888888;
+  padding: 5px; }
+
+/*# sourceMappingURL=problem.css.map */

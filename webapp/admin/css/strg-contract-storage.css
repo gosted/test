@@ -1,0 +1,312 @@
+@charset "UTF-8";
+/**
+ * 本文件是合同入库样式文件
+ *@author 张欢
+ */
+/*基本信息*/
+.basic .title-box {
+  background: #f6f6f6;
+}
+.basic .search {
+  height: 42px;
+  border-bottom: 1px solid #e4e4e4;
+  overflow: hidden;
+}
+.basic .search .search-cnt {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 6px;
+}
+.basic .search label .name {
+  line-height: 31px;
+  text-indent: 25px;
+  background: url("../images/commen/contract-code-bg.png") no-repeat left center;
+}
+.basic .search label .input-text {
+  width: 277px;
+  border: none;
+}
+.basic .search label .input-text:hover {
+  border: none;
+}
+.basic .search label .btn {
+  border: none;
+}
+.basic .search label .btn:hover {
+  border: none;
+}
+.basic .search label > div {
+  border: solid 1px #ddd;
+}
+.basic .search label > div:hover {
+  border: solid 1px #3bb4f2;
+}
+.basic .table-box {
+  width: auto;
+  background: #fff;
+  overflow: hidden;
+}
+.basic .table-box .form-table {
+  margin: 0 auto 15px;
+}
+
+/*分类标题*/
+.title-box {
+  width: 800px;
+  height: 32px;
+  border-bottom: 1px solid #e4e4e4;
+  margin: 15px auto;
+  line-height: 32px;
+}
+.title-box span {
+  border-left: 4px solid #ff7200;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 18px;
+  padding-left: 7px;
+}
+
+/*合同清单*/
+.contract-details {
+  background: #f6f6f6;
+  overflow: hidden;
+}
+.contract-details .title-box {
+  background: #fff;
+}
+
+.table-list {
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.table-list .equ-logo {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-position: center left;
+  background: url("../images/temporary/equ_logo.png") no-repeat;
+}
+.table-list .td-view {
+  line-height: 30px;
+}
+
+.c-gray {
+  color: #999999 !important;
+}
+
+/*设备清单*/
+.equipment-details .title-box {
+  background: #f6f6f6;
+  margin-bottom: 10px;
+}
+
+.table-title {
+  width: 800px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 900;
+  margin: 10px auto;
+  background-color: #cfe6ff;
+}
+.table-title div {
+  width: 140px;
+  height: 100%;
+  text-align: center;
+  padding: 0 1px;
+  overflow-x: hidden;
+  float: left;
+  border-right: 1px solid #bbb;
+}
+.table-title div.border-l {
+  border-left: 1px solid #bbb;
+}
+.table-title div[cls="price"] {
+  width: 70px;
+}
+.table-title div[cls="quantity"] {
+  width: 50px;
+}
+.table-title div[cls="unit"] {
+  width: 50px;
+}
+.table-title div[cls="remark"] {
+  width: 188px;
+}
+
+.equ-det-list {
+  width: 800px;
+  margin: 0 auto;
+  /*强调色—警告*/
+}
+.equ-det-list a {
+  color: #006fbb;
+}
+.equ-det-list a:hover {
+  color: #070066;
+}
+.equ-det-list .c-warning,
+.equ-det-list .c-warning a,
+.equ-det-list a.c-warning {
+  color: #f37b1d;
+}
+.equ-det-list .c-warning a:hover,
+.equ-det-list a.c-warning:hover {
+  color: #c85e0b;
+}
+.equ-det-list > li {
+  border: 1px solid #e4e4e4;
+  margin-bottom: 8px;
+}
+.equ-det-list .li-header {
+  height: 32px;
+  background: #eeeeee;
+}
+.equ-det-list .li-header > a {
+  text-decoration: none;
+  font-size: 18px;
+}
+.equ-det-list .order {
+  display: inline-block;
+  width: 32px;
+  height: 100%;
+  line-height: 32px;
+  text-align: center;
+  overflow: hidden;
+  background: #e2e2e2;
+  -webkit-border-bottom-right-radius: 50%;
+  -webkit-border-top-right-radius: 50%;
+  -moz-border-bottom-right-radius: 50%;
+  -moz-border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.equ-det-list .equ-logo {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  background-position: center left;
+  background: url("../images/temporary/equ_logo.png") no-repeat;
+}
+.equ-det-list .inline-label {
+  display: inline-block;
+  height: 100%;
+  line-height: 32px;
+  margin-right: 10px;
+}
+.equ-det-list .inline-label > * {
+  float: left;
+}
+.equ-det-list .inline-label .textarea,
+.equ-det-list .inline-label .input-text {
+  display: inline-block;
+  width: 100px;
+  margin-top: 5px;
+}
+.equ-det-list .textarea,
+.equ-det-list .input-text {
+  position: relative;
+  z-index: 1;
+  height: 23px;
+  text-align: center;
+  padding: 0;
+  line-height: 20px;
+}
+.equ-det-list .textarea:focus {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+}
+.equ-det-list .edit-disabled {
+  display: inline-block;
+  width: 100px;
+  max-width: 110px;
+}
+.equ-det-list .li-body {
+  height: 38px;
+}
+.equ-det-list .li-body .div-td {
+  width: 140px;
+  height: 100%;
+  text-align: center;
+  padding: 0 1px;
+  /*overflow-x: hidden;*/
+  float: left;
+  border-right: 1px solid #e4e4e4;
+}
+.equ-det-list .li-body .div-td[cls="price"] {
+  width: 70px;
+}
+.equ-det-list .li-body .div-td[cls="quantity"] {
+  width: 50px;
+}
+.equ-det-list .li-body .div-td[cls="unit"] {
+  width: 50px;
+}
+.equ-det-list .li-body .div-td[cls="shelfId"] {
+  overflow: visible;
+}
+.equ-det-list .li-body .div-td.width-auto {
+  width: 188px;
+  border: none;
+}
+.equ-det-list .li-body .div-td.width-auto .textarea {
+  overflow: auto;
+}
+.equ-det-list .li-body .div-td .textarea,
+.equ-det-list .li-body .div-td .input-text {
+  margin-top: 6px;
+}
+.equ-det-list .li-body .div-td p {
+  height: 24px;
+  margin: 7px auto 0;
+}
+
+.edit-able .deal {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.edit-disable .sure {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/*tab切换*/
+.tabBar {
+  width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.search-area {
+  width: 800px;
+  margin: 10px auto;
+}
+
+.no-data {
+  width: 798px;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+}
+
+.tree {
+  min-width: 200px;
+  min-height: 100px;
+}
+
+.tabBar span.current {
+  background-color: #006fbb;
+}
+
+.con_hint {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+.con_hint p {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=strg-contract-storage.css.map */

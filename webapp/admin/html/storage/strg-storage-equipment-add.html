@@ -1,0 +1,182 @@
+﻿<!--
+ * 本文件是新增设备html文件
+ * @author 鲍哲
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <LINK rel="Bookmark" href="/favicon.ico" >
+  <LINK rel="Shortcut Icon" href="/favicon.ico" />
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../lib/html5.js"></script>
+  <script type="text/javascript" src="../../lib/respond.min.js"></script>
+  <script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+  <![endif]-->
+  <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+
+  <!--[if IE 6]>
+  <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+  <script>DD_belatedPNG.fix('*');</script>
+  <![endif]-->
+  <title>新增设备</title>
+</head>
+<body>
+
+<div>
+  <div id="table-box" class="table-box pt-20" >
+    <table id='roleAdd' class="form-table table table-border table-bordered table-bg">
+      <tr>
+        <td colspan='5' class=" table-key"><span class="c-red">*</span>设备名称：</td>
+        <td colspan='15' class="has-tip">
+          <div class="formControls">
+            <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="equipmentName" name="equipmentName">
+          </div>
+          <div class="msg-tip" title="角色名不能为空"> </div>
+        </td>
+
+        <td colspan='5' class=" table-key"><span class="c-red">*</span>设备编号：</td>
+        <td colspan='15' class="recordStartTime has-tip">
+          <div class="formControls">
+            <input type="text" class="input-text input-type"  datatype="*" nullmsg=" " errormsg=" "  con_name="equipmentCode" name="equipmentCode">
+          </div>
+          <div class="msg-tip" title="角色编码不能为空"> </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="table-key" colspan="5"><span class="c-red">*</span>上级分类：</td>
+        <td colspan="35" class="has-tip major">
+          <div class="formControls input-tree">
+            <input type="text" class="input-text equipmentType" datatype="*" nullmsg=" " errormsg=" "  readonly con_name="equipmentParentId" name="equipmentParentId">
+            <ul class="tree" style="z-index: 1">
+
+            </ul>
+          </div>
+          <div class="msg-tip" title="请选择"> </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='5' class=" table-key"><span class="c-red">*</span>单位：</td>
+        <td colspan='15' class="has-tip">
+          <div class="formControls">
+            <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="equipmentUnit" name="equipmentUnit">
+          </div>
+          <div class="msg-tip" title="角色名不能为空"> </div>
+        </td>
+        <td colspan='5' class=" table-key"><span class="c-red">*</span>排序：</td>
+        <td colspan='15' class="has-tip">
+          <div class="formControls">
+            <input type="text" class="input-text input-type" value="3" datatype="*" nullmsg=" " errormsg=" " con_name="equipmentSort" name="equipmentSort">
+          </div>
+          <div class="msg-tip" title="角色名不能为空"> </div>
+        </td>
+      </tr>
+      <tr>
+      <td colspan='5' class=" table-key"><span class="c-red">*</span>产品线：</td>
+      <td colspan='35' class="recordStartTime has-tip">
+        <div class="formControls">
+          <select type="text" class="input-text input-type select" datatype="*" nullmsg=" " errormsg=" " con_name="productLine" name="productLine">
+
+          </select>
+        </div>
+        <div class="msg-tip" title="产品线不能为空"> </div>
+      </td>
+
+    </tr>
+      <tr>
+        <td colspan='5' class=" table-key"><span class="c-red">*</span>入库方式：</td>
+        <td colspan='15' class="recordStartTime has-tip">
+          <div class="formControls">
+            <label class="col-3"><input class="check" type="radio"   value="0" name="storeStyle"   checked="checked">单次入库</label>
+            <label class="col-3"><input class="check" type="radio"  value="1" name="storeStyle">批量入库</label>
+          </div>
+          <div class="msg-tip" title=""> </div>
+        </td>
+        <td colspan='5' class=" table-key"><span class="c-red">*</span>折旧期限：</td>
+        <td colspan='15' class="recordStartTime has-tip">
+          <div class="formControls">
+            <input style="position: relative" type="text" class="input-text input-type" datatype="n1-10" nullmsg=" " errormsg=" " con_name="durableYears" name="durableYears">
+            <span style="position: absolute; top: 0;right: 10px">月</span>
+          </div>
+          <div class="msg-tip" title=""> </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='5' class=" table-key"><span class="c-red">*</span>残值率：</td>
+        <td colspan='15' class="recordStartTime has-tip">
+          <div class="formControls">
+            <input type="text" class="input-text input-type" datatype="pre" nullmsg=" " errormsg=" " con_name="residualRate" name="residualRate">
+            <span style="position: absolute; top: 0;right: 10px">%</span>
+          </div>
+          <div class="msg-tip" title=""> </div>
+        </td>
+        <td colspan='5' class=" table-key">月折旧比：</td>
+        <td colspan='15' class="recordStartTime has-tip">
+          <div class="formControls">
+            <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="depreciationRate" name="depreciationRate" disabled style="background: #FFFFFF">
+            <span style="position: absolute; top: 0;right: 10px">%</span>
+          </div>
+          <div class="msg-tip" title="月折旧比不能为空"> </div>
+        </td>
+      </tr>
+      <tr>
+      <td colspan='5' class=" table-key">关键参数：</td>
+      <td colspan='35' class="recordStartTime has-tip">
+        <div class="formControls">
+          <input type="text" class="input-text input-type" nullmsg=" " errormsg=" " con_name="equipmentParam" name="equipmentParam">
+        </div>
+        <div class="msg-tip" title="角色编码不能为空"> </div>
+      </td>
+    </tr>
+
+      <tr>
+        <td class="table-key" colspan="5">描述：</td>
+        <td colspan="35" class="has-tip">
+          <div class="formControls cl">
+            <textarea rows="3" con_name="equipmentRemark" name="equipmentRemark" class="textarea"  dragonfly="true" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"></textarea>
+            <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+          </div>
+          <div class="msg-tip" title="请正确填写"> </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="table-key" colspan="5"><span class="c-red"></span>图片：</td>
+        <td colspan="35" class="has-tip">
+          <div class="l">
+            <a href="javascript:;" class="btn btn-success radius f-r mr-5 btn-add">
+              <i class="Hui-iconfont">&#xe642;</i>
+              添加图标
+            </a>
+          </div>
+          <div class="listAddImg" style="cursor:pointer;">
+            <img src="">
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div class="pd-10 text-c">
+      <button href="javascript:;" class="btn con-ProgramLibrary btn-default btn-uploadstar upload-lib radius mr-10 ProgramSubmitButton"><i class="Hui-iconfont">&#xe676</i>&nbsp;&nbsp;保存</button>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/strg-storage-equipment-add.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/**
+ * 本文件是单个清单入库样式文件
+ *@author 张欢
+ */
+/*基本信息*/
+body {
+  overflow: hidden;
+}
+
+/*头部*/
+.basic {
+  overflow: hidden;
+  margin-top: 8px;
+  height: 50px;
+  background: #e3f0fe;
+  text-align: center;
+}
+
+.basic-cnt {
+  display: inline-block;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.basic-td {
+  height: 100%;
+  border-right: 1px solid #fff;
+  text-align: center;
+}
+.basic-td.equ-name {
+  padding-left: 30px;
+  padding-right: 5px;
+  background-position: center left;
+  background: url("../images/temporary/equ_logo.png") no-repeat;
+}
+.basic-td.equ-code {
+  width: 119px;
+}
+.basic-td.equ-num {
+  width: 118px;
+}
+.basic-td.equ-val {
+  border-right: none;
+  padding-left: 5px;
+}
+.basic-td p {
+  color: #999;
+}
+.basic-td > div {
+  height: 50%;
+  margin: 0;
+  padding: 0;
+}
+.basic-td > p {
+  height: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+/*表单部*/
+.form-ctn {
+  width: 390px;
+  margin: 0 auto;
+}
+.form-ctn .input-text {
+  width: 300px;
+  height: 22px;
+  line-height: 22px;
+}
+
+.one-row {
+  position: relative;
+  line-height: 22px;
+  margin-top: 10px;
+}
+.one-row .like-label {
+  display: block;
+  position: relative;
+}
+.one-row .like-label .textarea-numberbar {
+  right: 0;
+  bottom: -25px;
+}
+.one-row .like-label > span {
+  display: inline-block;
+  width: 88px;
+  text-align: right;
+}
+.one-row .btn {
+  width: 80px;
+  height: 31px;
+}
+
+#tip-msg {
+  background: none;
+  padding: 0;
+}
+
+.textarea {
+  width: 300px;
+  height: 60px;
+}
+
+.input-tree .tree {
+  top: 22px;
+}
+
+/*# sourceMappingURL=strg-work-order-storage-more.css.map */

@@ -1,0 +1,128 @@
+<!--
+ * 本文件是资产生命周期html文件
+ * @author 彭佳明
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/asset-check-lifeCycle.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>资产查看</title>
+</head>
+<body>
+<div class="pl-20 pr-20 pt-10 lifeCycle">
+    <div class="mt-10 lifAp">
+        <div class="top">
+            <div class="topTitle">
+                <div class="l le"><span class="sc Img">设备分类：</span><b class="equipmentName"></b></div>
+                <div class="l le"><span class="sc">设备名称：</span><b con_name="assetName"></b></div>
+                <div class="l le"><span class="sc">型号：</span><b con_name="specifications"></b></div>
+            </div>
+            <div class="cb">
+                <div class="cl mt-15">
+                    <div class="l le"><span class="sc">设备编号：</span><b con_name="deviceCode"></b></div>
+                    <div class="l le"><span class="sc">资产编号：</span><b con_name="assetCode"></b></div>
+                    <div class="l le"><span class="sc">公司编号：</span><b con_name="companyCode"></b></div>
+                </div>
+                <div class="cl">
+                    <div class="l le"><span class="sc">资产状态：</span><b class="assetStatus"></b></div>
+                    <div class="l le"><span class="sc">单价：</span><b con_name="price"></b></div>
+                    <div class="l le"><span class="sc">单位：</span><b con_name="unit"></b></div>
+                </div>
+                <div class="cl">
+                    <div class="l le"><span class="sc">厂商：</span><b con_name="manufacturer"></b></div>
+                    <div class="l le"><span class="sc">折旧期限(月)：</span><b con_name="durableYears"></b></div>
+                    <div class="l le"><span class="sc">残值率(%)：</span><b con_name="residualRate"></b></div>
+                </div>
+                <div class="cl">
+                    <div class="l le"><span class="sc">月折旧比(%)：</span><b con_name="depreciationRate"></b></div>
+                </div>
+            </div>
+        </div>
+        <div class="position posNow">
+            <span class="color">|</span><span>设备当前位置</span>
+        </div>
+
+        <div class="table">
+            <div class="row">
+                <div class="cell fir"></div>
+                <div class="cell sed">
+                    <div class="ch position1" con_cur="position1"></div>
+                    <div class="sc pro">所在项目</div>
+                </div>
+                <div class="cell thr">
+                    <div class="ch position2" con_cur="position2"></div>
+                    <div class="sc pro">所在工地</div>
+                </div>
+                <div class="cell fou">
+                    <div class="ch user" con_cur="user"></div>
+                    <div class="sc pro">安装人</div>
+                </div>
+                <div class="cell fiv">
+                    <div class="ch time" con_cur="time"></div>
+                    <div class="sc pro">安装时间</div>
+                </div>
+                <div class="cell last">
+                    <div class="ch file-list"><span class="atNo">无</span></div>
+                    <div class="sc">附件</div>
+                </div>
+            </div>
+        </div>
+        <div class="position postion-bg">
+            <span class="color">|</span><span>设备生命周期</span>
+        </div>
+        <div class="ew">
+            <div class="eqL">
+                <div class="tp">
+                    <div class="time">2017-5-10 <span class="ti">11:01:01</span></div><div class="squ"></div>
+                    <div class="oper">设备状态</div>
+                </div>
+                <div class="bt">
+                    <div class="bto">
+                        <div class="sc">操作人：</div>
+                        <div class="person">张三</div>
+                    </div>
+                    <div class="btr">
+                        <div class="sc">备注：</div>
+                        <div class="remark">备注</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagination-box">
+        <div style="padding-top:20px;" class="pagination cl">
+            <div id="pagination" class="l"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/asset-check-lifeCycle.js"></script>
+</body>
+</html>

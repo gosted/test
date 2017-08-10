@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/**
+ * 本文件是角色管理样式文件
+ *@author 鲍哲
+ */
+.role-table .text-c .authName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  padding-left: 3px; }
+
+.role-check {
+  margin-top: 5px;
+  border-bottom: 1px solid #dddddd; }
+  .role-check input {
+    margin-top: 0px; }
+  .role-check img {
+    margin-left: 3px;
+    margin-bottom: 3px; }
+
+.check-box input {
+  margin-top: 0px; }
+
+/*# sourceMappingURL=system-role.css.map */

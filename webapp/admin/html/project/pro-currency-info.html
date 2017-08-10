@@ -1,0 +1,203 @@
+<!--
+ * 本文件是通用工单信息显示html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/pro-currency-info.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>通用工单信息</title>
+</head>
+<body>
+    <div class="table-box pt-20 pd-20">
+        <div class="long-label cl mt-10"><span class="lab-cnt f-l">基本信息</span><span class="brdr f-l"></span></div>
+        <table id='workOrder' class="form-table table table-border table-bordered">
+            <tr>
+                <td colspan="5" class=" table-key">工单名称：</td>
+                <td colspan="15" class="has-tip" con_name="workOrderName"></td>
+                <td colspan="5" class=" table-key">工单编号：</td>
+                <td colspan="15" class="recordStartTime has-tip" con_name="workOrderNum"></td>
+            </tr>
+            <tr>
+                <td colspan="5" class=" table-key">类型：</td>
+                <td colspan="15" class="has-tip workOderType" con_name="workOderType"></td>
+                <td colspan="5" class=" table-key">指定人：</td>
+                <td colspan="15" class="has-tip assigner" con_name="assigner"></td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">所属项目：</td>
+                <td colspan="15" class="has-tip major project" name="project"></td>
+                <td class="table-key" colspan="5">所属工地：</td>
+                <td colspan="15" class="has-tip major worksite" con_name="site"></td>
+            </tr>
+            <tr>
+                <td colspan="5" class=" table-key">联系人：</td>
+                <td colspan="15" class="has-tip contract" con_name="contract"></td>
+                <td colspan="5" class=" table-key">联系电话：</td>
+                <td colspan="15" class="has-tip contractNumber" con_name="contractNumber"></td>
+            </tr>
+
+
+            <tr>
+                <td class="table-key" colspan="5">备注：</td>
+                <td colspan="35" con_name="remark"></td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">附件：</td>
+                <td colspan="35" class="file-list file-list-base"></td>
+            </tr>
+        </table>
+        <div id="tab-category" class="HuiTab">
+            <div class="tabBar cl detail-tap">
+                <span class="equipment">
+                    <a href="javascript:;">
+                        <strong>
+                            设备清单
+                        </strong>
+                    </a>
+                    <i class="tip-num">0</i>
+                </span><em class="l">|</em>
+                <span class="server">
+                    <a href="javascript:;">
+                        <strong>
+                            服务清单
+                        </strong>
+                    </a>
+                    <i class="tip-num">0</i>
+                </span>
+                <em class="l">|</em>
+                <span class="other">
+                    <a href="javascript:;">
+                        <strong>
+                            其他清单
+                        </strong>
+                    </a>
+                    <i class="tip-num">0</i>
+                </span>
+            </div>
+
+            <div ind="equipment" class="tabCon equipment-cnt">
+                <table class="table table-border table-bordered table-bg table-hover">
+                    <thead>
+                    <tr class="text-c">
+                        <th>设备名称</th>
+                        <th width="120">规格型号</th>
+                        <th width="100">厂商</th>
+                        <th width="50">数量</th>
+                        <th width="50">单位</th>
+                        <th width="100">备注</th>
+                        <th width="100">关联设备分类</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tbody">
+                    <tr class="text-c hidden" detailType="QDLX-SB">
+                        <td con_name="detailName"></td>
+                        <td con_name="detailModel"></td>
+                        <td con_name="detailCompany"></td>
+                        <td con_name="detailCount"></td>
+                        <td con_name="detailUnit"></td>
+                        <td con_name="detailRemark"></td>
+                        <td con_name="equipmentName"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ind="server" class="tabCon server-cnt">
+                <table class="table table-border table-bordered table-bg table-hover">
+                    <thead>
+                    <tr class="text-c">
+                        <th>服务名称</th>
+                        <th width="100">开始时间</th>
+                        <th width="100">结束时间</th>
+                        <th width="50">数量</th>
+                        <th width="50">单位</th>
+                        <th width="120">备注</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tbody">
+                    <tr class="text-c hidden" detailType="QDLX-FW">
+                        <td con_name="detailName"></td>
+                        <td con_name="detailStartDate"></td>
+                        <td con_name="detailEndDate"></td>
+                        <td con_name="detailCount"></td>
+                        <td con_name="detailUnit"></td>
+                        <td con_name="detailRemark"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ind="other" class="tabCon other-cnt">
+                <table class="table table-border table-bordered table-bg table-hover">
+                    <thead>
+                    <tr class="text-c">
+                        <th width="200">清单名称</th>
+                        <th>描述</th>
+                        <th width="50">数量</th>
+                        <th width="50">单位</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tbody">
+                    <tr class="text-c hidden" detailType="QDLX-QT">
+                        <td con_name="detailName"></td>
+                        <td con_name="detailRemark"></td>
+                        <td con_name="detailCount"></td>
+                        <td con_name="detailUnit"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="long-label cl mt-10"><span class="lab-cnt f-l">处理过程</span><span class="brdr f-l"></span></div>
+        <div class="history-info">
+            <table class="form-table table-border table-bordered hidden">
+                <tr>
+                    <td colspan="5" class="table-key">流转人：</td>
+                    <td colspan="15" con_name="apprApprover"></td>
+                    <td colspan="5" class="table-key">处理日期：</td>
+                    <td colspan="15" con_name="apprTime"></td>
+                </tr>
+                <tr>
+                    <td class="table-key" colspan="5">备注：</td>
+                    <td colspan="35" con_name="apprRemark"></td>
+                </tr>
+                <tr>
+                    <td class="table-key" colspan="5">附件：</td>
+                    <td colspan="35" class="file-list"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/pro-currency-info.js"></script>
+</body>
+</html>

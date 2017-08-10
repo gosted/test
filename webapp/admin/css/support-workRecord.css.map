@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AACA;;;EAGE;AAEF,6CAA6C;EAC3C,KAAK,EAAE,IAAI;;AAIT,wBAAG;EACD,SAAS,EAAE,IAAI",
+"sources": ["../sass/support-workRecord.scss"],
+"names": [],
+"file": "support-workRecord.css"
+}

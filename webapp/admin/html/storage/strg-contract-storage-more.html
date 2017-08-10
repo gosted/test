@@ -1,0 +1,161 @@
+﻿<!--
+ * 本文件是单个清单入库html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <LINK rel="Bookmark" href="../../images/favicon.ico" >
+  <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+  <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/strg-contract-storage-more.css" rel="stylesheet" type="text/css" />
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../lib/html5.js"></script>
+  <script type="text/javascript" src="../../lib/respond.min.js"></script>
+  <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+  <![endif]-->
+
+  <!--[if IE 6]>
+  <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+  <script>DD_belatedPNG.fix('*');</script>
+  <![endif]-->
+  <title>单个清单入库</title>
+</head>
+<body>
+  <div class="basic">
+    <div class="basic-cnt cl">
+      <div class="basic-td l equ-name">
+        <div class="text-overflow">
+          <span></span>
+        </div>
+        <p>设备名称</p>
+      </div>
+      <div class="basic-td l equ-code">
+        <div class="text-overflow">
+          <span></span>
+        </div>
+        <p>规格型号</p>
+      </div>
+      <div class="basic-td l equ-num">
+        <div class="cl">
+          <span class="no-in c-red"></span>/<span class="all-in"></span>
+        </div>
+        <p>未入库/采购数量</p>
+      </div>
+      <div class="basic-td l equ-val">
+        <div class="text-overflow">
+          <span></span><span>元</span>
+        </div>
+        <p>单价</p>
+      </div>
+    </div>
+  </div>
+  <div class="form-ctn">
+    <div class="one-row">
+      <label class="cl like-label">
+        <span class="l"><span class="c-red">*</span>入库数量：</span>
+        <input type="text" class="input-text l" datatype="float" con_name="storeCount" nullmsg="请输入入库数量！" errormsg="请输入正确的入库数量！">
+      </label>
+    </div>
+    <div class="one-row">
+      <label class="cl like-label">
+        <span class="l">厂商：</span>
+        <input type="text" class="input-text l" con_name="manufacturer">
+      </label>
+    </div>
+    <div class="one-row">
+      <label class="cl like-label">
+        <span class="l">型号：</span>
+        <input type="text" class="input-text l" con_name="specifications">
+      </label>
+    </div>
+    <!--<div class="one-row">
+      <label class="cl like-label">
+        <span class="l">设备编号：</span>
+        <input type="text" class="input-text l" con_name="deviceCode">
+      </label>
+    </div>-->
+    <div class="one-row">
+      <div class="cl like-label">
+        <span class="l"><span class="c-red">*</span>设备分类：</span>
+        <div class="l input-tree equipment-type">
+          <input type="text" class="input-text inp-text l" readonly con_name="equipmentId" datatype="*" nullmsg="请选择设备分类！" errormsg="请选择正确的设备分类！">
+          <ul class="tree">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="one-row">
+      <div class="cl like-label">
+        <span class="l"><span class="c-red">*</span>货架：</span>
+        <div class="l input-tree shelf-position">
+          <input type="text" class="input-text inp-text l" readonly con_name="shelfId" datatype="area" nullmsg="请选择货架！" errormsg="请选择正确的货架！">
+          <ul class="tree">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--<div class="one-row">
+      <label class="cl like-label">
+        <span class="l">单价：</span>
+        <input type="text" class="input-text l" datatype="money" ignore="ignore" nullmsg=" " errormsg="请输入正确的单价！" con_name="price">
+      </label>
+    </div>
+    <div class="one-row">
+      <label class="cl like-label">
+        <span class="l">单位：</span>
+        <input type="text" class="input-text l" con_name="unit">
+      </label>
+    </div>-->
+    <div class="one-row">
+      <label class="cl like-label">
+        <span class="l">说明：</span>
+        <textarea rows="3" con_name="remark" class="textarea l"  dragonfly="true" onKeyUp="textarealength(this,200)"></textarea>
+        <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+      </label>
+    </div>
+    <div class="one-row asset-code">
+      <div class="cl like-label">
+        <span class="l">基地资产编号：</span>
+        <label><input type="radio" checked name="assetCode" value="0">生成</label>
+        <label class="ml-20"><input type="radio" name="assetCode" value="1">不生成</label>
+      </div>
+    </div>
+    <!--<div class="one-row store-type hidden">
+      <div class="cl like-label">
+        <span class="l"><span class="c-red">*</span>入库方式：</span>
+        <label><input type="radio" name="storeType" value="0" ignore="ignore" datatype="*" con_name="storeType" nullmsg="请选择入库方式！">按批入库</label>
+        <label class="ml-20"><input type="radio" name="storeType" value="1">按条入库</label>
+      </div>
+    </div>-->
+    <div id="tip-msg"></div>
+
+    <div class="one-row text-c">
+      <button class="btn btn-success radius save">保存</button>
+      <button class="btn btn-danger radius ml-50 cancle">取消</button>
+    </div>
+  </div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/strg-contract-storage-more.js"></script>
+</body>
+</html>

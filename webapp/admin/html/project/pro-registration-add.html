@@ -1,0 +1,202 @@
+<!--
+ * 本文件是资产登记添加html文件
+ * @author 彭佳明
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/pro-manage-add.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/system-data-power-add.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>资产添加</title>
+</head>
+<body>
+
+<div class="pb-20 pt-10">
+    <div id="table-box" style="width:800px;margin:0 auto;">
+        <div class="l cl mb-10">
+            <label style="padding-left:20px;position:relative;top:5px;background:url(../../images/commen/contract-code-bg.png) no-repeat left" class="form-label l label-key">资产编号：</label>
+            <div class="formControls l list-box" style="width: 500px;">
+                <input  type="text" class="input-text assetCode" con_n="userRealName">
+                <ul class="list">
+
+                </ul>
+            </div>
+        </div>
+        <div class="r find-btn pb-4">
+            <a href="javascript:;" class="btn btn-success radius f-r searchCode">
+                <i class="Hui-iconfont">&#xe665;</i>
+                确定
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="pt-10">
+    <div id="table-box1" class="table-box">
+
+        <table  class="providerAdd form-table table table-border table-bordered table-bg">
+            <tr>
+                <td class="table-key" colspan="5">资产名称：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl">
+                        <input style="background:#fff;" readonly="readonly" disabled="disabled" type="text" class="input-text input-type assetName" datatype="*" nullmsg=" " errormsg=" " con_name="assetName">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5">资产分类：</td>
+                <td colspan="15" class="has-tip has-partnerCode">
+                    <div class="formControls cl">
+                        <input style="background:#fff;" readonly="readonly" disabled="disabled"  type="text" class="input-text input-type assetCategory" datatype="*" ignore="ignore" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip partnerCode-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">资产编号：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl">
+                        <input style="background:#fff;" readonly="readonly" disabled="disabled"  type="text" class="input-text input-type assetCode1" datatype="*" nullmsg=" "  errormsg=" " con_name="assetCode">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5">公司编号：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl">
+                        <input style="background:#fff;" readonly="readonly" disabled="disabled"  type="text" class="input-text input-type companyCode" ignore="ignore" datatype="*" nullmsg=" " errormsg=" " con_name="companyCode">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding-left:0;" class="table-key" colspan="5">状态：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl">
+                        <input style="background:#fff;" readonly="readonly" disabled="disabled"  type="text" class="input-text input-type assetStatus" ignore="ignore" datatype="*" nullmsg=" " errormsg=" "  ignore="ignore" con_name="assetStatusName">
+                    </div>
+                    <div class="msg-tip" title="请填写通讯地址"> </div>
+                </td>
+                <td colspan="20"></td>
+            </tr>
+
+            <tr ><td style="border:none;padding:10px 0;border-bottom:1px solid #ddd;" colspan="35"><span style="border-left:3px solid #ff7200;padding-right:4px;"></span>资产登记:</td></tr>
+            <tr style="margin-top:10px;">
+                <td class="table-key" colspan="5">所属项目：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl">
+                        <input type="text" class="input-text input-type partnerName" readonly="readonly" style="width:264px;" disabled="disabled" datatype="*" nullmsg=" " errormsg=" " con_na="partnerName">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5">子项目：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl">
+                        <input style="width:264px;"  readonly="readonly" disabled="disabled" type="text" class="input-text input-type subProject" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">所属工地：</td>
+                <td colspan="15" class="has-tip has-partnerCode">
+                    <div class="formControls cl">
+                        <input style="width:264px;"  readonly="readonly" disabled="disabled" type="text" class="input-text input-type workSite" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip partnerCode-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>资产位置：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl">
+                        <input style="width:264px;"  type="text" class="input-text input-type assetPosition" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>安装人：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls cl">
+                        <input style="width:264px;"  type="text" class="input-text input-type installPeople" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td style="padding-left:0;" class="table-key" colspan="5"><span class="c-red">*</span>安装时间：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls l cl" style="width: 264px;">
+                        <input class="input-text table-input Wdate over-date input-type newsEditData installTime" type="text" onfocus="WdatePicker()" con_na="userMajorUnit">
+                    </div>
+                    <div class="msg-tip" title="请填写安装时间"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">备注：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls cl con_textarea">
+                        <textarea rows="3" con_name="remark" style="width:663px;" class="textarea remark"  dragonfly="true" datatype="*" ignore="ignore" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red"></span>附件：</td>
+                <td colspan="35" class="formControls">
+                    <form id="upload" class="upload-form" enctype ="multipart/form-data">
+                        <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+                        <input type="file" name="file" class="upload-file">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="6"></td>
+                <td colspan="34" class="formControls file-list">
+
+                </td>
+            </tr>
+        </table>
+
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn btn-success radius mr-10 save">
+                <i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存
+            </button>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/pro-regsitration-add.js"></script>
+</body>
+</html>

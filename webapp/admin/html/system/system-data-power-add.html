@@ -1,0 +1,122 @@
+﻿<!--
+ * 本文件是添加数据权限html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="../../images/favicon.ico" >
+<LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+<link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../../css/system-data-power-add.css" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../lib/html5.js"></script>
+<script type="text/javascript" src="../../lib/respond.min.js"></script>
+<script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+<![endif]-->
+
+<!--[if IE 6]>
+<script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>添加</title>
+</head>
+<body>
+<div class="pl-20 pr-20 pt-10">
+  <div class="table-box">
+    <table class="form-table table table-border table-bordered table-bg add-table">
+      <tr>
+        <td class="table-key" colspan="4"><span class="c-red">*</span>姓名：</td>
+        <td colspan="36" class="has-tip">
+          <div class="formControls list-box">
+            <input type="text" class="input-text" con_name="userName" datatype="*" nullmsg=" " errormsg=" ">
+            <ul class="list">
+
+            </ul>
+          </div>
+          <div class="msg-tip" title="请正确填写"> </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="table-key" colspan="4"><span class="c-red">*</span>关联类型：</td>
+        <td colspan="36" class="has-tip">
+          <div class="formControls">
+            <select class="input-text" con_name="arType" datatype="*" nullmsg=" " errormsg=" ">
+
+            </select>
+          </div>
+          <div class="msg-tip" title="请正确填写"> </div>
+        </td>
+      </tr>
+      <tr class="add-tr">
+        <td class="table-key" colspan="4"><span class="c-red">*</span>地区：</td>
+        <td colspan="18" class="has-tip">
+          <div class="formControls input-tree">
+            <input type="text" class="input-text" readonly con_name="areaId" datatype="*" nullmsg=" " errormsg=" ">
+            <ul class="tree">
+
+            </ul>
+          </div>
+          <div class="msg-tip" title="请正确填写"> </div>
+        </td>
+        <td class="table-key" colspan="6"><span class="c-red">*</span>是否向下兼容：</td>
+        <td colspan="8" class="has-tip">
+          <div class="formControls cl">
+            <div class="radio_box l col-6">
+              <input type="radio" id="arIsCompatibility-1" name="arIsCompatibility" datatype="*" con_name="arIsCompatibility" nullmsg=" " errormsg=" " value="1">
+              <label for="arIsCompatibility-1">是</label>
+            </div>
+            <div class="radio_box l col-6">
+              <input type="radio" id="arIsCompatibility-2" name="arIsCompatibility" value="0">
+              <label for="arIsCompatibility-2">否</label>
+            </div>
+          </div>
+          <div class="msg-tip" title="请正确填写"> </div>
+        </td>
+        <td colspan="4">
+          <div class="l">
+            <a href="javascript:;" class="btn btn-success radius f-r mr-5 btn-add">
+              <i class="Hui-iconfont">&#xe600;</i>
+              添加
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr class="power-box">
+        <td class="table-key" colspan="4">数据权限：</td>
+        <td colspan="36">
+          <div class="formControls cl">
+            <table class="form-table table table-border table-bordered table-bg power">
+              <tr>
+                <td class="th cont-type">关联类型</td>
+                <td class="th">地区</td>
+                <td class="th yes-or-no">是否向下兼容</td>
+                <td class="th deal">操作</td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/system-data-power-add.js"></script>
+</body>
+</html>

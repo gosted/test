@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/**
+ * 本文件是修改密码样式文件
+ * @author 张欢
+ */
+.li-table {
+  width: 800px;
+  margin: 0 auto;
+}
+.li-table .table-key {
+  height: 31px;
+  line-height: 29px;
+  text-align: right;
+  background: #FEF6F6;
+  border: 1px solid #dddddd;
+  border-right: none;
+}
+.li-table .msg {
+  margin-top: 3px;
+}
+.li-table .Validform_checktip {
+  margin-left: 5px;
+}
+
+.btns-group {
+  text-align: center;
+}
+
+/*# sourceMappingURL=edit-psw.css.map */

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/*
+* 制作方案页面文件
+*@author 王步华
+*/
+.rowstyle {
+  text-align: center !important; }
+
+body, th, td, button, input, select, textarea {
+  color: #000; }
+
+/*# sourceMappingURL=support-SptMdlPro.css.map */

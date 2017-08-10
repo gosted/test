@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/**
+ * 本文件是详情样式文件
+ *@author 鲍哲
+ */
+.form-label {
+  color: #999999; }
+
+.close-check {
+  margin-top: 50px; }
+
+.file-list {
+  height: 30px; }
+
+.file-list .doc {
+  background: url("../images/commen/icon_47.png") no-repeat; }
+
+.file-list .xls {
+  background: url("../images/commen/icon_50.png") no-repeat; }
+
+.file-list .ppt {
+  background: url("../images/commen/icon_44.png") no-repeat; }
+
+.file-list .pdf {
+  background: url("../images/commen/icon_54.png") no-repeat; }
+
+.file-list .other {
+  background: url("../images/commen/unknown.png") no-repeat; }
+
+.file-list b {
+  display: inline-block;
+  width: 18px;
+  height: 16px; }
+
+#accept_model P {
+  margin-bottom: 0px;
+  cursor: pointer; }
+
+#work_model P {
+  margin-bottom: 0px;
+  cursor: pointer; }
+#work_model .file-list {
+  height: 30px; }
+
+.form-table:nth-child(2n) .table-key {
+  background: #e0efff;
+  text-align: right; }
+
+.ann-diad-div {
+  position: relative;
+  height: 30px; }
+  .ann-diad-div .ann-diad {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    text-align: center;
+    line-height: 30px;
+    width: 80px;
+    color: #ffffff;
+    background: #5eb95e; }
+  .ann-diad-div .ann-diad：hover {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    text-align: center;
+    line-height: 30px;
+    width: 80px;
+    color: #ffffff;
+    background: #37a737; }
+  .ann-diad-div .ann-diadHover {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    text-align: center;
+    line-height: 30px;
+    width: 80px;
+    color: #ffffff;
+    background: #37a737; }
+  .ann-diad-div .ann-diad-input {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    z-index: 10;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    -o-opacity: 0;
+    *opacity: 0;
+    _opacity: 0;
+    -webkit-opacity: 0;
+    /* Netscape and Older than Firefox 0.9 */
+    -moz-opacity: 0;
+    /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+    -khtml-opacity: 0;
+    /* IE9 + etc...modern browsers */
+    opacity: 0;
+    /* IE 4-9 */
+    filter: alpha(opacity=0);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /*IE4-IE9*/ }
+  .ann-diad-div .ann-diad-show {
+    width: 300px;
+    height: 32px;
+    margin-left: 80px;
+    text-align: left; }
+
+/*# sourceMappingURL=support-con-detail.css.map */

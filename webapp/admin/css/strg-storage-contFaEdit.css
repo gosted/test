@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/*
+* 固定资产合同-编辑页面样式文件
+*@author 王步华
+*/
+.file-list p {
+  height: 30px;
+  text-align: left;
+  line-height: 30px; }
+  .file-list p span {
+    cursor: pointer; }
+.file-list img {
+  float: left;
+  display: inline-block;
+  padding-top: 8px; }
+.file-list span {
+  margin-left: 10px; }
+.file-list button {
+  background: transparent;
+  border: none; }
+
+.widthChange {
+  width: 97%;
+  min-height: 30px;
+  border-radius: 1px;
+  border: 1px solid #ddd; }
+
+.needChoose {
+  min-height: 28px;
+  overflow: auto;
+  max-height: 30px;
+  border-radius: 1px;
+  border: 1px solid #ddd;
+  margin: 1px auto; }
+
+.needChoose:hover {
+  border: 1px solid #006BFF; }
+
+.addBtn {
+  cursor: pointer; }
+
+.changePos {
+  line-height: 30px; }
+
+.import {
+  float: left;
+  margin-top: 8px; }
+
+.import .table-key {
+  float: left; }
+
+.import .text-c {
+  float: left; }
+
+.import .text-c button {
+  margin-left: 4px; }
+
+.addList .input-text:hover {
+  border: 1px solid #006BFF; }
+
+.express {
+  background-color: #f6f6f6; }
+  .express .express-mian {
+    width: 800px;
+    margin: 0 auto; }
+
+.strg-block {
+  width: 6px;
+  height: 20px;
+  background-color: #ff7200;
+  display: inline-block;
+  margin-top: 5px;
+  float: left; }
+
+.strg-size {
+  display: inline-block;
+  line-height: 30px;
+  margin: 0 5px;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000; }
+
+.detailedList {
+  background-color: #ffffff; }
+  .detailedList .detailedList-mian {
+    width: 800px;
+    margin: 0 auto; }
+
+.selfDefine {
+  width: 100%;
+  background: #ffffff;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  border-bottom: 1px solid #e4e4e4; }
+
+.selfDefines {
+  width: 100%;
+  background: #f8f8f8;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  border-bottom: 1px solid #e4e4e4; }
+
+.HuiTab {
+  background-color: #f6f6f6;
+  overflow: inherit;
+  width: 800px;
+  margin: 0 auto; }
+
+.form-table {
+  margin-bottom: 0; }
+
+.tabBar {
+  height: 32px;
+  border-bottom: 1px solid #939393;
+  background-color: #fff;
+  margin-top: 15px;
+  margin-bottom: 12px; }
+  .tabBar span {
+    width: 112px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: none; }
+    .tabBar span.current {
+      background-color: #cfe6ff; }
+      .tabBar span.current a {
+        color: #006fbb; }
+    .tabBar span a {
+      display: inline-block;
+      height: 32px;
+      padding-left: 25px; }
+  .tabBar em {
+    font-style: normal;
+    font-size: 19px;
+    color: #006fbb; }
+  .tabBar .equipment a {
+    background: url("../images/commen/equ.png") no-repeat left 6px; }
+  .tabBar .server a {
+    background: url("../images/commen/server.png") no-repeat left 6px; }
+  .tabBar .other a {
+    background: url("../images/commen/other.png") no-repeat left 6px; }
+
+.tbody .div-text {
+  text-align: center;
+  border: none;
+  background: none; }
+.tbody .inp-text {
+  text-align: center;
+  border: none;
+  background: none; }
+
+.editable .div-text {
+  background: white;
+  border: 1px solid #ccc;
+  min-height: 31px; }
+.editable .inp-text {
+  background: white;
+  border: 1px solid #ccc; }
+.editable td {
+  position: relative; }
+.editable .onfocus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: auto; }
+
+.tabCon .div-text {
+  line-height: 31px; }
+.tabCon .inp-text {
+  line-height: 31px; }
+
+.tbody .textarea {
+  position: relative;
+  z-index: 1;
+  height: 32px;
+  text-align: center;
+  padding: 0;
+  line-height: 28px;
+  vertical-align: top;
+  overflow: auto; }
+
+#dateStart,
+#dateEnd,
+#dateStartCopy,
+#dateEndCopy {
+  text-align: left; }
+
+/*# sourceMappingURL=strg-storage-contFaEdit.css.map */

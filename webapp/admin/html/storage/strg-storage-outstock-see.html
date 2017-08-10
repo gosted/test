@@ -1,0 +1,159 @@
+<!--
+* 出库单查看页面html文件
+*@author 王步华
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="admin/images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="admin/images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/strg-storage-outstock-see.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js" ></script>
+    <script type="text/javascript" src="../../lib/respond.min.js" ></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js" ></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>出库信息</title>
+</head>
+<body>
+<div class="mt-20" id="parentDiv">
+    <div id="table-box" class="table-box">
+        <table  class="form-table table table-border table-bordered table-bg pb-10">
+            <tr>
+                <td colspan='5' class=" table-key">工单名称：</td>
+                <td colspan='15' class=" has-tip outOrderNames" con_name="outOrderName">
+
+                </td>
+                <td colspan='5' class=" table-key">工单编号：</td>
+                <td colspan='15' class="has-tip workOrderNum-has" con_name="outOrderCode">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan='5' class=" table-key">工单类型：</td>
+                <td colspan='15' class=" has-tip" con_name="outOrderTypeName">
+
+                </td>
+                <td colspan='5' class=" table-key">所属库房：</td>
+                <td colspan='15' class="has-tip storageNames" con_name="storageName">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="5">工单说明：</td>
+                <td colspan="35" class="has-tip" con_name="outOrderRemark">
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="express">
+        <div class="pt-10 pb-10 express-mian">
+            <div class="table-key selfDefine mb-10"><span class="strg-block"></span><p class="strg-size">快递单号：</p></div>
+            <table class="table table-border table-bordered table-bg addTable">
+                <thead>
+                    <tr class="text-c thead">
+                        <th width="160" getAttr="parDetlType"><span class="c-red">*</span>快递名称</th>
+                        <th getAttr="parDetlInfo" ><span class="c-red">*</span>快递单号</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody expre">
+                    <tr class="firstTr">
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="detailedList">
+        <div class="pt-10 pb-10 detailedList-mian">
+            <div class="table-key selfDefines mb-10"><span class="strg-block"></span><p class="strg-size">出库工单清单：</p></div>
+            <table class="table table-border table-bordered table-bg table-hover table-qd">
+                <thead>
+                    <tr class="text-c">
+                        <th>设备名称</th>
+                        <th width="150">规格型号</th>
+                        <th>厂商</th>
+                        <th width="50">单位</th>
+                        <th width="100">未出库/应出库</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody class="tbodyIds">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="equipmentList">
+        <div class="pt-10 pb-10 equipmentList-mian">
+            <div class="table-key strgTitle mb-10"><span class="strg-block"></span><p class="strg-size">设备清单：</p></div>
+            <div class="deviceList">
+
+            </div>
+        </div>
+        <!--分页-->
+        <div class="pagination-box">
+            <div class="pagination cl">
+                <div id="pagination" class="l"></div>
+            </div>
+        </div>
+        <!--分页结束-->
+    </div>
+
+
+    <!--<div class="bombBox">-->
+        <!--<div class="mt-5 bombBox-mian">-->
+            <!--<table class="table table-border table-bordered table-bg table-hover">-->
+                <!--<thead>-->
+                <!--<tr class="text-c">-->
+                    <!--<th width="25"><input type="checkbox" name="" value=""></th>-->
+                    <!--<th>设备分类</th>-->
+                    <!--<th width="150">设备名称</th>-->
+                    <!--<th>型号</th>-->
+                    <!--<th>设备编号</th>-->
+                    <!--<th width="100">货架位置</th>-->
+                    <!--<th width="60">数量</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody class="tbodys">-->
+
+                <!--</tbody>-->
+            <!--</table>-->
+        <!--</div>-->
+    <!--</div>-->
+
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/strg-storage-outstock-see.js" ></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AACA;;;GAGG;AACH,mDAAiD;EAC/C,UAAU,EAAE,OAAO;EACnB,UAAU,EAAC,IAAI;EACf,eAAe,EAAC,IAAI;EACpB,kBAAkB,EAAC,IAAI;EACvB,MAAM,EAAE,IAAI",
+"sources": ["../sass/cus-complaint-basic.scss"],
+"names": [],
+"file": "cus-complaint-basic.css"
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/**
+ * 本文件是日志详情页样式文件
+ *@author 陈安
+ */
+#DataTables_Table_0_wrapper .childdiv {
+  height: 28px;
+  line-height: 28px;
+  background-color: #f0f0f0; }
+#DataTables_Table_0_wrapper .childlabel {
+  text-align: right;
+  margin-top: 0px;
+  height: 28px;
+  line-height: 28px;
+  background-color: #f0f0f0; }
+#DataTables_Table_0_wrapper .parentdiv {
+  width: 20%; }
+
+/*# sourceMappingURL=support-remarkdetails.css.map */

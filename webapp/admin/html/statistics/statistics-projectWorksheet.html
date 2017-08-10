@@ -1,0 +1,90 @@
+﻿<!--
+ * 本文件是项目工单统计html文件
+ * @author 王步华
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="../../images/favicon.ico" >
+<LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+  <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/statistics.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet"  type="text/css" href="../../lib/monthpicker/jquery.monthpicker.css" />
+
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../lib/html5.js"></script>
+<script type="text/javascript" src="../../lib/respond.min.js"></script>
+<script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+<![endif]-->
+
+<!--[if IE 6]>
+<script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>项目工单统计</title>
+</head>
+<body>
+<nav class="breadcrumb">
+  <i class="Hui-iconfont clr-blue">&#xe67f;</i> 首页
+  <span class="c-gray en">&gt;</span> 支撑统计
+  <span class="c-gray en">&gt;</span>
+  <span class="clr-blue">项目工单统计</span>
+  <a class="btn btn-success radius r mr-20 refresh" href="javascript:location.replace(location.href);" title="刷新" >
+    <i class="Hui-iconfont">&#xe68f;</i>
+  </a>
+</nav>
+<div class="pl-20 pr-20 pt-10">
+  <!--条件检索区-->
+  <div class="row cl search">
+    <!--时间查询区-->
+    <div class="row cl">
+      <div class="l cl f-l mr-10">
+        <label class="form-label l label-key mt-5">项目：</label>
+        <div class="formControls l">
+          <input type="text" class="input-text projectName">
+        </div>
+      </div>
+
+      <div class="r">
+        <a href="javascript:;" class="btn btn-success radius f-r mr-5 btn-find">
+          <i class="Hui-iconfont">&#xe665;</i>
+          查询
+        </a>
+      </div>
+    </div>
+ <!--   &lt;!&ndash;地区查询区&ndash;&gt;
+    <div class="areas-search mt-5">
+
+    </div>-->
+  </div>
+  <!--echarts图表区-->
+  <!--<div style="margin-top:20px;text-align:left;color:red">说明：统计数据只包含被成功受理的支撑需求，不包含被退回或终止的支撑需求。
+</div>-->
+  <div class="echarts-box mt-20">
+    <div class="echarts-content-line mt-5" id="echarts-content"></div>
+  </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/monthpicker/jquery.monthpicker.js"></script>
+<script type="text/javascript" src="../../lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/echarts.min.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<!--<script src="../../js/businessTiem.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="../../js/statistics-projectWorksheet.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

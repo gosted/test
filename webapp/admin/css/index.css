@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/**
+ * 本文件是首页样式文件
+ * @author 张欢
+ */
+body {
+  color: #000; }
+
+.Hui-userbar {
+  right: 50px; }
+
+.Hui-aside .menu_dropdown dt {
+  color: #000; }
+
+.Hui-aside .menu_dropdown li a {
+  color: #000; }
+
+.menu_dropdown dl {
+  display: none; }
+.menu_dropdown .selected .menu-txt {
+  color: #148cf1; }
+.menu_dropdown #menuProblem,
+.menu_dropdown #menuNews {
+  display: block; }
+
+.Hui-header {
+  background: #006fbb; }
+  .Hui-header .logo-box {
+    height: 44px;
+    margin: 0 0 0 15px;
+    padding: 0; }
+    .Hui-header .logo-box .logo {
+      display: inline-block;
+      height: 100%;
+      margin: 4px 0 0 0;
+      padding: 0;
+      color: white;
+      font-size: 16px;
+      float: left; }
+      .Hui-header .logo-box .logo img {
+        height: 34px;
+        margin: 0;
+        padding: 0; }
+      .Hui-header .logo-box .logo .title-img {
+        height: 16px; }
+    .Hui-header .logo-box .logo-title {
+      margin: 14px 0 0 12px; }
+      .Hui-header .logo-box .logo-title:hover {
+        text-decoration: none; }
+
+.menu-logo {
+  display: inline-block;
+  width: 14px;
+  height: 35px;
+  float: left; }
+
+.menu-txt {
+  margin-left: 3px;
+  float: left;
+  font-weight: 900; }
+
+#menuNews .menu-logo {
+  background: url("../images/commen/news.png") no-repeat center; }
+
+#menuPreSupt .menu-logo {
+  background: url("../images/commen/pre_1.png") no-repeat center; }
+
+#menuSystem .menu-logo {
+  background: url("../images/commen/sys_0.png") no-repeat center; }
+
+#menuSupportCount .menu-logo {
+  background: url("../images/commen/count_0.png") no-repeat center; }
+
+#menuProblem .menu-logo {
+  background: url("../images/commen/help.png") no-repeat center; }
+
+#menuNewsManage .menu-logo {
+  background: url("../images/commen/newsMan_0.png") no-repeat center; }
+
+#menuProjectManage .menu-logo {
+  background: url("../images/commen/project_0.png") no-repeat center; }
+
+#menuStorageManage .menu-logo {
+  background: url("../images/commen/storage_0.png") no-repeat center; }
+
+#menuAssetManage .menu-logo {
+  background: url("../images/commen/asset_0.png") no-repeat center; }
+
+#menuProviderManage .menu-logo {
+  background: url("../images/commen/provider_0.png") no-repeat center; }
+
+#menuService .menu-logo {
+  background: url("../images/commen/server_0.png") no-repeat center; }
+
+#menuDataStatistics .menu-logo {
+  background: url("../images/commen/sjtj.png") no-repeat center; }
+
+.Hui-aside {
+  width: 149px; }
+
+.dislpayArrow {
+  left: 149px; }
+
+.Hui-article-box {
+  left: 149px; }
+
+/*系统消息*/
+.news-num {
+  display: none;
+  width: 24px;
+  height: 22px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+  font-size: 11px;
+  position: absolute;
+  top: -2px;
+  background: url(../images/commen/sys_news.png) no-repeat; }
+
+/*系统消息结束*/
+
+/*# sourceMappingURL=index.css.map */

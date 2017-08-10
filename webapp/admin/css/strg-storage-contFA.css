@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/**
+ * 本文件是固定资产合同样式文件
+ *@author 王步华
+ */
+.table {
+  table-layout: fixed; }
+
+.table .text-c .td-view {
+  text-align: left;
+  padding-left: 3px; }
+
+.tbody .contName {
+  cursor: pointer; }
+
+.search-area div label {
+  margin-top: 3px; }
+.search-area .key-words {
+  margin-left: 7px; }
+
+/*# sourceMappingURL=strg-storage-contFA.css.map */

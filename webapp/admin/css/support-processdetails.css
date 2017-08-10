@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/**
+ * 本文件是流程详情页样式文件
+ *@author 陈安
+ */
+#DataTables_Table_0_wrapper .contenthead {
+  width: 20%;
+  background-color: #006FBB;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  color: white; }
+#DataTables_Table_0_wrapper .content {
+  width: 20%;
+  background-color: #f0f0f0;
+  height: 28px;
+  line-height: 28px;
+  text-align: center; }
+
+/*# sourceMappingURL=support-processdetails.css.map */

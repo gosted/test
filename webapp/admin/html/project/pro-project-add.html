@@ -1,0 +1,228 @@
+<!--
+ * 本文件是项目添加html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>项目添加</title>
+</head>
+<body>
+
+<div class="pt-10">
+    <div id="table-box" class="table-box">
+
+        <table id='libAdd' class="form-table table table-border table-bordered table-bg">
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>项目名称：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text" con_name="projectName" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>项目类型：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <select class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="projectType"></select>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>项目编号：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" disabled con_name="projectCode" value="自动生成">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>所属省份：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <select class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="areaId">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>内/外部：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <label class="mr-10 l"><input type="radio" name="projectInout" checked value="0" datatype="*" nullmsg=" " errormsg=" " con_name="projectInout">内部</label>
+                        <label class="l"><input type="radio" name="projectInout" value="1">外部</label>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>开始时间：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" con_name="projectStartDate" datatype="date" nullmsg=" " errormsg=" " onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'datemax\')}'})" id="datemin" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>结束时间：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" con_name="projectEndDate" datatype="date" nullmsg=" " errormsg=" " onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">计划初验时间：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" con_name="projectEarlyDate" datatype="date" nullmsg=" " errormsg=" " ignore="ignore" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'datemaxO\')}'})" id="dateminO" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5">计划终验时间：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" con_name="projectFinalDate" datatype="date" nullmsg=" " errormsg=" " ignore="ignore" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'dateminO\')}'})" id="datemaxO" class="input-text Wdate">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">项目来源：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " ignore="ignore" con_name="projectSource">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>属地实施项目：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <label><input type="radio" checked name="isDependencyPro" value="0" datatype="*" con_name="isDependencyPro" nullmsg=" ">是</label>
+                        <label class="ml-20"><input type="radio" name="isDependencyPro" value="1">否</label>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">销售经理：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " ignore="ignore" con_name="saleManager">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5">项目金额：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="money" nullmsg=" " errormsg=" " ignore="ignore" con_name="projectAmont">
+                    </div>
+                    <div class="msg-tip" title="请输入正确金额,0~9,999,999,999,999.99元之间"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">销售部门：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " ignore="ignore" con_name="saleDepartment">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <!--<td class="table-key" colspan="5">合同甲方名称：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " ignore="ignore" con_name="contractAName">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>-->
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">客户名称：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " ignore="ignore" con_name="customName">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5">客户联系人：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " ignore="ignore" con_name="customContact">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">客户电子邮箱：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="e" nullmsg=" " errormsg=" " ignore="ignore" con_name="customEmail">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+                <td class="table-key" colspan="5">客户电话：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="m|phone" nullmsg=" " errormsg=" " ignore="ignore" con_name="customPhone">
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">备注：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls">
+                        <textarea rows="3" con_name="projectRemark" class="textarea"  dragonfly="true" datatype="*" ignore="ignore" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn btn-success radius mr-10 save">
+                <i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存
+            </button>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/pro-project-add.js"></script>
+</body>
+</html>

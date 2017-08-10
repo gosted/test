@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*
+* 支撑方案库页面文件
+*@author 王步华
+*/
+.tree {
+  min-height: 500px; }
+
+.dataTables_wrapper .table-bg thead th {
+  background: #cfe6ff !important;
+  color: #434649 !important; }
+
+.treest {
+  position: relative; }
+  .treest .tree {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #f7faff;
+    height: 100%;
+    width: 200px;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd; }
+
+.search-area-my {
+  overflow: hidden;
+  clear: both; }
+
+.search-area-my .form-label {
+  width: 66px; }
+
+.search-area-my > div {
+  width: 200px; }
+
+/*# sourceMappingURL=support-SptMdlPro-Library.css.map */

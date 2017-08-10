@@ -23,6 +23,219 @@ a:hover {
     display: none;
   }
 }
+* {
+  word-wrap: break-word;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+iframe,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+button,
+input,
+textarea,
+th,
+td,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol,
+dl {
+  list-style-type: none;
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 400;
+}
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+input {
+  outline: none!important;
+}
+input,
+button {
+  overflow: visible;
+  vertical-align: middle;
+  outline: none;
+}
+input[type="checkbox"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="text"],
+input[type="password"] {
+  -webkit-appearance: none;
+}
+body,
+th,
+td,
+button,
+input,
+select,
+textarea {
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, tahoma, arial, "WenQuanYi Micro Hei", Verdana, sans-serif, "\5B8B\4F53";
+  font-size: 12px;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+  outline: none;
+}
+a.ie6:hover {
+  zoom: 1;
+}
+a:focus {
+  outline: none;
+}
+a:hover,
+a:active {
+  outline: none;
+}
+:focus {
+  outline: none;
+}
+sub,
+sup {
+  vertical-align: baseline;
+}
+button,
+input[type="button"],
+input[type="submit"] {
+  line-height: normal !important;
+}
+/*img*/
+img {
+  border: 0;
+  vertical-align: middle;
+}
+a img,
+img {
+  -ms-interpolation-mode: bicubic;
+}
+/*HTML5 reset*/
+header,
+footer,
+section,
+aside,
+details,
+menu,
+article,
+section,
+nav,
+address,
+hgroup,
+figure,
+figcaption,
+legend {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+time {
+  display: inline;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+legend {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 40px;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+legend small {
+  font-size: 15px;
+  color: #999999;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+fieldset {
+  border-width: 0;
+  padding: 0.35em 0.625em 0.75em;
+  margin: 0 2px;
+  border: 1px solid #c0c0c0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="checkbox"]::-webkit-inner-spin-button,
+input[type="checkbox"]::-webkit-outer-spin-button {
+  outline: none;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 /*表单开关样式*/
 .ui-switch {
   position: absolute;
@@ -164,4 +377,78 @@ a:hover {
 }
 .mui-switch.mui-switch-anim:checked:before {
   transition: left 0.3s;
+}
+.Validform_checktip {
+  margin-left: 8px;
+  line-height: 20px;
+  height: 20px;
+  overflow: hidden;
+  color: #999;
+  font-size: 12px;
+}
+.Validform_right {
+  color: #71b83d;
+  padding-left: 20px;
+  background: url(../images/right.png) no-repeat left center;
+}
+.Validform_wrong {
+  color: red;
+  padding-left: 20px;
+  white-space: nowrap;
+  background: url(../images/error.png) no-repeat left center;
+}
+.Validform_loading {
+  padding-left: 20px;
+  background: url(../images/onLoad.gif) no-repeat left center;
+}
+.Validform_error {
+  border-color: #a94442;
+}
+#Validform_msg {
+  color: #7d8289;
+  font: 12px/1.5 tahoma, arial, sans-serif;
+  width: 280px;
+  -webkit-box-shadow: 2px 2px 3px #aaa;
+  -moz-box-shadow: 2px 2px 3px #aaa;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  z-index: 99999;
+  display: none;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
+}
+#Validform_msg .iframe {
+  position: absolute;
+  left: 0px;
+  top: -1px;
+  z-index: -1;
+}
+#Validform_msg .Validform_title {
+  line-height: 25px;
+  height: 25px;
+  text-align: left;
+  font-weight: bold;
+  padding: 0 8px;
+  color: #fff;
+  position: relative;
+  background-color: #000;
+}
+#Validform_msg a.Validform_close:link,
+#Validform_msg a.Validform_close:visited {
+  line-height: 22px;
+  position: absolute;
+  right: 8px;
+  top: 0px;
+  color: #fff;
+  text-decoration: none;
+}
+#Validform_msg a.Validform_close:hover {
+  color: #cc0;
+}
+#Validform_msg .Validform_info {
+  padding: 8px;
+  border: 1px solid #000;
+  border-top: none;
+  text-align: left;
 }

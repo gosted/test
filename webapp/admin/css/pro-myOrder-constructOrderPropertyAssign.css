@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/**
+ * 本文件是施工工单样式文件
+ * @author 孙倩
+ */
+.equipment-cnt {
+  margin-top: 10px;
+  width: 980px;
+  margin: 10px auto;
+}
+
+.HuiTab {
+  background-color: #f6f6f6;
+  overflow: inherit;
+}
+
+.form-table {
+  margin-bottom: 0;
+}
+
+.tabBar {
+  height: 32px;
+  border-bottom: 1px solid #939393;
+  background-color: #fff;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+.tabBar span {
+  width: 112px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: none;
+}
+.tabBar span.current {
+  background-color: #cfe6ff;
+}
+.tabBar span.current a {
+  color: #006fbb;
+}
+.tabBar span a {
+  display: inline-block;
+  height: 32px;
+  padding-left: 25px;
+}
+.tabBar em {
+  font-style: normal;
+  font-size: 19px;
+  color: #006fbb;
+}
+.tabBar .equipment a {
+  background: url("../images/commen/equ.png") no-repeat left 6px;
+}
+.tabBar .server a {
+  background: url("../images/commen/server.png") no-repeat left 6px;
+}
+.tabBar .other a {
+  background: url("../images/commen/other.png") no-repeat left 6px;
+}
+
+.tbody .div-text {
+  text-align: center;
+  border: none;
+  background: white;
+}
+.tbody .inp-text {
+  text-align: center;
+  border: none;
+  background: white;
+}
+
+.tbody1 .div-text {
+  text-align: center;
+  border: none;
+  background: white;
+}
+.tbody1 .inp-text {
+  text-align: center;
+  border: none;
+  background: white;
+}
+
+.editable .div-text {
+  background: white;
+  border: 1px solid #ccc;
+  min-height: 31px;
+  background: #FFFFFF;
+}
+.editable .inp-text {
+  background: white;
+  border: 1px solid #ccc;
+}
+.editable td {
+  position: relative;
+}
+.editable .onfocus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: auto;
+}
+
+.tabCon .div-text {
+  line-height: 31px;
+}
+.tabCon .inp-text {
+  line-height: 31px;
+}
+
+.installTime {
+  line-height: 20px;
+}
+
+/*# sourceMappingURL=pro-myOrder-constructOrderPropertyAssign.css.map */

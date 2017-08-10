@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/**
+ * 本文件是机构管理页样式文件
+ *@author 陈安
+ */
+.table-tree {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+  min-width: 200px;
+  height: 200px;
+  border: 1px solid #ddd;
+  overflow: auto; }
+  .table-tree .table-treeul li {
+    list-style: none;
+    line-height: 14px;
+    text-align: left;
+    white-space: nowrap;
+    outline: 0;
+    margin-left: 15px; }
+    .table-tree .table-treeul li ul {
+      padding: 0 0 0 18px; }
+  .table-tree .table-treeul a {
+    display: inline-block;
+    padding: 1px 3px 0 0;
+    cursor: pointer;
+    height: 17px;
+    background-color: transparent;
+    text-decoration: none;
+    vertical-align: top; }
+    .table-tree .table-treeul a:hover {
+      text-decoration: underline; }
+  .table-tree .table-treeul .tree-sw,
+  .table-tree .table-treeul .tree-icon {
+    display: inline-block; }
+  .table-tree .table-treeul .tree-sw {
+    width: 20px;
+    height: 20px;
+    background: url("../images/commen/tree_0.png") no-repeat center; }
+  .table-tree .table-treeul .tree-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+    vertical-align: top;
+    background: url("../images/commen/scan_0.png") no-repeat center; }
+  .table-tree .table-treeul .tree-close {
+    background-position: -74px -36px; }
+
+.organ-name {
+  height: 26px;
+  border: 1px solid #ddd;
+  background: url(../images/commen/select_fold.png) no-repeat right center; }
+  .organ-name div {
+    padding-left: 4px;
+    padding-right: 30px; }
+
+/*# sourceMappingURL=system-organ-add.css.map */

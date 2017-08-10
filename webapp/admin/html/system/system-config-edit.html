@@ -1,0 +1,105 @@
+﻿<!--
+ * 本文件是系统配置编辑html文件
+ * @author 鲍哲
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/support-upload.css" rel="stylesheet" type="text/css" />
+    <!--<link href="../../css/system-user-add.css" rel="stylesheet" type="text/css" />-->
+    <link href="../../css/system-role.css" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>系统配置</title>
+</head>
+
+<body>
+
+
+<div style="margin-top: 20px;">
+    <div id="table-box" class="table-box">
+        <table id='roleAdd' class="form-table table table-border table-bordered table-bg">
+            <tr>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>配置名称：</td>
+                <td colspan='35' class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="sysconfigName" name="sysconfigName">
+                    </div>
+                    <div class="msg-tip" title="名称不能为空"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>配置编码：</td>
+                <td colspan='15' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" con_name="sysconfigCode" name="sysconfigCode" disabled>
+                    </div>
+                    <div class="msg-tip" title="编码不能为空"> </div>
+                </td>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>排序：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" con_name="sysconfigSort" name="sysconfigSort" datatype="n1-100" nullmsg=" " errormsg=" " >
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red ">*</span>配置值：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls  cl con_textarea">
+                        <textarea rows="3" con_name="sysconfigValue" name="sysconfigValue" class="sysval textarea table-input" datatype="*1-200" dragonfly="true" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)" style="width: 663px"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">2</em>/200</p>
+                    </div>
+                    <div class="msg-tip" title="请输入您的意见"> </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">配置说明：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls cl con_textarea">
+                        <textarea rows="3" con_name="sysconfigDesc" name="sysconfigDesc" class="sysdec textarea table-input" onKeyUp="textarealength(this,200)"  style="width: 663px" ></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">2</em>/200</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn con-ProgramLibrary btn-default btn-uploadstar upload-lib radius mr-10 ProgramSubmitButton"><i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/system-config-edit.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!--
+ * 本文件是新闻列表添加页html文件
+ * @author 李明
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/support-upload.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/news-list-add.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>新闻列表添加</title>
+</head>
+<body>
+
+<div>
+    <div class="table-box mt-20">
+        <table class="form-table table table-border table-bordered table-bg">
+            <tr class="mainImg">
+                <td colspan="13" class=" table-key" style="text-align: center"><span class="c-red">*</span>主图：</td>
+                <td colspan='27' height="120">
+                    <div class="listAddImg" style="cursor:pointer;">
+                        <img src="../../images/news/add.jpg">
+                    </div>
+                </td>
+            </tr>
+            <tr class="newsTitle">
+                <td class="table-key" colspan="5"><span class="c-red">*</span>新闻名称：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls input-tree">
+                        <input type="text" class="input-text newsName" datatype="*" con_name="title" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+            </tr>
+            <tr class="keyWord">
+                <td class="table-key" colspan="5"><span class="c-red">*</span>关键词：</td>
+                <td colspan="22" class="has-tip">
+                    <div class="formControls input-tree">
+                        <input type="text" class="input-text newsKeyName" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>发布日期：</td>
+                <td colspan='8' class="has-tip">
+                    <div class="formControls ">
+                        <input class="input-text table-input Wdate input-type releaseTime" type="text" onfocus="WdatePicker()" con_name="releaseTime" datatype="date" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+            </tr>
+            <tr class="newsSource">
+                <td class="table-key" colspan="5"><span class="c-red">*</span>来源：</td>
+                <td colspan="22" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text newsSourceVal" con_name="source" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+                <td colspan='5' class=" table-key newsAuthor"><span class="c-red">*</span>作者：</td>
+                <td colspan="8" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text newsAuthorVal" con_name="author" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+            </tr>
+
+            <tr class="newsClass">
+                <td colspan="5" class="table-key newsAuthor"><span class="c-red">*</span>产品类别：</td>
+                <td colspan="15">
+                    <select id="newsSelect">
+
+                    </select>
+                </td>
+                <td colspan="20"></td>
+            </tr>
+            <tr class="addValue" id="addValue">
+                <td class="table-key" colspan="5"><span class="c-red">*</span>产品价值：</td>
+                <td colspan="30" class="has-tip">
+                    <div class="formControls proValue">
+                        <input type="text" class="input-text" con_name="proValue" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+                <td class="table-key" colspan="5" style="text-align: center;font-size: 20px;cursor:pointer;"><i class="Hui-iconfont">&#xe600</i></td>
+            </tr>
+
+            <tr class="newsIntro">
+                <td class="table-key" colspan="5"><span class="c-red">*</span>简介：</td>
+                <td colspan="35" class="has-tip jianjie">
+                    <div class="formControls">
+                        <textarea con_name="introduction" class="input-text introduction" style="width:100%;height: 40px;" datatype="*" nullmsg=" " errormsg=" "></textarea>
+                    </div>
+                    <div class="msg-tip" title="请输入正确信息"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="40" style="position: relative;">
+                    <script type="text/plain" style="width: 100%;" id="myEditor" name="myEditor"></script>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="6"><span class="c-red"></span>附件：</td>
+                <td colspan="34" class="formControls">
+                    <form id="upload" class="upload-form" enctype ="multipart/form-data">
+                        <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+                        <input type="file" name="file" class="upload-file">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="6"></td>
+                <td colspan="34" class="formControls file-list">
+
+                </td>
+            </tr>
+        </table>
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn btn-success save radius mr-10"><i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../lib/ueditor/1.4.3/ueditor.config.js"></script>
+<script type="text/javascript" src="../../lib/ueditor/1.4.3/ueditor.all.min.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/news-list-add.js"></script>
+</body>
+</html>

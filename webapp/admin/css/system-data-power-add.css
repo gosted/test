@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/**
+ * 本文件是数据权限样式文件
+ * @author 张欢
+ */
+/*用户名搜索列表*/
+.list-box {
+  position: relative;
+  z-index: 1;
+}
+.list-box .list {
+  display: none;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  text-indent: 5px;
+  padding: 0;
+  background: -webkit-linear-gradient(#d9f0ff, #f0f7ff);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#d9f0ff, #f0f7ff);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#d9f0ff, #f0f7ff);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(#d9f0ff, #f0f7ff);
+  /* 标准的语法 */
+  cursor: pointer;
+}
+.list-box .list li:hover {
+  color: blue;
+  background: #cfe6ff;
+}
+
+/*用户名搜索列表结束*/
+/*是否向下兼容列表*/
+.power-box {
+  display: none;
+}
+
+.power {
+  width: 100%;
+}
+.power tr td {
+  width: auto;
+}
+.power tr .cont-type {
+  width: 100px;
+}
+.power tr .yes-or-no {
+  width: 80px;
+}
+.power tr .yes-no {
+  text-align: center;
+}
+.power tr .deal {
+  width: 80px;
+}
+.power tr .btn-two {
+  width: 160px;
+}
+.power tr:nth-child(2n+1) {
+  background: #FEF6F6;
+}
+.power .th {
+  text-align: center;
+  background: #cfe6ff;
+}
+
+/*是否向下兼容列表结束*/
+
+/*# sourceMappingURL=system-data-power-add.css.map */

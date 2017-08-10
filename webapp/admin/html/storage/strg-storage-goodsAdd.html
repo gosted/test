@@ -1,0 +1,139 @@
+<!--
+ * 本文件是货架定义添加html文件
+ * @author 王步华
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="admin/images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="admin/images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/support-upload.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/strg-storage-goodsAdd.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>货架定义添加</title>
+</head>
+<body>
+
+<div style="margin-top: 20px;">
+    <div id="table-box" class="table-box">
+        <table id='libAdd' class="form-table table table-border table-bordered table-bg">
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>货架名称：</td>
+                <td colspan="35" class="has-tip shelfCode-has">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type shelfName" datatype="*1-20" nullmsg=" " errormsg=" "  con_name="shelfName">
+                    </div>
+                    <div class="msg-tip" title="输入长度为1-20"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>上级货架：</td>
+                <td colspan="35" class="has-tip major">
+                    <div class="formControls input-tree">
+                        <input type="text" class="input-text shelfParentId"  readonly con_name="shelfParentId">
+                        <ul class="tree" style="z-index: 1">
+
+                        </ul>
+                    </div>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>货架编号：</td>
+                <td colspan="35" class="has-tip shelfCode-has">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type shelfCode" placeholder="自动生成"  con_name="shelfCode" disabled>
+                    </div>
+                    <div class="msg-tip" title="请输入1-64位编号"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>所属库房：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type storageId" datatype="*1-20" nullmsg=" " errormsg=" "  con_name="storageId"  disabled>
+                    </div>
+                    <div class="msg-tip" title="输入长度为1-20"> </div>
+                </td>
+            </tr>
+
+            <!--<tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>排序：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type shelfSort" value="1" datatype="n1-64" nullmsg=" " errormsg=" "  con_name="shelfSort">
+                    </div>
+                    <div class="msg-tip" title="请输入1-64位数字"> </div>
+                </td>
+            </tr>-->
+
+            <tr>
+                <td class="table-key" colspan="5">货架描述：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls cl">
+                        <textarea rows="3" con_name="shelfRemark" class="textarea return-content shelfRemark"  dragonfly="true"  onKeyUp="textarealength(this,500)"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
+                    </div>
+                    <div class="msg-tip" title="请填写"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red"></span>附件：</td>
+                <td colspan="35" class="formControls">
+                    <form id="upload" class="upload-form" enctype ="multipart/form-data">
+                        <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+                        <input type="file" name="file" class="upload-file">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"></td>
+                <td colspan="35" class="formControls file-list">
+
+                </td>
+            </tr>
+        </table>
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn btn-success btn-default btn-uploadstar upload-lib radius mr-10 ProgramSubmitButton"><i class="Hui-iconfont">&#xe676</i>&nbsp;&nbsp;保存</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/strg-storage-goodsAdd.js"></script>
+</body>
+</html>

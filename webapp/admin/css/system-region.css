@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/**
+ * 本文件是机构管理页样式文件
+ *@author 陈安
+ */
+.ctn-box {
+  position: relative; }
+  .ctn-box .tree {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #f7faff;
+    height: 100%;
+    width: 200px;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd; }
+  .ctn-box .ctn {
+    margin-left: 226px; }
+
+.tree > li {
+  margin-left: 15px; }
+
+.tree {
+  margin: 0;
+  padding: 20px 0 0 15px;
+  line-height: 16px;
+  color: #333; }
+  .tree li {
+    list-style: none;
+    line-height: 14px;
+    text-align: left;
+    white-space: nowrap;
+    outline: 0;
+    margin-left: 5px; }
+    .tree li ul {
+      padding: 0 0 0 8px; }
+  .tree a {
+    display: inline-block;
+    padding: 1px 3px 0 0;
+    cursor: pointer;
+    height: 17px;
+    background-color: transparent;
+    text-decoration: none;
+    vertical-align: top; }
+    .tree a:hover {
+      text-decoration: underline; }
+  .tree .tree-sw,
+  .tree .tree-icon {
+    display: inline-block; }
+  .tree .tree-sw {
+    width: 20px;
+    height: 20px;
+    background: url("../images/commen/tree_0.png") no-repeat center; }
+  .tree .tree-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+    vertical-align: top;
+    background: url("../images/commen/scan_0.png") no-repeat center; }
+  .tree .tree-close {
+    background-position: -74px -36px; }
+
+.table .text-c .td-view {
+  text-align: left;
+  padding-left: 3px; }
+
+.search-area div label {
+  margin-top: 3px; }
+.search-area .key-words {
+  margin-left: 7px; }
+
+/*# sourceMappingURL=system-region.css.map */

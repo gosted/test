@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/**
+ * 本文件是审批页样式文件
+ * @author 张欢
+ */
+table p {
+  margin-bottom: 0;
+}
+
+.file-list p {
+  cursor: pointer;
+}
+.file-list b {
+  width: 18px;
+  height: 16px;
+  display: inline-block;
+  float: left;
+  margin-top: 6px;
+}
+.file-list .doc {
+  background: url("../images/commen/icon_47.png") no-repeat;
+}
+.file-list .xls {
+  background: url("../images/commen/icon_50.png") no-repeat;
+}
+.file-list .ppt {
+  background: url("../images/commen/icon_44.png") no-repeat;
+}
+.file-list .pdf {
+  background: url("../images/commen/icon_54.png") no-repeat;
+}
+.file-list .other {
+  background: url("../images/commen/unknown.png") no-repeat;
+}
+
+/*# sourceMappingURL=support-demand-list.css.map */

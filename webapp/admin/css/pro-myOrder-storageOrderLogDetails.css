@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/**
+ * 本文件是出库工单详情页业务日志样式文件
+ * @author 孙倩
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\000036}}
+.pad {
+  padding: 0px 20px 20px 100px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\000037}}
+.firstLine {
+  width: 712px;
+  margin-left: 89px;
+  border-left: 2px solid #ea858c;
+  height: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\000038}}
+.pd-20 {
+  padding-top: 0px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000311}}
+.leftchild {
+  width: 89px;
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000316}}
+.leftchild span {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000320}}
+.leftchild .span_noposi {
+  font-size: 12px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000323}}
+.leftchild .span_posi {
+  position: relative;
+  width: 20px;
+  height: 19px;
+  left: 80px;
+  top: -38px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000331}}
+.rightchild {
+  width: 697px;
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000336}}
+.rightchild > div {
+  overflow: hidden;
+  padding-left: 18px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000340}}
+.rightchild > div > span {
+  margin-left: 10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000343}}
+.rightchild > div > .content_span {
+  font-size: 14px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000346}}
+.rightchild > div > .name_span {
+  color: #005bab;
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000352}}
+#DataTables_Table_0_wrapper .childdiv {
+  text-align: center;
+  height: 28px;
+  line-height: 28px;
+  background-color: #f0f0f0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000358}}
+#DataTables_Table_0_wrapper .childlabel {
+  background-color: #006fbb;
+  color: #fff;
+  text-align: center;
+  margin-top: 0px;
+  height: 28px;
+  line-height: 28px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/zhgd\/02\%B4\%FA\%C2\%EB\/zhgd\/zhgd-view\/zhgd-view-pc\/src\/main\/webapp\/admin\/sass\/pro-myOrder-storageOrderLogDetails\.scss}line{font-family:\0000366}}
+#DataTables_Table_0_wrapper .parentdiv {
+  width: 20%;
+}
+
+/*# sourceMappingURL=pro-myOrder-storageOrderLogDetails.css.map */

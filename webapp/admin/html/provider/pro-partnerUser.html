@@ -1,0 +1,139 @@
+﻿<!--
+ * 本文件是合作伙伴用户html文件
+ * @author 王步华
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <LINK rel="Bookmark" href="admin/images/favicon.ico" >
+  <LINK rel="Shortcut Icon" href="admin/images/favicon.ico" />
+
+  <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/pro-partnerUser.css" rel="stylesheet" type="text/css" />
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../lib/html5.js"></script>
+  <script type="text/javascript" src="../../lib/respond.min.js"></script>
+  <script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+  <![endif]-->
+
+  <!--[if IE 6]>
+  <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js"></script>
+  <script>DD_belatedPNG.fix('*');</script>
+  <![endif]-->
+  <title>合作伙伴用户</title>
+</head>
+<body>
+<nav class="breadcrumb">
+  <i class="Hui-iconfont clr-blue">&#xe67f;</i> 首页
+  <span class="c-gray en">&gt;</span> 合作伙伴
+  <span class="c-gray en">&gt;</span>
+  <span class="clr-blue">合作伙伴用户</span>
+  <a class="btn btn-success radius r mr-20 refresh" href="javascript:location.replace(location.href);" title="刷新" >
+    <i class="Hui-iconfont">&#xe68f;</i>
+  </a>
+</nav>
+<div class="pr-20">
+  <div class="ctn-box">
+    <ul id="tree" class="tree">
+    </ul>
+    <div class="ctn">
+      <!--搜索区-->
+      <div class="search-area lib-search">
+        <div class="row cl pt-10">
+
+          <div class="l cl f-l">
+            <label class="form-label l label-key">用户名：</label>
+            <div class="formControls l">
+              <input type="text" class="input-text prName" con_name="prName">
+            </div>
+          </div>
+
+          <div class="l cl key-words">
+            <label class="form-label l label-key">真实姓名：</label>
+            <div class="formControls l">
+              <input type="text" class="input-text prLabel" con_name="prLabel">
+            </div>
+          </div>
+
+          <!--<div class="r">
+            <a href="javascript:;" class="btn btn-danger radius f-r mr-5 btn-empty">
+              <i class="Hui-iconfont">&#xe609;</i>
+              清空
+            </a>
+          </div>
+-->
+          <div class="r">
+            <a href="javascript:;" class="btn btn-success radius f-r mr-5 btn-find">
+              <i class="Hui-iconfont">&#xe665;</i>
+              查询
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row cl mt-5 lib-search">
+
+        <div class="l">
+          <a href="javascript:;" class="btn btn-success radius f-r mr-5 btn-add">
+            <i class="Hui-iconfont">&#xe600;</i>
+            添加
+          </a>
+        </div>
+
+      </div>
+      <!--搜索区结束-->
+      <!--列表区-->
+      <div class="mt-5">
+        <table class="table table-border table-bordered table-bg table-hover">
+          <thead>
+          <tr class="text-c">
+            <th width="25"><input type="checkbox" name="" value=""></th>
+            <th style="width: 100px;">用户名</th>
+            <th style="width: 100px;">真实姓名</th>
+            <th style="width: 30px;">性别</th>
+            <th>主机构</th>
+            <th style="width: 30px;">状态</th>
+            <th style="width: 140px;">末次登录时间</th>
+            <th style="width: 120px;">操作</th>
+          </tr>
+          </thead>
+          <tbody class="tbody">
+
+          </tbody>
+        </table>
+        <div class="no-data">暂无数据</div>
+      </div>
+      <!--列表区结束-->
+      <!--分页-->
+      <div class="pagination-box">
+        <div class="pagination cl">
+          <div id="pagination" class="l"></div>
+        </div>
+      </div>
+      <!--分页结束-->
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../../lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/pro-partnerUser.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/**
+ * 本文件是新闻图片库页面样式文件
+ * @author 彭佳明
+ */
+.search-area-my > div {
+  width: 600px; }
+
+.search-area-my > div > .formControls {
+  width: 260px; }
+
+.mt-10 .tbody td .imgWrap {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+  padding: 4px 0;
+  overflow:hidden;
+}
+
+.mt-10 .tbody td .imgWrap div {
+  background-size: cover;
+  width: 150px;
+  height: 100px;
+  left: 0;
+  top: 0;
+}
+
+.mt-10 .tbody td .imgWrap img {
+  max-height: 100%;
+}
+
+/*# sourceMappingURL=news-picture.css.map */
+/*# sourceMappingURL=news-picture.css.map */
+
+/*# sourceMappingURL=news-picture.css.map */

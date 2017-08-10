@@ -1,0 +1,284 @@
+<!--
+ * 本文件是出库工单退回编辑html文件
+ * @author 王步华
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/pro-reSubmit.css" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>出库工单</title>
+</head>
+<body>
+<!--<nav class="breadcrumb">
+    <i class="Hui-iconfont clr-blue">&#xe67f;</i> 首页
+    <span class="c-gray en">&gt;</span> 项目管理
+    <span class="c-gray en">&gt;</span>
+    <span class="c-gray en">生成工单</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="clr-blue">出库工单</span>
+    <a class="btn btn-success radius r mr-20 refresh" href="javascript:location.replace(location.href);" title="刷新" >
+        <i class="Hui-iconfont">&#xe68f;</i>
+    </a>
+</nav>-->
+<div>
+    <div id="table-box" class="table-box pt-20">
+        <table id='roleAdd' class="form-table table table-border table-bordered table-bg">
+            <tr>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>工单名称：</td>
+                <td colspan='15' class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="workOrderName" name="workOrderName" >
+                    </div>
+                    <div class="msg-tip" title="工单名称不能为空"> </div>
+                </td>
+
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>工单编号：</td>
+                <td colspan='15' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type" datatype="*" nullmsg=" " errormsg=" " con_name="workOrderNum" name="workOrderNum" value="自动生成"  disabled >
+                    </div>
+                    <div class="msg-tip" title="工单编号不能为空"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>所属项目：</td>
+                <td colspan="15" class="has-tip major">
+                    <div class="formControls input-tree">
+                        <select  type="select" con_name="project"  name="project" class="select project"  datatype="*" nullmsg=" " errormsg=" ">
+
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>子项目：</td>
+                <td colspan='15' class="recordStartTime has-tip input-tree">
+                    <select  type="select" name="subProjectId" con_name="subProjectId"  class="select subProject" datatype="*" nullmsg=" " errormsg=" ">
+                    </select>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red">*</span>所属工地：</td>
+                <td colspan="15" class="has-tip major">
+                    <div class="formControls input-tree">
+                        <select  type="select" name="site" con_name="site"  class="select worksite" datatype="*" nullmsg=" " errormsg=" ">
+
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>选择仓库：</td>
+                <td colspan='15' class="recordStartTime has-tip">
+                    <div class="formControls input-tree">
+                        <select   class="select str storageName" con_name ="storageName" datatype="*" nullmsg=" " errormsg=" " >
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='5' class=" table-key">联系人：</td>
+                <td colspan='15' class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type ipt contract"  nullmsg=" " errormsg=" " nameValue="contract"  con_name="contract">
+                    </div>
+                    <div class="msg-tip" title="请输入"></div>
+                </td>
+                <td colspan='5' class=" table-key">联系电话：</td>
+                <td colspan='15' class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type　ipt contractNumber" datatype="m|phone" ignore="ignore" nullmsg=" " errormsg=" " nameValue="contractNumber"  con_name="contractNumber">
+                    </div>
+                    <div class="msg-tip" title="请正确输入"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='5' class=" table-key">收货人：</td>
+                <td colspan='15' class="has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type　ipt consignee" nullmsg=" " errormsg=" " nameValue="consignee"  con_name="consignee">
+                    </div>
+                    <div class="msg-tip" title="请输入"> </div>
+                </td>
+
+                <td colspan='5' class=" table-key">收货人电话：</td>
+                <td colspan='15' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type　ipt consigneePhone"  nullmsg=" " errormsg=" " datatype="m|phone" ignore="ignore" nameValue="consigneePhone" con_name="consigneePhone">
+                    </div>
+                    <div class="msg-tip" title="请正确输入"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='5' class=" table-key">收货人邮箱：</td>
+                <td colspan='15' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type consigneeEmail" datatype="e" ignore="ignore"  nullmsg=" " errormsg=" " nameValue="consigneeEmail" con_name="consigneeEmail" >
+                    </div>
+                    <div class="msg-tip" title=""> </div>
+                </td>
+                <td colspan='5' class=" table-key">收货地址：</td>
+                <td colspan='15' class="recordStartTime has-tip">
+                    <div class="formControls">
+                        <input type="text" class="input-text input-type consigneeAdd"  nullmsg=" " errormsg=" " nameValue="consigneeAdd" con_name="consigneeAdd" >
+                    </div>
+                    <div class="msg-tip" title="请输入"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">备注：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls accept-textarea cl">
+                        <textarea rows="3" class="textarea table-input remark"  dragonfly="true" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"  con_name="remark"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">2</em>/200</p>
+                    </div>
+                    <div class="msg-tip" title="请输入"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='5' class=" table-key">提醒：</td>
+                <td colspan='35' class="recordStartTime has-tip">
+                    <div class="formControls checkbox">
+                        <label class="col-3"><input class="check isSendEmail" type="checkbox" checked="checked" value="0" con_name="isSendEmail">邮件提醒</label>
+                        <label class="col-3"><input class="check isSendMsg" type="checkbox" checked="checked"  value="1" con_name="isSendMsg">系统消息</label>
+                    </div>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5">工单类型：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls mb-10">
+                        <select class="relevant-type input-text l mr-10" nameValue="spDetailType" con_name="spDetailType">
+
+                        </select>
+                        <label class="mr-10 l">相关编号：</label>
+                        <div class="list-box l mr-10">
+                            <input type="text" readonly class="input-text relevant" nameValue="spbasisCode" con_name="spbasisCode">
+                        </div>
+                        <label class="mr-10 l">导入：</label>
+                        <label class="mr-10 l"><input type="checkbox" checked name="detailed" value="QDLX-SB">设备清单</label>
+                        <span>
+                            <i class="fa fa-plus-square fa-2x c-success add-btn" aria-hidden="true" title="添加" style="cursor: pointer;"></i>
+                        </span>
+
+                    </div>
+                    <table class="table table-border table-bordered table-bg table-hover according">
+                        <thead>
+                        <tr class="text-c">
+                            <th width="90">类型</th>
+                            <th width="120">编号</th>
+                            <th>名称</th>
+                            <th width="60">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody class="tbody">
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"><span class="c-red"></span>附件：</td>
+                <td colspan="35" class="formControls">
+                    <form id="upload" class="upload-form" enctype ="multipart/form-data">
+                        <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+                        <input type="file"  name="file"  class="upload-file">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan="5"></td>
+                <td colspan="35" class="formControls file-list">
+
+                </td>
+            </tr>
+        </table>
+
+        <div>
+            <div class="mt-20 oder">
+                <span class="bdshare-button-style0-16">出库清单</span>
+                <button href="javascript:;" class="btn con-ProgramLibrary btn-default btn-uploadstar upload-lib radius mr-10 ProgramSubmitButton f-r"><i class="Hui-iconfont"></i>&nbsp;&nbsp;Excel导入</button>
+                <button href="javascript:;" class="btn con-ProgramLibrary btn-default btn-uploadstar upload-lib radius mr-10 ProgramSubmitButton f-r"><i class="Hui-iconfont"></i>&nbsp;&nbsp;子项目导入</button>
+            </div>
+
+            <div class="mt-10">
+                <table class="table table-border table-bordered table-bg addTable tableList">
+                    <thead>
+                    <tr class="text-c">
+                        <th width="100"><span class="c-red">*</span>设备名称</th>
+                        <th width="100"><span class="c-red">*</span>规格型号</th>
+                        <th width="100"><span class="c-red">*</span>厂商</th>
+                        <th width="100">单位</th>
+                        <th width="100">数量</th>
+                        <th width="100"><span class="c-red">*</span>关联设备编号</th>
+                        <th width="60">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tbody1">
+
+                    </tbody>
+                    <tbody class="tbody">
+                    <tr class="firstTr listTr">
+                        <td><input con_name="detailName" class="needChoose input-text widthChange arr" type="text" /></td>
+                        <td><input con_name="detailModel" class="needChoose input-text widthChange arr" type="text" /></td>
+                        <td><input con_name="detailCompany" class="needChoose input-text widthChange arr" type="text" /></td>
+                        <td><input con_name="detailUnit" class="input-text widthChange arr" type="text" /></td>
+                        <td><input con_name="detailCount" class="input-text widthChange arr" type="text" /></td>
+                        <td class="input-tree">
+                            <input type="text" class="needChoose input-text inp-text widthChange" readonly>
+                            <ul class="tree">
+
+                            </ul>
+                        </td>
+                        <td class="addBtn getList" style="text-align: center;">
+                            <!--<i title="添加" class="Hui-iconfont btn-add btnList">&#xe604;</i>-->
+                            <i title="添加" class="fa fa-plus-square fa-lg btn-add btnList" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn con-ProgramLibrary btn-default btn-uploadstar upload-lib radius mr-10 ProgramSubmitButton"><i class="Hui-iconfont">&#xe676</i>&nbsp;&nbsp;提交</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/pro-reSubmit.js" charset="utf-8"></script>
+</body>
+</html>

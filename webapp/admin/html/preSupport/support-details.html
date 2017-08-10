@@ -1,0 +1,277 @@
+﻿<!--
+ * 本文件是详情页html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <LINK rel="Bookmark" href="../../images/favicon.ico" >
+  <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+  <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/icheck/icheck.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/support-details.css" rel="stylesheet" type="text/css" />
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../lib/html5.js"></script>
+  <script type="text/javascript" src="../../lib/respond.min.js"></script>
+  <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+  <![endif]-->
+
+  <!--[if IE 6]>
+  <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+  <script>DD_belatedPNG.fix('*');</script>
+  <![endif]-->
+  <title>需求信息详情</title>
+</head>
+<body>
+<div>
+  <div class="details">
+    <div class="table-box">
+      <div class="base-info">
+        <div class="long-label cl mt-10"><span class="lab-cnt f-l">基本信息</span><span class="brdr f-l"></span></div>
+        <table class="form-table table table-border table-bordered table-bg">
+          <tr>
+            <td class="table-key" colspan="4">支撑类型：</td>
+            <td colspan="8" con_name="reqSupType"></td>
+            <td class="table-key" colspan="4">需求单编号：</td>
+            <td colspan="9" con_name="reqCode"></td>
+            <td class="table-key" colspan="4">提交日期：</td>
+            <td colspan="11" con_name="reqSubTime" _type="date"></td>
+          </tr>
+          <tr>
+            <td class="table-key" colspan="4">需求单名称：</td>
+            <td colspan="36" con_name="reqName"></td>
+          </tr>
+          <tr>
+            <td class="table-key" colspan="4">属地联通：</td>
+            <td colspan="36" con_name="unitName"></td>
+          </tr>
+          <tr>
+            <td class="table-key" colspan="4">联系人姓名：</td>
+            <td colspan="8" con_name="customerContacts"></td>
+            <td class="table-key" colspan="4">联系人电话：</td>
+            <td colspan="9" con_name="customerPhone"></td>
+            <td class="table-key" colspan="4">联系人邮箱：</td>
+            <td colspan="11" con_name="customerEmail"></td>
+          </tr>
+        </table>
+
+        <div class="long-label cl mt-10"><span class="lab-cnt f-l">需求信息</span><span class="brdr f-l"></span></div>
+        <div class="need-infmt">
+          <div id="project">
+            <table ind="0" class="form-table table table-border table-bordered table-bg">
+              <tr>
+                <td class="table-key" colspan="4">客户名称：</td>
+                <td colspan="36" con_name="customerName"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">支撑地点：</td>
+                <td colspan="36" con_name="reqSupAddress"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="5">是否需要建设：</td>
+                <td colspan="15" con_name="reqIsConstruct"></td>
+                <td class="table-key" colspan="5">期望完成日期：</td>
+                <td colspan="15" con_name="reqExpectEndTime" _type="date"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">功能需求：</td>
+                <td colspan="36" con_name="functionId"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">项目性质：</td>
+                <td colspan="16" con_name="reqProProperty"></td>
+                <td class="table-key" colspan="4">项目工期：</td>
+                <td colspan="16" con_name="reqProCycle"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="5">预期收入(元)：</td>
+                <td colspan="9" con_name="reqProExpectRevenue"></td>
+                <td class="table-key" colspan="5">工地数量(个)：</td>
+                <td colspan="8" con_name="reqProSiteNum"></td>
+                <td class="table-key" colspan="5">工人数量(人)：</td>
+                <td colspan="8" con_name="reqProWorkerNum"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">需求概要：</td>
+                <td colspan="36" con_name="reqOutline"></td>
+              </tr>
+              <tr class="need-info">
+                <td class="table-key" colspan="4">需求详情：</td>
+                <td colspan="36" con_name="reqDetail"></td>
+              </tr>
+            </table>
+          </div>
+
+          <div id="exhibition">
+            <table ind="1" class="form-table table table-border table-bordered table-bg">
+              <tr>
+                <td class="table-key" colspan="4">展会名称：</td>
+                <td colspan="36" con_name="reqEventName"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">展会地点：</td>
+                <td colspan="36" con_name="reqSupAddress"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="5">展会开始时间：</td>
+                <td colspan="9" con_name="reqSupBeginTime" _type="date"></td>
+                <td class="table-key" colspan="5">展会结束时间：</td>
+                <td colspan="9" con_name="reqSupEndTime" _type="date"></td>
+                <td class="table-key" colspan="5">参会人数：</td>
+                <td colspan="9" con_name="reqSupPeopleNum"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">参会人员：</td>
+                <td colspan="36" con_name="reqSupPeople"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">功能需求：</td>
+                <td colspan="36" con_name="functionId"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">需求概要：</td>
+                <td colspan="36" con_name="reqOutline"></td>
+              </tr>
+              <tr class="need-info">
+                <td class="table-key" colspan="4">需求详情：</td>
+                <td colspan="36" con_name="reqDetail"></td>
+              </tr>
+            </table>
+          </div>
+
+          <div id="train">
+            <table ind="2" class="form-table table table-border table-bordered table-bg">
+              <tr>
+                <td class="table-key" colspan="4">培训名称：</td>
+                <td colspan="36" con_name="reqEventName"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">培训地点：</td>
+                <td colspan="36" con_name="reqSupAddress"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">培训人员：</td>
+                <td colspan="36" con_name="reqSupPeople"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="5">培训开始时间：</td>
+                <td colspan="9" con_name="reqSupBeginTime" _type="date"></td>
+                <td class="table-key" colspan="5">培训结束时间：</td>
+                <td colspan="9" con_name="reqSupEndTime" _type="date"></td>
+                <td class="table-key" colspan="5">培训人数：</td>
+                <td colspan="9" con_name="reqSupPeopleNum"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">功能需求：</td>
+                <td colspan="36" con_name="functionId"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">需求概要：</td>
+                <td colspan="36" con_name="reqOutline"></td>
+              </tr>
+              <tr class="need-info">
+                <td class="table-key" colspan="4">需求详情：</td>
+                <td colspan="36" con_name="reqDetail"></td>
+              </tr>
+            </table>
+          </div>
+
+          <div id="other">
+            <table ind="3" class="form-table table table-border table-bordered table-bg">
+              <tr>
+                <td class="table-key" colspan="5">期望完成日期：</td>
+                <td colspan="35" con_name="reqExpectEndTime" _type="date"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">支撑地点：</td>
+                <td colspan="36" con_name="reqSupAddress"></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">功能需求：</td>
+                <td colspan="36" con_name="functionId" ></td>
+              </tr>
+              <tr>
+                <td class="table-key" colspan="4">需求概要：</td>
+                <td colspan="36" con_name="reqOutline"></td>
+              </tr>
+              <tr class="need-info">
+                <td class="table-key" colspan="4">需求详情：</td>
+                <td colspan="36" con_name="reqDetail"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-check">
+        <div class="long-label cl mt-10"><span class="lab-cnt f-l">业务经理受理</span><span class="brdr f-l"></span></div>
+        <table class="form-table table table-border table-bordered table-bg">
+          <tr>
+            <td class="table-key" colspan="4">业务经理：</td>
+            <td colspan="15" con_name="apprApprover"></td>
+            <td class="table-key" colspan="5">处理时间：</td>
+            <td colspan="16" con_name="apprTime" _type="timesec"></td>
+          </tr>
+          <tr>
+            <td class="table-key" colspan="4">处理结果：</td>
+            <td colspan="15" con_name="apprResult"></td>
+            <td class="table-key" colspan="5">预计工作量：</td>
+            <td colspan="16" con_name="reqWorkload"></td>
+          </tr>
+          <tr>
+            <td class="table-key" colspan="4">重大支撑：</td>
+            <td colspan="8" con_name="reqIsImportant"></td>
+            <td class="table-key" colspan="4">现场支撑：</td>
+            <td colspan="10" con_name="reqIsSpot"></td>
+            <td class="table-key" colspan="5">远程支撑：</td>
+            <td colspan="9" con_name="reqIsPm"></td>
+          </tr>
+          <tr class="task-info">
+            <td class="table-key" colspan="4">受理意见：</td>
+            <td colspan="36" con_name="apprOption"></td>
+          </tr>
+        </table>
+
+        <div class="long-label cl mt-10"><span class="lab-cnt f-l">负责人审批</span><span class="brdr f-l"></span></div>
+        <table class="form-table table table-border table-bordered table-bg">
+          <tr>
+            <td class="table-key" colspan="4">负责人：</td>
+            <td colspan="9" con_name="jdApprApprover"></td>
+            <td class="table-key" colspan="4">审批时间：</td>
+            <td colspan="10" con_name="jdApprTime" _type="time"></td>
+            <td class="table-key" colspan="4">结果：</td>
+            <td colspan="9" con_name="jdApprResult"></td>
+          </tr>
+          <tr>
+            <td class="table-key" colspan="4">审批意见：</td>
+            <td colspan="36" con_name="jdApprOption"></td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/support-details.js"></script>
+</body>
+</html>

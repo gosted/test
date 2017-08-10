@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;;AAOA,MAAM;EACJ,KAAK,EAAE,IAAI;;AAET,YAAE;EACA,KAAK,EAAE,IAAI;;AAEb,oBAAU;EACR,KAAK,EAAE,KAAK;;AAEd,oBAAU;EACR,KAAK,EAAE,IAAI;;AAEb,iBAAO;EACL,UAAU,EAAE,MAAM;;AAGtB,yBACA;EACE,UAAU,EApBP,OAAO;;AAsBZ,UAAG;EACD,UAAU,EAtBH,OAAO;;;AA0BlB,SAAS;EACP,UAAU,EAAE,OAAO",
+"sources": ["../sass/self-info.scss"],
+"names": [],
+"file": "self-info.css"
+}

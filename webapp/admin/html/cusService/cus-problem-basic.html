@@ -1,0 +1,136 @@
+<!--
+ * 本文件是问题编辑html文件
+ * @author 鲍哲
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/cus-complaint-basic.css" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>编辑</title>
+</head>
+<body>
+<div>
+    <div id="table-box" class="table-box pt-20">
+        <table id='roleAdd' class="form-table table table-border table-bordered">
+            <tr>
+                <td colspan='7' class=" table-key">问题名称：</td>
+                <td colspan='13' class="has-tip" con_name="problemName">
+                </td>
+                <td colspan='7' class=" table-key">问题等级：</td>
+                <td colspan='13' class="recordStartTime has-tip">
+                    <div class="formControls input-tree">
+                        <select  type="selected" disabled class="input-type select problemLevel" con_name="problemLevel">
+
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'>所属项目：</td>
+                <td colspan='13' class="has-tip major" con_name="projectName">
+                </td>
+                <td colspan='7' class=" table-key">子项目：</td>
+                <td colspan='13' class="recordStartTime has-tip input-tree" con_name="subprojectName">
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'>所属工地：</td>
+                <td colspan='13' class="has-tip major" con_name="workSiteName">
+                </td>
+                <td colspan='7' class=" table-key">状态：</td>
+                <td colspan='13' class="has-tip major">
+                    <div class="formControls input-tree">
+                        <select type="selected" name="state" disabled class="input-type select state" con_name="state">
+
+                        </select>
+                    </div>
+                    <div class="msg-tip" title="请选择状态"> </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan='7' class=" table-key">问题提出人：</td>
+                <td colspan='13' class="recordStartTime has-tip" con_name="problemOriginator">
+                </td>
+                <td colspan='7' class=" table-key">问题提出人电话：</td>
+                <td colspan='13' class="recordStartTime has-tip" con_name="originatorPhone">
+                </td>
+            </tr>
+            <tr>
+
+                <td colspan='7' class=" table-key">问题提出时间：</td>
+                <td colspan='13' class="recordStartTime has-tip originatorTime" con_name="originatorTime">
+                </td>
+                <td colspan='7' class=" table-key">登记人：</td>
+                <td colspan='13' class="recordStartTime has-tip" con_name="registrantPeople">
+                </td>
+            </tr>
+            <tr>
+                <td colspan='7' class=" table-key">登记人联系方式：</td>
+                <td colspan='13' class="recordStartTime has-tip" con_name="registrantPhone">
+                </td>
+                <td colspan='7' class=" table-key">登记日期：</td>
+                <td colspan='13' class="registrantTime has-tip" con_name="registrantTime">
+                </td>
+            </tr>
+            <tr>
+                <td colspan='7' class=" table-key">可能存在原因：</td>
+                <td colspan='33' class="recordStartTime has-tip" con_name="reason">
+                </td>
+            </tr>
+            <tr>
+                <td colspan='7' class=" table-key">问题描述：</td>
+                <td colspan='33' class="has-tip" con_name="problemDescription">
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'>备注：</td>
+                <td colspan='33' class="has-tip" con_name="remark">
+                </td>
+            </tr>
+            <tr>
+                <td class="table-key" colspan='7'><span class="c-red"></span>附件：</td>
+                <td colspan='33' class="formControls file-list">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/cus-problem-basic.js" charset="utf-8"></script>
+</body>
+</html>

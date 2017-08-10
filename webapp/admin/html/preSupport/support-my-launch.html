@@ -1,0 +1,588 @@
+<!--
+ * 发起支撑-项目支撑页
+ * @author 陈安
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/icheck/icheck.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="../../skin/default/skin.css" rel="stylesheet" type="text/css" id="skin"/>
+<link href="../../css/common.css" rel="stylesheet" type="text/css"/>
+<LINK rel="Bookmark" href="../../images/favicon.ico" >
+<LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../lib/html5.js"></script>
+<script type="text/javascript" src="../../lib/respond.min.js"></script>
+<script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+<![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>发起支撑</title>
+</head>
+<style>
+	
+	.readyonly{
+		background-color: #F0F0F0;
+	}
+	.steeing{
+		margin: 0 auto;
+		width: 835px;
+		overflow: hidden;
+	}
+	.steeing span{
+		display: block;
+		height: 36px;
+		width: 167px;
+		text-align: center;
+		color: #006bff;
+		line-height: 58px;
+		float: left;
+		background: url(../../images/commen/steering_gray.png) no-repeat top center;
+	}
+	.steeing .hasbg{
+		background: url(../../images/commen/steering_blue.png) no-repeat top center;
+	}
+	.nextBtn{
+		margin: 0px;
+	}
+</style>
+<body>
+<nav class="breadcrumb">
+  <i class="Hui-iconfont clr-blue">&#xe67f;</i> 首页
+  <span class="c-gray en">&gt;</span> 前期支撑
+  <span class="c-gray en">&gt;</span> 
+  <span class="clr-blue">发起支撑</span>
+  <button class="btn btn-success radius r mr-20 refresh" href="javascript:location.replace(location.href);" title="刷新" >
+    <i class="Hui-iconfont">&#xe68f;</i>
+  </button>
+</nav>
+<div class="pd-20 graybg">
+    <div action="" method="post" class="form" id="form-article-add">
+    	<div id="tab-system" class="HuiTab ">
+    		<div class="steeing"><span class="hasbg flag_cl">基本信息</span><span class="hasbg">需求信息</span><span class="hasbg">支撑信息</span><span class="hasbg">附件信息</span><span>完成</span></div>
+			<div class="tabCon formOne table-box">
+				<table class='form-table table table-border table-bordered table-bg table-box' style="margin: 10px auto;" border="" cellspacing="" cellpadding="">
+					<tr>
+						<td class='table-key' colspan="5">属地联通：</td>
+						<td colspan="18" class="has-tip">
+							<div class="formControls cl">
+								<input type="text" class="input-text input-type readyonly" value="" placeholder="属地联通" name="" con_name="unitId" readonly="readonly" >
+							</div>
+						</td>
+						<td class='table-key' colspan="5">需求单编号：</td>
+						<td colspan="12" class="has-tip">
+							<div class="formControls cl">
+								<input type="text" class="input-text input-type readyonly" value="" name="" con_name="reqCode" readonly="readonly" >
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class='table-key' colspan="5">支撑类型：</td>
+						<td colspan="35" class="has-tip">
+							<div class="formControls skin-minimal">
+						        <div class="radio_box col-2">
+						            <input type="radio" id="reqSupType-1" name="reqSupType" con_name="reqSupType" value="0" checked='checked' datatype="*" nullmsg=" " errormsg=" ">
+						            <label for="reqSupType-1">项目支撑</label>
+						        </div>
+						        <div class="radio_box col-2">
+						            <input type="radio" id="reqSupType-2" name="reqSupType" con_name="reqSupType" value="1">
+						            <label for="reqSupType-2">展会支撑</label>
+						        </div>
+						        <div class="radio_box col-2">
+						            <input type="radio" id="reqSupType-3" name="reqSupType" con_name="reqSupType" value="2">
+						            <label for="reqSupType-3">培训支撑</label>
+						        </div>
+						         <div class="radio_box col-2">
+						            <input type="radio" id="reqSupType-4" name="reqSupType" con_name="reqSupType" value="3">
+						            <label for="reqSupType-4">其他支撑</label>
+						        </div>
+					        </div>
+							<div class="msg-tip" title="请选择"> </div>
+						</td>
+					</tr>
+					<tr>
+						<td class='table-key' colspan="5"><span class="c-red">*</span>需求单名称：</td>
+						<td colspan="35" class="has-tip">
+							<div class="formControls cl">
+								<input type="text" class="input-text input-type" datatype="*1-100" nullmsg=" " errormsg=" " value="" placeholder="" name="" con_name="reqName">
+							</div>
+							<div class="msg-tip" title="输入长度在1-100位之间"> </div>
+						</td>
+					</tr>
+					<tr>
+						<td class='table-key' colspan="5"><span class="c-red">*</span>联系人姓名：</td>
+						<td colspan="15" class="has-tip">
+							<div class="formControls cl">
+								<input type="text" class="input-text input-type" value="" datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="customerContacts">
+							</div>
+							<div class="msg-tip" title="输入长度在1-100位"> </div>
+						</td>
+						<td class='table-key' colspan="5"><span class="c-red">*</span>联系人电话：</td>
+						<td colspan="15"  class="has-tip">
+							<div class="formControls cl">
+								<input type="text" class="input-text input-type" value="" datatype="phonenum" nullmsg=" " errormsg=" " placeholder="" name="" con_name="customerPhone">
+							</div>
+							<div class="msg-tip" title="请输入正确的电话格式"> </div>
+						</td>
+					</tr>
+					<tr>
+						<td class='table-key' colspan="5">联系人邮箱：</td>
+						<td colspan="35" class='has-tip'>
+							<div class="formControls cl">
+								<input type="text" ignore='ignore' nullmsg=' ' errormsg=' ' datatype='e' class="input-text input-type" value="" placeholder="" name="" con_name="customerEmail">
+							</div>
+							<div class='msg-tip' title='请输入正确的邮箱格式'></div>
+						</td>
+					</tr>
+				</table>
+				<div class="support-type">
+					<div class="row cl" style="display: none;">
+						<label class="form-label col-2"><span class="c-red"></span>所属地区：</label>
+						<div class="formControls col-6">
+							<input type="text" class="input-text" value="" placeholder="所属地区" name="" con_name="areaId">
+						</div>
+					</div>
+					<div class="row cl">
+						<div class="formControls">
+							<div class="uploader-thum-container parent" style="text-align:center;">
+								<button class="btn btn-success btn-default btn-uploadstar radius mr-10 nextBtn nextBtnOne"><i class='Hui-iconfont'>&#xe67a</i>下一步</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tabCon formTwo table-box">
+				<div class="row cl supportType" id="projectPage" style="display: none;">
+					<table class='form-table table table-border table-bordered table-bg' style="margin: 10px auto;" border="" cellspacing="" cellpadding="">
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>客户名称：</td>
+							<td colspan='35' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type" value="" datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="customerName">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>支撑地点：</td>
+							<td colspan='35' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type" value="" datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqSupAddress">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span><span>期望完成日期：</span></td>
+							<td colspan='11' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" onfocus="WdatePicker()" datatype="times" nullmsg=" " errormsg=" " class="input-text input-type Wdate" con_name="reqExpectEndTime">
+								</div>
+								<div class="msg-tip" title="请选择正确时间"> </div>
+							</td>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>是否需要建设：</td>
+							<td colspan="19" class="has-tip">
+								<div class="formControls cl">
+									<div class="radio_box col-3">
+							            <input type="radio" id="sex-1" name="construction" con_name="reqIsConstruct" value="0" >
+							            <label for="sex-1">是</label>
+							        </div>
+									<div class="radio_box col-3">
+							            <input type="radio" id="sex-2" name="construction" con_name="reqIsConstruct" value="1">
+							            <label for="sex-2">否</label>
+							        </div>
+									<div class="radio_box col-3">
+							            <input type="radio" id="sex-3" name="construction" con_name="reqIsConstruct" value="2" datatype="*" nullmsg=" " msg=' '>
+							            <label for="sex-3">不确定</label>
+							        </div>
+								</div>
+								<div class="msg-tip" title="请选择"> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>项目性质：</td>
+							<td colspan='21' class="has-tip">
+								<div class="formControls skin-minimal">
+									<div class="radio_box col-4">
+							            <input type="radio" id="sx-1" name="project" con_name="reqProProperty" value="0" >
+							            <label for="sx-1">试点工地项目</label>
+							        </div>
+									<div class="radio_box col-4">
+							            <input type="radio" id="sx-2" name="project" con_name="reqProProperty" value="1">
+							            <label for="sx-2">正式推广项目</label>
+							        </div>
+									<div class="radio_box col-4">
+							            <input type="radio" id="sx-3" name="project" con_name="reqProProperty" value="2" datatype="*" nullmsg=" " errormsg=' '>
+							            <label for="sx-3">其他</label>
+							        </div>
+								</div>
+								<div class="msg-tip" title="请选择"> </div>
+							</td>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>项目工期：</td>
+							<td colspan='9' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type" value="" datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqProCycle">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>预期收入(元)：</td>
+							<td colspan='8' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type" value="" datatype="floatnum" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqProExpectRevenue">
+								</div>
+								<div class="msg-tip" title="请输入正确金额,0~9999999999999.99元之间"> </div>
+							</td>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>工地数量(个)：</td>
+							<td colspan='8' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type" value="" datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqProSiteNum">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>工人数量(人)：</td>
+							<td colspan='9' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type" value="" datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqProWorkerNum">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>功能需求：</td>
+							<td  colspan='35' class="has-tip">
+								<div class="formControls require">
+									<label style='display: none;'><input type='checkbox' name='user-Character-0-0-0' id='user-Character-0-0-0' con_name='functionId' value='' datatype='*' nullmsg=' ' errormsg=' ' checkboxid=''></label>
+								</div>
+								<div class="msg-tip" title="请选择 "> </div>
+							</td>
+						</tr>
+					</table>
+					<div class="row cl">
+						<div class="formControls col-12">
+							<div class="uploader-thum-container" style='text-align: center;'>
+								<div id="fileList" class="uploader-list"></div>
+								<button class="btn btn-success btn-default btn-uploadstar radius mr-10 preBtn preBtnTwo"><i class='Hui-iconfont'>&#xe678</i>上一步</button>
+								<button class="btn btn-success btn-default btn-uploadstar radius mr-10 nextBtn" id="projectPageBtn"><i class='Hui-iconfont'>&#xe67a</i>下一步</button>
+							</div>
+						</div>
+					</div>
+		   	    </div>
+		   	    <div class="supportType" id="showPage" style="display: none;">
+		   	    	<table class='form-table table table-border table-bordered table-bg' style="margin: 10px auto;" border="" cellspacing="" cellpadding="">
+		   	    		<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>展会名称：</td>
+							<td colspan='35' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type" value="" datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqEventName">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+		   	    		<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>展会地点：</td>
+							<td colspan='35' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type" value="" datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqSupAddress">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>展会开始时间：</td>
+							<td colspan='8' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type Wdate" onfocus="WdatePicker()" datatype="*" nullmsg=" " errormsg=" " con_name="reqSupBeginTime">
+								</div>
+								<div class="msg-tip" title="请选择正确的时间 "> </div>
+							</td>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>展会结束时间：</td>
+							<td colspan='8' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type Wdate" onfocus="WdatePicker()" datatype="*" nullmsg=" " errormsg=" " con_name="reqSupEndTime">
+								</div>
+								<div class="msg-tip" title="请选择正确的时间 "> </div>
+							</td>
+							<td class="table-key" colspan='5'><span class="c-red"></span>参会人数：</td>
+							<td colspan='9' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type" value="" ignore='ignore' datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqSupPeopleNum">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位 "> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red"></span>参会人员：</td>
+							<td colspan='35' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type" value="" ignore='ignore' datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqSupPeople">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>功能需求：</td>
+							<td  colspan='35' class="has-tip">
+								<div class="formControls require">
+									<label style='display: none;'><input type='checkbox' name='user-Character-0-0-0' id='user-Character-0-0-0' con_name='functionId' value='' datatype='*' nullmsg=' ' errormsg=' ' checkboxid=''></label>
+								</div>
+								<div class="msg-tip" title="请选择 "> </div>
+							</td>
+						</tr>
+		   	    	</table>
+					<div class="row cl">
+						<div class="formControls  col-12">
+							<div class="uploader-thum-container" style="text-align: center;">
+								<div id="fileList" class="uploader-list"></div>
+								<button class="btn btn-success btn-default btn-uploadstar radius mr-10 preBtn preBtnTwo"><i class='Hui-iconfont'>&#xe678</i>上一步</button>
+								<button class="btn btn-success btn-default btn-uploadstar radius mr-10 nextBtn" id="showPageBtn"><i class='Hui-iconfont'>&#xe67a</i>下一步</button>
+							</div>
+						</div>
+					</div>
+		   	    </div>
+		   	    <div class="supportType" id="trainPage" style="display: none;">
+		   	    	<table class='form-table table table-border table-bordered table-bg' style="margin: 10px auto;" border="" cellspacing="" cellpadding="">
+		   	    		<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>培训名称：</td>
+							<td colspan='35' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type" value="" datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqEventName">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+		   	    		<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>培训地点：</td>
+							<td colspan='35' class="has-tip">
+								<div class="formControls cl">
+									<input type="text" class="input-text input-type " value="" datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqSupAddress">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>培训开始时间：</td>
+							<td colspan='8' class="has-tip">
+								<div class="formControls ">
+									<input type="text" onfocus="WdatePicker()" datatype="*" nullmsg=" " errormsg=" " class="input-text input-type Wdate" con_name="reqSupBeginTime">
+								</div>
+								<div class="msg-tip" title="请选择正确时间 "> </div>
+							</td>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>培训结束时间：</td>
+							<td colspan='8' class="has-tip">
+								<div class="formControls ">
+									<input type="text" onfocus="WdatePicker()" datatype="*" nullmsg=" " errormsg=" " class="input-text input-type Wdate" con_name="reqSupEndTime">
+								</div>
+								<div class="msg-tip" title="请选择正确时间 "> </div>
+							</td>
+							<td class="table-key" colspan='5'><span class="c-red"></span>培训人数：</td>
+							<td colspan='35' class="has-tip">
+								<div class="formControls ">
+									<input type="text" class="input-text input-type" value="" ignore='ignore' datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqSupPeopleNum">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red"></span>培训人员：</td>
+							<td colspan='35' class="has-tip">
+								<div class="formControls">
+									<input type="text" class="input-text input-type " value="" ignore='ignore' datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqSupPeople">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>功能需求：</td>
+							<td  colspan='35' class="has-tip">
+								<div class="formControls require">
+									<label style='display: none;'><input type='checkbox' name='user-Character-0-0-0' id='user-Character-0-0-0' con_name='functionId' value='' datatype='*' nullmsg=' ' errormsg=' ' checkboxid=''></label>
+								</div>
+								<div class="msg-tip" title="请选择 "> </div>
+							</td>
+						</tr>
+		   	    	</table>
+					<div class="row cl">
+						<div class="formControls col-12">
+							<div class="uploader-thum-container" style="text-align: center;">
+								<div id="fileList" class="uploader-list"></div>
+								<button class="btn btn-success btn-default btn-uploadstar radius mr-10 preBtn preBtnTwo"><i class='Hui-iconfont'>&#xe678</i>上一步</button>
+								<button class="btn btn-success btn-default btn-uploadstar radius mr-10 nextBtn" id="trainPageBtn"><i class='Hui-iconfont'>&#xe67a</i>下一步</button>
+							</div>
+						</div>
+					</div>
+		   	    </div>
+		   	    <div class="supportType" id="restsPage" style="display: none;">
+		   	    	<table class='form-table table table-border table-bordered table-bg table-2' style="margin: 10px auto;" border="" cellspacing="" cellpadding="">
+		   	    		<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>期望完成日期：</td>
+							<td colspan='35' class="has-tip">
+								<div class="formControls ">
+									<input type="text" onfocus="WdatePicker()" datatype="times" nullmsg=" " errormsg=" " class="input-text input-type Wdate" con_name="reqExpectEndTime">
+								</div>		
+								<div class="msg-tip" title="请选择正确时间 "> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>支撑地点：</td>
+							<td colspan='35' class="has-tip">
+								<div class="formControls ">
+									<input type="text" class="input-text input-type " value="" datatype="*1-100" nullmsg=" " errormsg=" " placeholder="" name="" con_name="reqSupAddress">
+								</div>
+								<div class="msg-tip" title="输入长度在1-100位"> </div>
+							</td>
+						</tr>
+						<tr>
+							<td class="table-key" colspan='5'><span class="c-red">*</span>功能需求：</td>
+							<td  colspan='35' class="has-tip">
+								<div class="formControls require">
+									<label style='display: none;'><input type='checkbox' name='user-Character-0-0-0' id='user-Character-0-0-0' con_name='functionId' value='' datatype='*' nullmsg=' ' errormsg=' ' checkboxid=''></label>
+								</div>
+								<div class="msg-tip" title="请选择 "> </div>
+							</td>
+						</tr>
+		   	    	</table>
+					<div class="row cl">
+						<div class="formControls col-12">
+							<div class="uploader-thum-container" style="text-align: center;">
+								<div id="fileList" class="uploader-list"></div>
+								<button class="btn btn-success btn-default btn-uploadstar radius mr-10 preBtn preBtnTwo"><i class='Hui-iconfont'>&#xe678</i>上一步</button>
+								<button class="btn btn-success btn-default btn-uploadstar radius mr-10 nextBtn" id="restsPageBtn"><i class='Hui-iconfont'>&#xe67a</i>下一步</button>
+							</div>
+						</div>
+					</div>
+		   	    </div>
+			</div>
+			<div class="tabCon formThree table-box">
+				<table class='form-table table table-border table-bordered table-bg table-2' style="margin: 10px auto;" border="" cellspacing="" cellpadding="">
+					<tr>
+						<td class="table-key" colspan='5'>需求概要：</td>
+						<td colspan='35' class="has-tip">
+							<div class="formControls">
+								<textarea name="" cols="" ignore='ignore' style="height: 150px;" rows="" class="textarea return-content"  placeholder="" dragonfly="true" con_name="reqOutline" datatype='*1-400' nullmsg=" " errormsg='' onKeyUp="textarealength(this,400)"></textarea>
+								<p class="textarea-numberbar"><em class="textarea-length">0</em>/400</p>
+							</div>
+							<div class="msg-tip" title=""> </div>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-key" colspan='5'>需求详情：</td>
+						<td colspan='35' class="has-tip">
+							<div class="formControls">
+								<textarea name="" cols="" ignore='ignore' style='height: 200px;' rows="" class="textarea" datatype='*1-2000' placeholder="" dragonfly="true" con_name="reqDetail" nullmsg=" " errormsg=' ' onKeyUp="textarealength(this,2000)"></textarea>
+								<p class="textarea-numberbar"><em class="textarea-length">0</em>/2000</p>
+							</div>
+							<div class="msg-tip" title=""> </div>
+						</td>
+					</tr>
+				</table>
+				<div class="row cl">
+					<div class="formControls col-12">
+						<div class="uploader-thum-container" style="text-align: center;">
+							<div id="fileList" class="uploader-list"></div>
+							<button class="btn btn-success btn-default btn-uploadstar radius mr-10 preBtn preBtnThree"><i class='Hui-iconfont'>&#xe678</i>上一步</button>
+							<button class="btn btn-success btn-default btn-uploadstar radius mr-10 nextBtn nextBtnThree"><i class='Hui-iconfont'>&#xe67a</i>下一步</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tabCon table-box">
+				<table class='form-table table table-border table-bordered table-bg table-2 accessory' style="margin: 10px auto;" border="" cellspacing="" cellpadding="">
+					<tr>
+						<td class="table-key" colspan="5"><span class="c-red"></span>附件：</td>
+				        <td colspan="35" class="formControls">
+				        	<form id="upload" class="upload-form" enctype ="multipart/form-data">
+				            	<a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+				            	<input type="file" name="file" class="upload-file">
+				          	</form>
+				        </td>
+					</tr>
+					<tr>
+				        <td class="table-key" colspan="5"></td>
+				        <td colspan="35" class="formControls file-list">
+				
+				        </td>
+				    </tr>
+				</table>
+				<div class="con_hint">
+					<div class="con_hint_l">说明：</div>
+					<div class="con_hint_r">
+						<p>每个附件大小不能超过50MB</p>
+					</div>
+				</div>
+				<div class="cl mt-10">
+					<div class="formControls col-12">
+						<div class="uploader-thum-container" style="text-align: center;">
+							<div id="fileList" class="uploader-list"></div>
+							<button class="btn btn-success btn-default btn-uploadstar radius mr-10 preBtn preBtnFour"><i class='Hui-iconfont mr-5'>&#xe678;</i>上一步</button>
+							
+							<button class="btn btn-success btn-default btn-uploadstar radius mr-10 lauMng_submitBtn"><i class='Hui-iconfont mr-5'>&#xe6a7;</i>提交</button>
+							<button class="btn btn-success btn-default btn-uploadstar radius mr-10 lauMng_conSave"><i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script> 
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js"></script> 
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script> 
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script> 
+<script type="text/javascript" src="../../lib/webuploader/0.1.5/webuploader.min.js"></script> 
+<script type="text/javascript" src="../../lib/ueditor/1.4.3/ueditor.config.js"></script> 
+<script type="text/javascript" src="../../lib/ueditor/1.4.3/ueditor.all.min.js"> </script> 
+<script type="text/javascript" src="../../lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script> 
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script> 
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script> 
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="../../js/support-my-launch.js"></script>
+<script type="text/javascript">
+	$(function(){
+//		$('.skin-minimal input').iCheck({
+//			checkboxClass: 'icheckbox-blue',
+//			radioClass: 'iradio-blue',
+//			increaseArea: '20%'
+//		});
+		tabChange("#tab-system .tabBar","#tab-system .tabCon","current","click","0");
+		function tabChange(tabBar,tabCon,class_name,tabEvent,i)
+		{
+			var $tab_menu=$(tabBar);
+			// 初始化操作
+			$tab_menu.removeClass(class_name);
+			$(tabBar).eq(i).addClass(class_name);
+			$(tabCon).hide();
+			$(tabCon).eq(i).show();
+			
+//			$tab_menu.on(tabEvent,function(){
+//				alert(111)
+//				$tab_menu.removeClass(class_name);
+//				$(this).addClass(class_name);
+//				var index=$tab_menu.index(this);
+//				$(tabCon).hide();
+//				$(tabCon).eq(index).show();
+//			});
+		}
+	});
+</script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/**
+ * 本文件是首页样式文件
+ * @author 陈安
+ */
+.clearfloat {
+  width: 822px;
+  overflow: hidden; }
+  .clearfloat > span {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 15px; }
+  .clearfloat > div {
+    width: 122px;
+    height: 62px;
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 15px; }
+    .clearfloat > div > span {
+      display: block;
+      text-align: center; }
+    .clearfloat > div > .title_span {
+      height: 27px;
+      line-height: 27px;
+      font-size: 14px; }
+    .clearfloat > div > .content_span {
+      height: 34px;
+      line-height: 34px;
+      font-size: 20px; }
+  .clearfloat > .clearright {
+    margin-right: 0px; }
+  .clearfloat > .addleft {
+    margin-left: 14px; }
+
+.navblue {
+  color: #006fbb;
+  border-bottom: 1px solid #006fbb; }
+
+.navorange {
+  color: #c33d02;
+  border-bottom: 1px solid #c33d02; }
+
+.navgreen {
+  color: #1e7100;
+  border-bottom: 1px solid #1e7100; }
+
+.blue-box > div {
+  background: url(../images/index/shouye_blue.png) no-repeat center center; }
+
+.orange-box > div {
+  background: url(../images/index/shouye_orange.png) no-repeat center center; }
+
+.green-box > div {
+  background: url(../images/index/shouye_green.png) no-repeat center center; }
+
+/*# sourceMappingURL=welcome.css.map */

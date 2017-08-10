@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/**
+ * 本文件是个人信息样式文件
+ * @author 张欢
+ */
+.power {
+  width: 100%;
+}
+.power tr td {
+  width: auto;
+}
+.power tr .cont-type {
+  width: 100px;
+}
+.power tr .yes-or-no {
+  width: 80px;
+}
+.power tr .yes-no {
+  text-align: center;
+}
+.power tr:nth-child(2n+1) {
+  background: #FEF6F6;
+}
+.power .th {
+  background: #cfe6ff;
+}
+
+.readonly {
+  background: #f0f0f0;
+}
+
+/*# sourceMappingURL=self-info.css.map */

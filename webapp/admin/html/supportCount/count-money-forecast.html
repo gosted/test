@@ -1,0 +1,114 @@
+﻿<!--
+ * 本文件是支撑量统计html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="../../images/favicon.ico" >
+<LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+<link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../../css/count-con.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet"  type="text/css" href="../../lib/monthpicker/jquery.monthpicker.css" />
+
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../lib/html5.js"></script>
+<script type="text/javascript" src="../../lib/respond.min.js"></script>
+<script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+<![endif]-->
+
+<!--[if IE 6]>
+<script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>支撑量统计</title>
+</head>
+<body>
+<nav class="breadcrumb">
+  <i class="Hui-iconfont clr-blue">&#xe67f;</i> 首页
+  <span class="c-gray en">&gt;</span> 支撑统计
+  <span class="c-gray en">&gt;</span>
+  <span class="clr-blue">项目金额预测</span>
+  <a class="btn btn-success radius r mr-20 refresh" href="javascript:location.replace(location.href);" title="刷新" >
+    <i class="Hui-iconfont">&#xe68f;</i>
+  </a>
+</nav>
+<div class="pl-20 pr-20 pt-10">
+  <!--条件检索区-->
+  <div class="row cl search">
+    <!--时间查询区-->
+    <div class="row cl">
+      <div class="l cl f-l mr-10">
+        <label class="form-label l label-key mt-5">起始时间：</label>
+        <div class="formControls l">
+			<input type="text" con_name="startTime" class="input-text ml-10 start-time" id="start-time" readonly>
+        </div>
+      </div>
+      <div class="l cl f-l ml-10">
+        <label class="form-label l label-key mt-5">结束时间：</label>
+        <div class="formControls l">
+			<input type="text" con_name="endTime" class="input-text end-time" id="end-time" readonly>
+        </div>
+      </div>
+    </div>
+    <!-- 产品查询区-->
+    <div class="products-areas mt-5">
+      <div class="products-content">
+      </div>
+    </div>
+    <!--地区查询区-->
+    <div class="areas-search mt-5">
+      <!--<div class="areas">
+        <label class="form-label l label-key f-l mt-5">区域：</label>
+        <div class="areas-content">
+          <span class="mr-10 default-span mt-5">全国</span><span class="mr-10 mt-5">华北</span><span>西北</span><span class="mr-10 mt-5">华中</span><span class="mr-10 mt-5">华南</span><span class="mr-10 mt-5">华东</span>
+          <span class="mr-10 default-span mt-5">全国</span><span class="mr-10 mt-5">华北</span><span>西北</span><span class="mr-10 mt-5">华中</span><span class="mr-10 mt-5">华南</span><span class="mr-10 mt-5">华东</span>
+          <span class="mr-10 default-span mt-5">全国</span><span class="mr-10 mt-5">华北</span><span>西北</span><span class="mr-10 mt-5">华中</span><span class="mr-10 mt-5">华南</span><span class="mr-10 mt-5">华东</span>
+          <span class="mr-10 default-span mt-5">全国</span><span class="mr-10 mt-5">华北</span><span>西北</span><span class="mr-10 mt-5">华中</span><span class="mr-10 mt-5">华南</span><span class="mr-10 mt-5">华东</span>
+          <span class="mr-10 default-span mt-5">全国</span><span class="mr-10 mt-5">华北</span><span>西北</span><span class="mr-10 mt-5">华中</span><span class="mr-10 mt-5">华南</span><span class="mr-10 mt-5">华东</span>
+        </div>
+      </div>
+      <div class="areas">
+        <label class="form-label l label-key f-l mt-5">区域：</label>
+        <div class="areas-content">
+          <span class="mr-10 default-span mt-5">全国</span><span class="mr-10 mt-5">华北</span><span>西北</span><span class="mr-10 mt-5">华中</span><span class="mr-10 mt-5">华南</span><span class="mr-10 mt-5">华东</span>
+          <span class="mr-10 default-span mt-5">全国</span><span class="mr-10 mt-5">华北</span><span>西北</span><span class="mr-10 mt-5">华中</span><span class="mr-10 mt-5">华南</span><span class="mr-10 mt-5">华东</span>
+          <span class="mr-10 default-span mt-5">全国</span><span class="mr-10 mt-5">华北</span><span>西北</span><span class="mr-10 mt-5">华中</span><span class="mr-10 mt-5">华南</span><span class="mr-10 mt-5">华东</span>
+          <span class="mr-10 default-span mt-5">全国</span><span class="mr-10 mt-5">华北</span><span>西北</span><span class="mr-10 mt-5">华中</span><span class="mr-10 mt-5">华南</span><span class="mr-10 mt-5">华东</span>
+        </div>-->
+      <!--</div>-->
+    </div>
+
+  </div>
+  <!--echarts图表区-->
+  <div style="margin-top:20px;text-align:left;color:red">说明：统计数据只包含被成功受理的支撑需求，不包含被退回或终止的支撑需求。
+</div>
+  <div class="echarts-box mt-20">
+    <div class="echarts-content-line mt-5" id="echarts-content"></div>
+  </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/monthpicker/jquery.monthpicker.js"></script>
+<script type="text/javascript" src="../../lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/echarts.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script src="../../js/Echars.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/count-money-forecast.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

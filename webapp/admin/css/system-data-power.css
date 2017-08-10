@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/**
+ * 本文件是数据权限样式文件
+ * @author 张欢
+ */
+.search-area-my .search {
+  width: 644px;
+  margin: 0;
+}
+.search-area-my .search-area-btns {
+  width: 160px;
+}
+.search-area-my .user {
+  width: 322px;
+}
+.search-area-my .user .formControls {
+  width: 200px;
+}
+.search-area-my .type {
+  width: 322px;
+}
+.search-area-my .type .formControls {
+  width: 200px;
+}
+.search-area-my .label-key {
+  width: 60px;
+}
+
+.table .td-view {
+  padding-left: 3px;
+}
+.table td {
+  text-align: center;
+}
+
+/*# sourceMappingURL=system-data-power.css.map */

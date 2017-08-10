@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/**
+ * 本文件是故障备注样式文件
+ * @author 王步华
+ */
+.according {
+  display: none; }
+
+.table-bg {
+  width: 100%;
+  table-layout: fixed; }
+  .table-bg tr td {
+    width: auto; }
+  .table-bg tr .according-type {
+    width: 90px; }
+  .table-bg tr .acc-code {
+    width: 120px; }
+  .table-bg tr .deal {
+    width: 60px; }
+  .table-bg .th {
+    text-align: center;
+    background: #cfe6ff; }
+  .table-bg tr.editable {
+    background-color: #f50; }
+    .table-bg tr.editable.editable-show {
+      background-color: #fff; }
+
+#roleAdd .apprOption {
+  width: 663px; }
+
+.form-table {
+  margin-bottom: 0; }
+
+.tbody .div-text {
+  text-align: center;
+  border: none;
+  background: white; }
+.tbody .inp-text {
+  text-align: center;
+  border: none;
+  background: white; }
+
+.tbody .textarea {
+  position: relative;
+  z-index: 1;
+  height: 32px;
+  text-align: center;
+  padding: 0;
+  line-height: 28px;
+  vertical-align: top;
+  overflow: auto; }
+
+/*# sourceMappingURL=cus-fault-remarks.css.map */

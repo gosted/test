@@ -1,0 +1,90 @@
+<!--
+ * 本文件是施工方案添加html文件
+ * @author 彭佳明
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/pro-manage-add.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>完工</title>
+</head>
+<body>
+
+<div class="contract-wrap pt-10">
+    <div id="table-box" class="table-box contract-box">
+            <table class="providerAdd  form-table table table-border table-bordered table-bg">
+                <tr>
+                    <td colspan='5' class=" table-key">提醒：</td>
+                    <td colspan='35' class="recordStartTime has-tip">
+                        <div class="formControls checkbox">
+                            <label class="col-3"><input class="check isSendEmail" type="checkbox"   value="0" name="isSendEmail" checked="checked">邮件提醒</label>
+                            <label class="col-3"><input class="check isSendMsg" type="checkbox"  value="1" name="isSendMsg" checked="checked">系统消息</label>
+                        </div>
+                        <div class="msg-tip" title="角色编码不能为空"> </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-key" colspan="5"><span class="c-red">*</span>确认日期：</td>
+                    <td colspan="35" class="has-tip">
+                        <div class="formControls">
+                            <input type="text" datatype="date" nullmsg=" " errormsg=" "  onfocus="WdatePicker()"  class="input-text Wdate over-date">
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="table-key" colspan="5">完工意见：</td>
+                    <td colspan="35" class="has-tip">
+                        <div class="formControls cl con_textarea">
+                            <textarea  rows="3" con_na="remark" style="width:663px;" class="textarea appr-option"  dragonfly="true" datatype="*" ignore="ignore" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,200)"></textarea>
+                            <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                        </div>
+                        <div class="msg-tip" title="请正确填写"> </div>
+                    </td>
+                 </tr>
+            </table>
+        <div class="pd-10 text-c">
+            <button href="javascript:;" class="btn btn-success radius mr-10  btn-save">
+                <i class="Hui-iconfont mr-5">&#xe6a7;</i>确认
+            </button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/pro-construction-approvalOverAdd.js"></script>
+</body>
+</html>

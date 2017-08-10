@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/**
+ * 本文件是登录页样式文件
+ * @author 张欢
+ */
+.header {
+  height: 90px;
+  background: none;
+}
+.header .hd-cnt {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+.header .hd-cnt .lgn-logo {
+  margin-top: 40px;
+  margin-left: 5.5%;
+  padding: 0;
+}
+.header .hd-cnt .lgn-title {
+  margin-top: 45px;
+  margin-left: 2%;
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  .header .hd-cnt {
+    width: 100%;
+  }
+}
+
+.login-bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+.login-bg .top-bg {
+  position: absolute;
+  width: 100%;
+  height: 328px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.login-bg .top-bg .top-bg-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #006EB7;
+}
+.login-bg .top-bg .top-bg-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #005BA7;
+}
+
+.loginWraper {
+  background: none;
+}
+.loginWraper .img-box {
+  position: relative;
+  background: white;
+}
+.loginWraper .img-box img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.loginWraper .login-cnt {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 950px;
+  height: 545px;
+  margin: 0 auto;
+}
+.loginWraper .login-cnt .img-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 440px;
+  height: 440px;
+}
+.loginWraper .login-cnt .login-bg-cnt {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/commen/loginBg_0.png") no-repeat center;
+}
+.loginWraper .login-cnt .lgn_right_box {
+  width: 328px;
+  height: 228px;
+  position: absolute;
+  right: 55px;
+  top: 192px;
+  background: url("../images/commen/whiteBg.png") no-repeat;
+}
+.loginWraper .login-cnt .lgn_right_box > div {
+  width: 276px;
+  height: 38px;
+  margin: 15px auto 0;
+  border: 2px solid #dcdcdc;
+  background: white;
+  overflow: hidden;
+  position: relative;
+}
+.loginWraper .login-cnt .lgn_right_box > div > input {
+  width: 230px;
+  height: 38px;
+  font-size: 16px;
+  line-height: 38px;
+  float: left;
+  border: none;
+}
+.loginWraper .login-cnt .lgn_right_box > div > div {
+  width: 15%;
+  height: 100%;
+  float: left;
+  background: #999999;
+}
+.loginWraper .login-cnt .lgn_right_box > div .tip {
+  width: 230px;
+  line-height: 38px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  background: none;
+  color: #999;
+  font-size: 16px;
+}
+.loginWraper .login-cnt .lgn_right_box .lgn_usr {
+  margin-top: 20px;
+}
+.loginWraper .login-cnt .lgn_right_box .lgn_bdr_r {
+  border-right: 2px solid #dcdcdc;
+}
+.loginWraper .login-cnt .lgn_right_box .lgn_login {
+  width: 280px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+  background: #d6000f;
+  border: none;
+  cursor: pointer;
+}
+.loginWraper .login-cnt .lgn_right_box .lgn_login:hover {
+  background: #e8737b;
+}
+.loginWraper .login-cnt .lgn_right_box .lgn_deal_psw {
+  width: 256px;
+  height: 32px;
+  padding-top: 10px;
+  border: none;
+  background: none;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.loginWraper .login-cnt .lgn_right_box .lgn_deal_psw .lgn_remember {
+  width: 50%;
+  background: none;
+  float: left;
+  overflow: hidden;
+}
+.loginWraper .login-cnt .lgn_right_box .lgn_remember > div, .loginWraper .login-cnt .lgn_right_box .lgn_remember > span {
+  float: left;
+}
+.loginWraper .login-cnt .lgn_right_box .lgn_remember > div {
+  width: 22px;
+  height: 22px;
+  background: url("../images/commen/no.png") no-repeat;
+}
+.loginWraper .login-cnt .lgn_right_box .lgn_remember > span {
+  line-height: 22px;
+  margin-left: 8px;
+}
+.loginWraper .login-cnt .lgn_right_box .lgn_deal_psw .lgn_forget {
+  width: 50%;
+  background: none;
+  float: right;
+  text-align: right;
+}
+.loginWraper .login-cnt .lgn_right_box .lgn_forget > a {
+  color: #c91717;
+}
+
+/*# sourceMappingURL=login.css.map */

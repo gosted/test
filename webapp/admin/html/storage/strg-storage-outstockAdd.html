@@ -1,0 +1,134 @@
+<!--
+* 出库单-新增页面html文件
+*@author 王步华
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="admin/images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="admin/images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/strg-storage-outstockAdd.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js" ></script>
+    <script type="text/javascript" src="../../lib/respond.min.js" ></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js" ></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>出库单添加</title>
+</head>
+<body>
+<div class="pt-20" id="parentDiv">
+    <div id="table-box" class="table-box">
+        <table class="form-table table table-border table-bordered table-bg">
+            <tr>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>出库单名称：</td>
+                <td colspan='15' class=" has-tip">
+                    <div class="formControls ">
+                        <input type="text" class="input-text input-type outOrderName" datatype="*" nullmsg=" " errormsg=" " con_name="outOrderName">
+                    </div>
+                    <div class="msg-tip contName-msg" title="请输入"></div>
+                </td>
+
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>出库单编号：</td>
+                <td colspan='15' class="has-tip outOrderCode-has">
+                    <div class="formControls ">
+                        <input type="text" class="input-text input-type outOrderCode"  placeholder="自动生成"  con_name="outOrderCode" disabled>
+                    </div>
+                    <div class="outOrderCode-msg msg-tip" title="请输入1-64位编码"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>出库人：</td>
+                <td colspan='15' class=" has-tip">
+                    <div class="formControls ">
+                        <input type="text" class="input-text input-type outOrderContacts" datatype="*" nullmsg=" " errormsg=" " con_name="outOrderContacts">
+                    </div>
+                    <div class="msg-tip" title="请输入"></div>
+                </td>
+
+                <td colspan='5' class=" table-key"><span class="c-red">*</span>出库时间：</td>
+                <td colspan='15' class="has-tip">
+                    <div class="formControls ">
+                        <input class="input-text table-input Wdate input-type outOrderTime" type="text" onfocus="WdatePicker()" style="" con_name="outOrderTime" datatype="*" nullmsg=" " errormsg=" ">
+                    </div>
+                    <div class="msg-tip" title="请选择"> </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" class="table-key"><span class="c-red">*</span>所属库房：</td>
+                <td colspan="15" class="has-tip">
+                    <div class="formControls list-box">
+                        <select name="storageId" class="input-text storageId"  readonly con_name="storageId">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="msg-tip storageId-tip" title="请输入"> <span class="Validform_checktip"></span></div>
+                </td>
+
+                <td colspan='5' class=" table-key"><span class="c-red ">*</span>出库类型：</td>
+                <td colspan='15' class=" has-tip">
+                    <div class="formControls input-tree">
+                        <select name="userMajorUnit" class="input-text outOrderType"  readonly con_name="outOrderType">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="msg-tip outOrderType-tip" title="请输入"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan='5' class=" table-key typeXin"><span class="c-red">*</span>出库来源ID：</td>
+                <td colspan='35' class=" has-tip sourceId-tip">
+                    <div class="formControls sourceId-tip-s"></div>
+                    <input type="text" class="input-text input-type sourceId"  con_name="sourceId">
+                    <div class="msg-tip" title="请输入"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="table-key" colspan="5">出库说明：</td>
+                <td colspan="35" class="has-tip">
+                    <div class="formControls cl">
+                        <textarea rows="3" con_name="outOrderRemark" class="textarea return-content contRemarks"  dragonfly="true"  onKeyUp="textarealength(this,500)"></textarea>
+                        <p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
+                    </div>
+                    <div class="msg-tip" title="请正确填写"> </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+	
+    <div class="pd-10 text-c">
+        <a href="javascript:;" class="btn btn-success btn-default btn-uploadstar upload-lib radius mr-10 ProgramSubmitButton"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;保存</a>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js" ></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js" ></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/strg-storage-outstockAdd.js" ></script>
+</body>
+</html>

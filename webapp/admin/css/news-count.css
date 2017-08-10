@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/**
+ * 本文件是新闻查询页样式文件
+ * @author 李明
+ */
+.cnt-box {
+  position: relative;
+  min-height: 500px; }
+  .cnt-box .tree {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #f7faff;
+    height: 100%;
+    width: 200px;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd; }
+  .cnt-box .cnt {
+    margin-left: 226px; }
+
+/*# sourceMappingURL=news-count.css.map */

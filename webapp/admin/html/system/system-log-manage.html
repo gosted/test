@@ -1,0 +1,173 @@
+<!--
+ * 本文件是日志管理html文件
+ * @author 彭佳明
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/system-log-manage.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>系统管理</title>
+</head>
+<body>
+<nav class="breadcrumb">
+    <i class="Hui-iconfont clr-blue">&#xe67f;</i> 首页
+    <span class="c-gray en">&gt;</span> 系统管理
+    <span class="c-gray en">&gt;</span>
+    <span class="clr-blue">日志管理</span>
+    <a class="btn btn-success radius r mr-20 refresh" href="javascript:location.replace(location.href);" title="刷新" >
+        <i class="Hui-iconfont">&#xe68f;</i>
+    </a>
+</nav>
+<div class="pl-20 pr-20 pt-10">
+    <!--搜索区-->
+    <div class="row cl search-area-my log-manage-top">
+        <div class="l cl log-user">
+            <label class="form-label l label-key">用户名：</label>
+            <div class="formControls l">
+                <input type="text" class="input-text logName" con_name="logName">
+            </div>
+        </div>
+
+        <div class="l cl log-ip">
+            <label class="form-label l label-key">ip：</label>
+            <div class="formControls l">
+                <input type="text" class="input-text logIp" con_name="logIp">
+            </div>
+        </div>
+
+        <div class="l cl log-attention">
+            <label class="form-label l label-key">备注：</label>
+            <div class="formControls l">
+                <input type="text" class="input-text logRemarks" con_name="logRemarks">
+            </div>
+        </div>
+
+        <!--<div class="l cl type log-type">
+            <label class="form-label l label-key">操作类型：</label>
+            <div class="formControls l logType">
+                <select  con_name="logType">
+                    <option value="">全部</option>
+                    <option value="0">增加</option>
+                    <option value="1">删除</option>
+                    <option value="2">修改</option>
+                </select>
+            </div>
+        </div>-->
+        <div class="l cl log-result">
+            <label class="form-label l label-key">操作类型：</label>
+            <div class="formControls l">
+                <input type="text" class="input-text logType" con_name="logResult">
+            </div>
+        </div>
+
+        <div class="l cl log-result">
+            <label class="form-label l label-key">操作结果：</label>
+            <div class="formControls l">
+                <input type="text" class="input-text logResult" con_name="logResult">
+            </div>
+        </div>
+        <div class="l cl log-module">
+            <label class="form-label l label-key">模块：</label>
+            <div class="formControls l">
+                <input type="text" class="input-text logModule" con_name="logModule">
+            </div>
+        </div>
+
+        <div class="l cl dt log-date">
+            <label class="form-label l label-key">日期：</label>
+            <div class="formControls l cl">
+                <input type="text" con_name="startTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate">
+                <span>--</span>
+                <input type="text" con_name="endTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate">
+            </div>
+        </div>
+
+        <div class="r find-btn">
+            <a href="javascript:;" class="btn btn-success radius f-r mr-5">
+                <i class="Hui-iconfont">&#xe665;</i>
+                查询
+            </a>
+        </div>
+
+    </div>
+    <!--搜索区结束-->
+    <div class="row cl mt-5 lib-search">
+        <div class="l">
+            <a href="javascript:;" class="btn btn-success radius f-r mr-5 btn-export">
+                <i class="Hui-iconfont">&#xe644;</i>
+                导出
+            </a>
+        </div>
+    </div>
+    <!--按钮区-->
+    <!--<div class="cl pd-5 bg-1 bk-gray mt-20 btn-area">
+      <span class="r">共有数据：<strong>54</strong> 条</span>
+    </div>-->
+    <!--按钮区结束-->
+    <!--列表区-->
+    <div class="mt-10">
+        <table class="table table-border table-bordered table-bg table-hover manage">
+            <thead>
+            <tr class="text-c">
+                <!--<th width="25"><input type="checkbox" name="" value=""></th>-->
+                <th width="60">用户名</th>
+                <th width="120">开始时间</th>
+                <th width="120">结束时间</th>
+                <th width="80">耗时(毫秒)</th>
+                <th>模块</th>
+                <th width="60">IP</th>
+                <th width="120">操作类型</th>
+                <th width="40">结果</th>
+                <th width="50">备注</th>
+            </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+        </table>
+        <div class="no-data">暂无数据</div>
+    </div>
+    <!--列表区结束-->
+    <!--分页-->
+    <div class="pagination-box">
+        <div class="pagination cl">
+            <div id="pagination" class="l"></div>
+        </div>
+    </div>
+    <!--分页结束-->
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../../lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/system-log-manage.js"></script>
+
+</body>
+</html>

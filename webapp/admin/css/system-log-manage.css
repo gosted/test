@@ -1,0 +1,75 @@
+.table {
+  table-layout: fixed; }
+
+.form-label {
+  text-align: left !important; }
+
+.formControls {
+  width: 83px; }
+
+.search-area-my > div {
+  margin-right: 6px; }
+
+.log-manage-top div {
+  width: 132px; }
+.log-manage-top .form-label {
+  width: 48px; }
+
+.log-user {
+  width: 138px !important; }
+  .log-user .form-label {
+    width: 48px;
+    margin-left: 6px; }
+  .log-user .formControls {
+    width: 83px; }
+
+.log-ip {
+  width: 108px !important; }
+  .log-ip .form-label {
+    width: 24px; }
+  .log-ip .formControls {
+    width: 83px; }
+
+.log-attention {
+  width: 124px !important; }
+  .log-attention .form-label {
+    width: 37px; }
+  .log-attention .formControls {
+    width: 83px; }
+
+.log-type {
+  width: 146px !important; }
+  .log-type .form-label {
+    width: 60px; }
+  .log-type .formControls {
+    width: 90px; }
+
+.log-result {
+  width: 146px !important; }
+  .log-result .form-label {
+    width: 60px; }
+  .log-result .formControls {
+    width: 83px; }
+
+.log-module {
+  width: 124px !important; }
+  .log-module .form-label {
+    width: 36px; }
+  .log-module .formControls {
+    width: 83px; }
+
+.log-date {
+  width: 246px !important; }
+  .log-date .form-label {
+    width: 36px; }
+  .log-date .formControls {
+    width: 204px; }
+
+.table .remar {
+  width: 100%;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/*# sourceMappingURL=system-log-manage.css.map */

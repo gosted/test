@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/**
+ * 本文件是跟踪反馈样式文件
+ * @author 张欢
+ */
+.file_c .file_container ul li {
+  height: 30px;
+  text-align: left;
+  line-height: 30px;
+}
+.file_c .file_container ul li img {
+  float: left;
+  display: inline-block;
+  padding-top: 8px;
+}
+.file_c .file_container ul li span {
+  margin-left: 10px;
+}
+.file_c .file_container ul li button {
+  background: transparent;
+  border: none;
+}
+
+table p {
+  margin-bottom: 0;
+}
+
+b {
+  width: 18px;
+  height: 16px;
+  display: inline-block;
+  float: left;
+  margin-top: 6px;
+}
+
+#checkForm {
+  width: 800px;
+  margin: 10px auto 0;
+}
+#checkForm .radio-box {
+  display: inline-block;
+  padding: 0;
+}
+
+.ann-diad-div .upload {
+  left: 5px;
+}
+
+.contract-type .radio_box {
+  margin-right: 10px;
+}
+.contract-type .mr-none {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=support-track-return.css.map */

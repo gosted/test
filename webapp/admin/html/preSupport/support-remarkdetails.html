@@ -1,0 +1,132 @@
+﻿<!--
+ * 备注详情页面
+ * @author 陈安
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/icheck/icheck.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="../../skin/default/skin.css" rel="stylesheet" type="text/css" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css"/>
+<link href="../../css/support-remarkdetails.css" rel="stylesheet" type="text/css"/>
+<LINK rel="Bookmark" href="../../images/favicon.ico" >
+<LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../lib/html5.js"></script>
+<script type="text/javascript" src="../../lib/respond.min.js"></script>
+<script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+<![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>备注详情</title>
+<style type="text/css">
+	.img-m img{
+		margin-bottom: 6px;
+	}
+	.file-add-list p{
+		margin-bottom: 0px;
+	}
+</style>
+</head>
+<body>
+<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer" style="overflow: auto;">
+	<div>
+		<div class="cl pb-5 pt-10 pl-20 btn-area">
+			  <a class="btn btn-success radius remarkdetails_btn" title="添加备注">
+				  <i class="Hui-iconfont">&#xe600;</i>
+				  添加备注
+			  </a>
+		</div>
+	</div>
+	<div id="remark_model" style="display: none;" >
+		<div id="tab-category" class="HuiTab">
+			<div class=" table-box" id="checkForm" style="margin-top: 10px">
+				<table  class="form-table table table-border table-bordered table-bg accessory">
+					<tr>
+						<td class="table-key" colspan="5"><span class="c-red">*</span>备注内容：</td>
+						<td colspan="35" class="has-tip">
+							<div class="formControls cl con_textarea">
+								<textarea rows="3" con_name="remarkDetail" class="textarea appr-option" datatype="*1-2000" dragonfly="true" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,2000)"></textarea>
+								<p class="textarea-numberbar"><em class="textarea-length">0</em>/2000</p>
+							</div>
+							<div class="msg-tip" title="请正确填写"> </div>
+						</td>
+					</tr>
+					<tr>
+						<td class="table-key" colspan="5"><span class="c-red"></span>是否公开：</td>
+						<td colspan="35" class="has-tip skin-minimal">
+							<div class="formControls cl">
+								<div class="radio_box l col-1">
+									<input type="radio" id="sex-1" name="remarkIsShow" con_name="remarkIsShow" value="0" datatype="*" nullmsg=" " errormsg=" " checked="checked" >
+									<label for="sex-1">是</label>
+								</div>
+								<div class="radio_box l col-1">
+									<input type="radio" id="sex-2" name="remarkIsShow" con_name="remarkIsShow"  value="1">
+									<label for="sex-2">否</label>
+								</div>
+							</div>
+							<div class="msg-tip" title="请选择"> </div>
+						</td>
+					</tr>
+					<tr>
+				        <td class="table-key" colspan="5"><span class="c-red"></span>附件：</td>
+				        <td colspan="35" class="formControls">
+				        	<form id="upload" class="upload-form" enctype ="multipart/form-data">
+				            	<a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+				            	<input type="file" name="file" class="upload-file">
+				          	</form>
+				        </td>
+				    </tr>
+				    <tr>
+				        <td class="table-key" colspan="5"></td>
+				        <td colspan="35" class="formControls file-add-list">
+				
+				        </td>
+				    </tr>
+				</table>
+				<div class="con_hint">
+					<div class="con_hint_l">说明：</div>
+					<div class="con_hint_r">
+						<p>每个附件大小不能超过50MB</p>
+					</div>
+				</div>
+				<div class="row cl mt-10">
+					<div class="col-offset-5 btns-group">
+						<button class="btn btn-success btn-default btn-uploadstar radius ml-10 lauMng_conSave remark-btn" con_name="apprResult" value="1"><i class="fa fa-floppy-o mr-5" aria-hidden="true"></i>保存</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="followinglist loglist" style="margin-top: 10px;margin-bottom: 80px;">
+
+   </div>
+</div>
+	
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/support-remarkdetails.js"></script>
+</body>
+</html>

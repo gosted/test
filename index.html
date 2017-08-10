@@ -8,7 +8,7 @@
    <link href="bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="bootstrap-select.css">
    <link rel="stylesheet" type="text/css" href="css/index.css">
-   
+   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
    <style type="text/css">
 	.active{
 		background:blue;
@@ -141,9 +141,23 @@
 类即可</label>
 <label><input class="mui-switch mui-switch-anim" type="checkbox" checked> 默认选中</label>
 
+<i class="icon-camera-retro"></i> icon-camera-retro
+<i class="fa fa-check-square-o"></i>
+<i class="fa fa-square-o" aria-hidden="true"></i>
+<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
 
+<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
 
+<i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
 
+<i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
+
+<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
 <nav>
 	<ul>
 		<li ng-click="tap=1">1</li>
@@ -195,6 +209,23 @@
 	    </div>
 	    <div class="panel-body">
 	        <form class="form-horizontal" name="myForm">
+				<div class="form-group">
+				<label class="col-xs-2 control-label col-xs-offset-2">name</label>
+					 <div class="formControls cl col-xs-3">
+	                        <input ng-model="user.name" sucmsg=" " type="text" class="form-control" maxlength="11" datatype="phone" nullmsg=" " errormsg=" ">
+	                 </div>
+	                 <div class="msg-tip" title="请正确填写"> </div>	
+				</div>
+                
+
+	            <div class="form-group" ng-class="{'has-error': myForm.myName.$touched && myForm.myName.$invalid}">
+	                <label class="col-xs-2 control-label">name</label>
+	                <div class="col-xs-6">
+	                    <input type="text" class="form-control" name="myName" ng-model="formData.username" placeholder="2-10个中英文字符，aaa会重名，必填">
+	                </div>
+	                <div class="col-xs-4 form-control-static text-danger" ng-messages="123"">
+	                </div>
+	            </div>
 
 	            <div class="form-group" ng-class="{'has-error': myForm.myName.$touched && myForm.myName.$invalid}">
 	                <label class="col-xs-2 control-label">name</label>
@@ -208,67 +239,34 @@
 	                </div>
 	            </div>
 
-	            <div class="form-group" ng-class="{'has-error': myForm.myDesc.$touched && myForm.myDesc.$invalid}">
-	                <label class="col-xs-2 control-label">desc</label>
-	                <div class="col-xs-6">
-	                    <input type="text" class="form-control" name="myDesc" ng-model="formData.desc"
-	                           placeholder="1-20个英文字母"
-	                           ng-pattern="/^[a-zA-Z]{1,20}$/">
-	                </div>
-	                <div class="col-xs-4 form-control-static text-danger" ng-messages="myForm.myDesc.$error"
-	                     ng-show="myForm.myDesc.$touched">
-	                    <div ng-message="pattern">描述格式不对</div>
-	                </div>
-	            </div>
-
-	            <div class="form-group" ng-class="{'has-error': myForm.myEmail.$touched && myForm.myEmail.$invalid}">
-	                <label class="col-xs-2 control-label">email</label>
-	                <div class="col-xs-6">
-	                    <input type="email" class="form-control" name="myEmail" ng-model="formData.email"
-	                           placeholder="必填"
-	                           required>
-	                </div>
-	                <div class="col-xs-4 form-control-static text-danger" ng-messages="myForm.myEmail.$error"
-	                     ng-show="myForm.myEmail.$touched">
-	                    <div ng-message="required">必填</div>
-	                    <div ng-message="email">邮箱格式不对</div>
-	                </div>
-	            </div>
-
-	            <div class="form-group" ng-class="{'has-error': myForm.myUrl.$touched && myForm.myUrl.$invalid}">
-	                <label class="col-xs-2 control-label">url</label>
-	                <div class="col-xs-6">
-	                    <input type="url" class="form-control" name="myUrl" ng-model="formData.url">
-	                </div>
-	                <div class="col-xs-4 form-control-static text-danger" ng-messages="myForm.myUrl.$error"
-	                     ng-show="myForm.myUrl.$touched">
-	                    <div ng-message="url">网址格式不对</div>
-	                </div>
-	            </div>
-
-	            <div class="form-group" ng-class="{'has-error': myForm.myDate.$touched && myForm.myDate.$invalid}">
-	                <label class="col-xs-2 control-label">date</label>
-	                <div class="col-xs-6">
-	                    <input type="date" class="form-control" name="myDate" ng-model="formData.date">
-	                </div>
-	            </div>
-
-	            <div class="form-group" ng-class="{'has-error': myForm.myNumber.$touched && myForm.myNumber.$invalid}">
-	                <label class="col-xs-2 control-label">number</label>
-	                <div class="col-xs-6">
-	                    <input type="number" class="form-control" name="myNumber" ng-model="formData.number">
-	                </div>
-	                <div class="col-xs-4 form-control-static text-danger" ng-messages="myForm.myNumber.$error"
-	                     ng-show="myForm.myNumber.$touched">
-	                    <div ng-message="url">数字格式不对</div>
-	                </div>
-	            </div>
-
 	            <div class="form-group">
 	                <div class="col-xs-6 col-xs-offset-2">
 	                    <button type="submit" class="btn btn-primary"
 	                            ng-disabled="myForm.$invalid">
 	                        Submit
+	                    </button>
+	                </div>
+	            </div>
+
+	            <div class="form-group">
+	                <div class="col-xs-6 col-xs-offset-2">
+	                    <button type="button" class="btn btn-primary save" ng-click="valid">
+	                        Submit
+	                    </button>
+	                </div>
+	            </div>
+
+	            <div class="form-group">
+	                <div class="col-xs-6 col-xs-offset-2">
+	                    <button type="button" class="btn btn-primary" ng-click="lay()">
+	                        弹出层
+	                    </button>
+	                </div>
+	            </div>
+	            <div class="form-group">
+	                <div class="col-xs-6 col-xs-offset-2">
+	                    <button type="button" class="btn btn-primary" ng-click="lay1()">
+	                        公告层
 	                    </button>
 	                </div>
 	            </div>
@@ -279,15 +277,18 @@
 </div>
 
 
-
 <my-test ng-click="test()"></my-test>
 
-<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.js"></script>
+<script src="jq1.9/jquery.js"></script>
+<script src="layer.js"></script>
+<script src="laypage.js"></script>
 <script src="bootstrap-3/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="bootstrap-select.js"></script>
 <script src="angular-1.5.8/angular.min.js"></script>
 <script src="angular-1.5.8/angular-cookies.js"></script>
-<script src="https://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script>
+<!-- <script src="https://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script> -->
+<script src="ng-sanitize.js"></script>
+<script type="text/javascript" src="Validform_v5.3.2_min.js"></script>
 <script>
    $(function () {
       $('#myTab li:eq(1) a').tab('show');

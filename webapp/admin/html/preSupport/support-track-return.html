@@ -1,0 +1,143 @@
+﻿<!--
+ * 本文件是跟踪反馈html文件
+ * @author 张欢
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <LINK rel="Bookmark" href="../../images/favicon.ico" >
+  <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+  <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/icheck/icheck.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/support-upload.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/support-track-return.css" rel="stylesheet" type="text/css" />
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="../../lib/html5.js"></script>
+  <script type="text/javascript" src="../../lib/respond.min.js"></script>
+  <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+  <![endif]-->
+
+  <!--[if IE 6]>
+  <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+  <script>DD_belatedPNG.fix('*');</script>
+  <![endif]-->
+  <title>跟踪反馈</title>
+</head>
+<body>
+<div>
+  <div id="checkForm" class="table-box">
+    <div class="con_hint">
+      <div class="con_hint_l">说明：</div>
+      <div class="con_hint_r">
+        <p>每个附件大小不能超过50MB</p>
+      </div>
+    </div>
+    <table class="form-table table table-border table-bordered table-bg">
+      <tr>
+        <td class="table-key" colspan="4">发起人：</td>
+        <td colspan="16" con_name="trackSpId"></td>
+        <td class="table-key" colspan="4">发起时间：</td>
+        <td colspan="16" con_name="trackSpTime" _type="date">
+      </tr>
+      <tr>
+        <td class="table-key" colspan="4">内容：</td>
+        <td colspan="36" con_name="trackSpContent"></td>
+      </tr>
+
+      <tr class="contract-all">
+        <td class="table-key" colspan="4"><span class="c-red">*</span>合同状态：</td>
+        <td colspan="11" class="has-tip">
+          <div class="formControls cl contract-type">
+            <div class="radio_box l contract">
+              <input type="radio" id="contract-1" con_name="trackContractState" checked="true" name="1" datatype="*" nullmsg=" " errormsg=" " value="HT-00">
+              <label for="contract-1">未签订</label>
+            </div>
+
+            <div class="radio_box l contracting">
+              <input type="radio" id="contract-2" name="1" value="HT-01">
+              <label for="contract-2">签订中</label>
+            </div>
+
+            <div class="radio_box mr-none l contracted">
+              <input type="radio" id="contract-3" name="1" value="HT-09">
+              <label for="contract-3">已签订</label>
+            </div>
+          </div>
+          <div class="msg-tip" title="请选择"> </div>
+        </td>
+        <td class="table-key" colspan="6"><span class="c-red">*</span><span class="contract-date">预计签订日期：</span></td>
+        <td colspan="7" class="has-tip">
+          <div class="formControls cl">
+            <input type="text" con_name="trackContractTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" id="datemin" nullmsg=" " errormsg=" " class="input-text input-type Wdate" datatype="date">
+          </div>
+          <div class="msg-tip" title="请输入正确信息"> </div>
+        </td>
+        <td class="table-key" colspan="6"><span class="c-red">*</span><span class="contract-money">预计金额（元）：</span></td>
+        <td colspan="6" class="has-tip">
+          <div class="formControls cl">
+            <input type="text" class="input-text input-type" con_name="trackContractSum" datatype="money" nullmsg=" " errormsg=" ">
+          </div>
+          <div class="msg-tip" title="请输入正确金额，0~9999999999999.99元之间"> </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="table-key" colspan="4"><span class="c-red">*</span>回复：</td>
+        <td colspan="36" class="has-tip">
+          <div class="formControls cl">
+            <textarea rows="3" con_name="trackReContent" class="textarea return-content" datatype="*1-1000" dragonfly="true" nullmsg=" " errormsg=" " onKeyUp="textarealength(this,1000)"></textarea>
+            <p class="textarea-numberbar"><em class="textarea-length">0</em>/1000</p>
+          </div>
+          <div class="msg-tip" title="请正确填写"> </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="table-key" colspan="4"><span class="c-red"></span>附件：</td>
+        <td colspan="36" class="formControls">
+          <form id="upload" class="upload-form" enctype ="multipart/form-data">
+            <a class="btn btn-success radius"><i class="Hui-iconfont">&#xe642;</i>上传文件</a>
+            <input type="file" name="file" class="upload-file">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td class="table-key" colspan="4"></td>
+        <td colspan="36" class="formControls file-list">
+
+        </td>
+      </tr>
+    </table>
+    
+    
+    <div class="row cl mt-20">
+      <div class="btns-group">
+        <button class="btn con-ProgramLibrary radius mr-10 submit">
+          <i class="Hui-iconfont mr-5">&#xe676;</i>
+          提交
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.form.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../../lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="../../lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/support-track-return.js"></script>
+</body>
+</html>

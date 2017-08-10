@@ -1,0 +1,106 @@
+<!--
+ * 本文件是工地列表html文件
+ * @author 鲍哲
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="../../images/favicon.ico" >
+    <LINK rel="Shortcut Icon" href="../../images/favicon.ico" />
+
+    <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE-2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="../../lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>项目定义</title>
+</head>
+<body>
+
+<div class="pl-20 pr-20 pt-10">
+    <!--搜索区开始-->
+    <div class="row cl">
+        <div class=" l cl mr-10">
+            <label class="form-label l label-key" style="margin-top: 3px">工地名称：</label>
+            <div class="formControls l">
+                <input class="input-text siteName" type="text" name="worksiteName"  con_name="worksiteName">
+            </div>
+        </div>
+        <div class=" l cl">
+            <label class="form-label l label-key" style="margin-top: 3px">工地编号：</label>
+            <div class="formControls l">
+                <input class="input-text siteName" type="text" name="worksiteCode"  con_name="worksiteCode">
+            </div>
+        </div>
+        <div class="r find-btn">
+            <button name="" class="btn btn-success radius btn-find" type="submit"><i class="Hui-iconfont"></i> 查询</button>
+        </div>
+    </div>
+    <!--搜索区结束-->
+   <!-- 按钮区开始-->
+    <div class="row cl mt-5 lib-search">
+
+        <div class="l">
+            <a href="javascript:;" class="btn btn-success radius f-r mr-5 btn-add">
+                <i class="Hui-iconfont">&#xe600;</i>
+                添加
+            </a>
+        </div>
+
+    </div>
+   <!-- 按钮区结束-->
+    <div class="mt-5">
+        <table class="table table-border table-bordered table-bg table-hover">
+            <thead>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="" value=""></th>
+                <th width="140">工地名称</th>
+                <th width="140">工地编号</th>
+                <th width="100">所属地区</th>
+                <th width="100">工地地址</th>
+                <th width="100">联系人</th>
+                <th width="110">联系电话</th>
+                <th width="80">操作</th>
+            </tr>
+            </thead>
+            <tbody class="tbody">
+
+            </tbody>
+        </table>
+        <div class="no-data">暂无数据</div>
+    </div>
+
+    <!--分页-->
+    <div class="pagination-box">
+        <div class="pagination cl">
+            <div id="pagination" class="l"></div>
+        </div>
+    </div>
+    <!--分页结束-->
+</div>
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="../../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../js/commen.js"></script>
+<script type="text/javascript" src="../../js/pro-Mgmt-SiteList.js"></script>
+</body>
+</html>

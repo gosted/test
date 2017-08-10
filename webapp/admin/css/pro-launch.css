@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/**
+ * 本文件是我的支撑页样式文件
+ * @author 鲍哲
+ */
+.box-div {
+  border-radius: 3px;
+  border: 1px solid #DCDCDC;
+  background: #FFFFFF;
+  height: 120px;
+  cursor: pointer; }
+
+.img {
+  line-height: 120px;
+  text-align: center;
+  vertical-align: middle; }
+
+p {
+  padding: 0px 20px 10px 0; }
+
+/*# sourceMappingURL=pro-launch.css.map */
