@@ -1,5 +1,5 @@
 (function(){
-angular.module("app",["ngSanitize","ngCookies"])
+angular.module("app",['ngSanitize','ngCookies','ngAnimate'])
 .controller("myContral",function($scope){
 	$scope.name = "zhangsan";
 	$scope.showname = false;
@@ -62,7 +62,8 @@ angular.module("app",["ngSanitize","ngCookies"])
 		link:function(scope,element,attrs){
 			//console.log(element)
 			scope.test = function(){
-				console.log(element);
+				console.log(element.attr("self_name"))
+				console.log(element,attrs);
 			}
 		}
 	}
@@ -239,26 +240,97 @@ angular.module("app",["ngSanitize","ngCookies"])
       //   }
       // });
       //自定页
-		layer.open({
-		    type: 1,
-		    skin: 'layui-layer-demo', //样式类名
-		    closeBtn: 0, //不显示关闭按钮
-		    shift: 2,
-		    shadeClose: true, //开启遮罩关闭
-		    content: '内容'
-		});
+		// layer.open({
+		//     type: 1,
+		//     skin: 'layui-layer-demo', //样式类名
+		//     closeBtn: 0, //不显示关闭按钮
+		//     shift: 2,
+		//     shadeClose: true, //开启遮罩关闭
+		//     content: '内容'
+		// });
         //示范一个公告层
-      // layer.open({
-      //    type: 1
-      //   ,title: false //不显示标题栏
-      //   ,closeBtn: false
-      //   ,shade: 0.4
-      //   //,time:3000
-      //   ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
-      //   ,content: '<div><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span></div>'
-      // });
+      layer.open({
+         type: 1
+        ,title: false //不显示标题栏
+        ,closeBtn: false
+        ,shade: 0.4
+        ,time:1000
+        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+        ,content: '<div><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span></div>'
+      });
     }
-})	
+})
+.controller("callback",function($scope,$element,getData){
+	$scope.flag = false;
+	$scope.flag1 = true;
+	$scope.flag2 = false;
+	$scope.next = function(par,selfName){
+		
+		getData.getData("dataSelect.json",{id:par}).then(function(data){
+			if(data.data.success === 0){
+				switch (selfName)
+				{
+					case 'select-first':
+						$scope.data1 = data.data.data;
+						$scope.flag = true;
+					break;
+		
+					case 'select-two':
+					    $scope.flag1 = true;
+						$scope.data2 = data.data.data;
+					break;
+
+					case 'select-three':
+						$scope.data3 = data.data.data;
+						$scope.flag2 = true;
+					break;
+					default :
+						return false;
+				}
+			}
+		})
+	}
+})
+.controller("btnGroup",function($scope){
+	$scope.isShow = false;
+	$scope.showLeft = function(){
+		$scope.isShow = !$scope.isShow;
+	}
+})
+.controller("laypage",function($scope,getData){
+	  laypage({
+	    cont: 'demo7',
+		pages: 10, //通过后台拿到的总页数
+		curr:  1, //当前页
+		first: '首页',
+		last: '尾页',
+		prev: false,
+		next: false,
+		skip: true //是否开启跳页
+		,jump: function(e, first){ //触发分页后的回调(单击页码后)
+		    if(!first){ //一定要加此判断，否则初始时会无限刷新
+		    var pageNo = e.curr;	
+		      getData.getData("data.json",{id:"0001"})
+				.then(function(data){
+					$scope.data = data;
+					return data;
+				},function(error){
+					$scope.data = error;
+					console.log("cuowu");
+				})
+				.then(function(data){
+					console.log(data);
+				})
+		    }
+		}
+	  });
+})		
+
 })()
+
+
+
+
+
 
 

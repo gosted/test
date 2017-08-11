@@ -96,14 +96,6 @@ button {
   vertical-align: middle;
   outline: none;
 }
-input[type="checkbox"],
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-input[type="text"],
-input[type="password"] {
-  -webkit-appearance: none;
-}
 body,
 th,
 td,
@@ -451,4 +443,19 @@ input[type="search"]::-webkit-search-decoration {
   border: 1px solid #000;
   border-top: none;
   text-align: left;
+}
+.box {
+  transition: all linear 0.5s;
+  background-color: lightblue;
+  height: 200px;
+  width: 100px;
+  position: fixed;
+  left: 100px;
+  top: 200px;
+}
+.ng-hide {
+  left: 200px;
+}
+.ng-cloak {
+  display: none;
 }

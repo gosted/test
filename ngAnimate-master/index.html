@@ -12,12 +12,12 @@
   <!-- /ngAnimation -->
   
   <script src="js/app.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="css/fontello/css/fontello.css">  
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  <!-- <link rel="stylesheet" href="css/fontello/css/fontello.css">  --> 
     
-  <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+ <!--  <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
-
+ -->
   
 </head>
 <body ng-controller="AppController">
@@ -46,6 +46,7 @@
 	<ul class="item-container" ng-class="{'list' : layoutMode == 0}">
 		<li class="item" ng-show="isShow" ng-class="animation" ng-repeat="item in list" ng-click="removeItem(item)">{{item.title}}</li>
 	</ul>
+  
 
 </body>
 </html>

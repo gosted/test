@@ -14,6 +14,12 @@
 		background:blue;
 	}
    </style>
+	<script src="jq1.9/jquery.js"></script>
+	<script src="layer.js"></script>
+	<script src="laypage.js"></script>
+	<script src="bootstrap-3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap-select.js"></script>
+
 </head>
 
 <body ng-app="app">
@@ -201,6 +207,22 @@
   <div class="col-md-2  col-xs-6 col-sm-4 .col-lg-3">.col-md-1</div>
 </div>
 </div>
+<div ng-controller="callback">
+	<ul class="list-group">
+		<li class="list-group-item" ng-click="next(1,'select-first')">树的第一级1</li>
+		<li class="list-group-item" ng-click="next(2,'select-first')">树的第一级2</li>
+		<li class="list-group-item" ng-click="next(3,'select-first')">树的第一级3</li>
+	</ul>
+	<ul class="list-group">
+		<li  ng-show="flag" class="list-group-item" ng-repeat="key in data1" ng-bind="key.user + '树的第2级' + $index " ng-click="next(key.id,'select-two')"><span ng-bind="$index"></span></li>
+	</ul>
+	<ul class="list-group">
+		<li  ng-show="flag1" class="list-group-item" ng-repeat="key in data2" ng-bind="key.user" ng-click="next(key.id,'select-three')"></li>
+	</ul>
+	<ul class="list-group">
+		<li  ng-show="flag2" class="list-group-item" ng-repeat="key in data3" ng-bind="key.user" ng-click="next(key.id,'select-fou')">树的第4级 <span ng-bind="$index"></span></li>
+	</ul>
+</div>
 
 <div ng-controller="myForm">
 	<div class="panel panel-default">
@@ -276,20 +298,103 @@
 	</div>	
 </div>
 
+<div ng-controller="laypage"> 
+	<div id="demo7"></div>
+</div>
+
+
+<div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">原始
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li>
+            <a href="javascript:;">功能</a>
+        </li>
+        <li>
+            <a href="javascript:;">另一个功能</a>
+        </li>
+        <li>
+            <a href="javascript:;">其他</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="javascript:;">分离的链接</a>
+        </li>
+    </ul>
+</div>
 
 <my-test ng-click="test()"></my-test>
 
-<script src="jq1.9/jquery.js"></script>
-<script src="layer.js"></script>
-<script src="laypage.js"></script>
-<script src="bootstrap-3/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="bootstrap-select.js"></script>
-<script src="angular-1.5.8/angular.min.js"></script>
+<div class="container item-container" style="overflow:hidden;" ng-controller="btnGroup">  
+        <button class="btn">圆角按钮</button>  
+        <button class="btn btn-default">默认按钮</button>  
+        <button class="btn btn-info">信息按钮</button>  
+        <button class="btn btn-warning">警示按钮</button>  
+        <button class="btn btn-danger">危险按钮</button>  
+        <button class="btn btn-link">链接按钮</button>  
+        <button class="btn btn-lg">大的按钮</button>  
+        <button class="btn btn-sm">小的按钮</button>  
+        <button class="btn btn-xs">超小按钮</button>  
+        <button class="btn btn-block">块级按钮</button>  
+        <button style="position:fixed;top:200px;right:200px;" ng-click="showLeft()" class="btn btn-success">成功按钮</button>  
+        <button class="btn btn-success btn-primary">原始按钮</button>  
+        <button class="btn btn-success active">激活按钮</button>  
+        <button class="btn btn-success disabled" role="button">禁用按钮</button>
+
+        <h1>隐藏 DIV: <input type="checkbox" ng-model="myCheck"></h1>
+
+		<div class="box" ng-cloak  ng-show="myCheck"></div> 
+
+		<label for="name">默认的复选框和单选按钮的实例</label>
+<div class="checkbox">
+	<label><input type="checkbox" value="">选项 1</label>
+</div>
+<div class="checkbox">
+	<label><input type="checkbox" value="">选项 2</label>
+</div>
+<div class="radio">
+	<label>
+		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 选项 1
+	</label>
+</div>
+<div class="radio">
+	<label>
+		<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">选项 2 - 选择它将会取消选择选项 1
+	</label>
+</div>
+<label for="name">内联的复选框和单选按钮的实例</label>
+<div>
+	<label class="checkbox-inline">
+		<input type="checkbox" id="inlineCheckbox1" value="option1"> 选项 1
+	</label>
+	<label class="checkbox-inline">
+		<input type="checkbox" id="inlineCheckbox2" value="option2"> 选项 2
+	</label>
+	<label class="checkbox-inline">
+		<input type="checkbox" id="inlineCheckbox3" value="option3"> 选项 3
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1" checked> 选项 1
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="optionsRadiosinline" id="optionsRadios4"  value="option2"> 选项 2
+	</label>
+</div>
+</div>
+
+
+
+<!-- <script src="angular-1.5.8/angular.min.js"></script> -->
+<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular-animate.min.js"></script>
 <script src="angular-1.5.8/angular-cookies.js"></script>
 <!-- <script src="https://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script> -->
 <script src="ng-sanitize.js"></script>
+<!-- <script src="https://cdn.bootcss.com/angular.js/1.4.6/angular-animate.min.js"></script> -->
 <script type="text/javascript" src="Validform_v5.3.2_min.js"></script>
 <script>
+	
    $(function () {
       $('#myTab li:eq(1) a').tab('show');
       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
@@ -300,7 +405,7 @@
    	  })
    	   $('.selectpicker').selectpicker({
         'selectedText': 'cat'
- 	  });
+ 	  });   
    });
 </script>
 <script type="text/javascript" src="index.js"></script>

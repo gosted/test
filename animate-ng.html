@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Try Bootstrap Online</title>
+   <meta charset="utf-8"/>
+   <meta name="description" content="跨境电商ERP，外贸电商ERP，外贸管理软件"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <link href="bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="bootstrap-select.css">
+   <link rel="stylesheet" type="text/css" href="css/index.css">
+   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+   <style>
+.box {
+  transition: all linear 0.5s;
+  background-color: lightblue;
+  height: 200px;
+  width:100px;
+  position:fixed;
+  left:100px;
+  top:200px;
+}
+
+.ng-hide {
+  left:200px;
+}
+</style>
+<script src="jq1.9/jquery.js"></script>
+<script src="layer.js"></script>
+<script src="laypage.js"></script>
+<script src="bootstrap-3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bootstrap-select.js"></script>
+<!-- <script src="angular-1.5.8/angular.min.js"></script> -->
+<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular-animate.min.js"></script>
+<script src="angular-1.5.8/angular-cookies.js"></script>
+<!-- <script src="https://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script> -->
+<script src="ng-sanitize.js"></script>
+<script type="text/javascript" src="Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script>
+
+</script>
+</head>
+<body ng-app="app">
+
+<div controller="box">
+  <h1>隐藏 DIV: <input type="checkbox" ng-model="myCheck"></h1>
+
+  <div class="box" ng-show="myCheck"></div>  
+</div>
+
+
+
+
+
+
+</body>
+</html>
