@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1</title>
+</head>
+<body>
+	<script>
+		let unique = function(arr){
+			let hashTable = {};
+			let data = [];
+			for(let i = 0,l = arr.length;i<l;i++){
+				if(!hashTable[arr[i]]){
+					hashTable[arr[i]] = true;
+					data.push(arr[i]);
+				}
+			}
+			return data;
+		}
+
+		function checkPalindrom(str){
+			return  str.split('').reverse().join('');
+		}
+		function findMaxDuplicateChar(str){
+				if(str.length == 1){
+					return str;
+				}
+			let charObj = {};
+			for(let i= 0;i<str.length;i++){
+				if(!charObj[str.charAt(i)]){
+					charObj[str.chartAt(i)] = 1;
+				}else{
+					charObj[str.charAt(i)] += 1;
+				}
+			}
+			let maxChar = '',maxValue = 1;
+			for(var k in charObj) {
+				if(charObj[k]>=maxValue){
+					maxChar = k;
+					maxValue = charObj[k];
+				}
+			}
+		}
+		function bubbleSort(arr){
+			for(let i = 0, l = arr.length;i<l-1;i++){
+				for(let j = i+1;j<l;j++){
+					if(arr[i]>arr[j]){
+						let tem = arr[i];
+						arr[i] = arr[j];
+						arr[j] = tem;
+					}
+				}
+			}
+			return arr;
+		}
+		function quickSort(arr){
+			if(arr.length<=1){
+				return arr;
+			}
+			let leftArr = [];
+			let rightArr = [];
+			let q = arr[0];
+			for(let i = 1,l = arr.length;i<l;i++){
+				if(arr[i]>q){
+					rightArr.push(arr[i]);
+				}else{
+					leftArr.push(arr[i])
+				}
+			}
+			return [].concat(quickSort(leftArr),[q],quickSort(rightArr));
+		}
+
+		var a = 2,b = 4;
+		a = a+b;
+		b = a - b;
+		a = a - b;
+		function getMaxProfit(arr){
+			var min = arr[0];
+			var max = 0;
+			for(var i = 0;i<arr.length;i++){
+				var cur = arr[i];
+				min = Math.min(min,cur);
+				var poten = currentPrice - minPrice;
+				max = Math.max(max,poten);
+			}
+			return max;
+		}
+		function randomString(n){
+			let str = 'fjdsklafjklafjdkfdjkal;';
+			let tmp = '',
+			i = 0,
+			l = str.length;
+			for(i = 0;i<n;i++){
+				tmp += str.charAt(Math.random()*l);
+			}
+			return tmp;
+		}
+		console.log(randomString(3));
+		function queryClassName(node,name){
+			var starts = '^|[n\r\t\f]',
+			ends = '()'
+		}
+
+		function firstNoRepeatChar(str){
+			var count = {};
+			var result = [];
+			for(var i = 0;i<str.length;i++){
+				if(count[str[i]]){
+					count[str[i]]++；
+				}else{
+					count[str[i]] = 1;
+				}
+			}
+			for(var prop in count){
+				if(count[prop] === 1){
+					result.push(prop);
+				}
+			}
+			return result.join('');
+		}
+		function missingNumber(arr){
+			var n = arr.length+1;
+			var sum = (1+n)*n/2;
+			var summ = 0;
+			for(var i = 0;i<arr.length;i++){
+				summ += arr[i];
+			}
+			return sum - summ;
+		}
+	</script>
+</body>
+</html>

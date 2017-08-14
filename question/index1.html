@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#demo {
+		    width: 0;
+		    height: 0;
+		    border-width: 20px;
+		    border-style: solid;
+		    border-color: transparent transparent red transparent;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo"></div>
+	<script>
+		Array.prototype.unquie = function() {
+			var res = [];
+			var json = {};
+			for(var i = 0;i<this.length;i++){
+				if(!json[this[i]]){
+					res.push(this[i]);
+					json[this[i]] = 1;
+				}
+			}
+			return res;
+		}
+		var arr = [112,112,23,"123","no","no"];
+		//console.log(arr.unquie());
+		function bubbleSort(arr){
+			var len = arr.length;
+			for(var i = 0; i<len; i++){
+				for(var j = 0; j<len-1-i; j++){
+					if(arr[j] > arr[j+1]) {
+						var temp = arr[j+1];
+						arr[j+1] = arr[j];
+						arr[j] = temp;
+					}
+				}
+			}
+			return arr;
+		}
+		function selectionSort(arr){
+			var len = arr.length;
+			var minIndex,temp;
+			for(var i = 0; i<len - 1; i++){
+				minIndex = i;
+				for(var j = i+1;j<len;j++){
+					if(arr[j] < arr[minIndex]){
+						minIndex = j;
+					}
+				}
+				temp = arr[i];
+				arr[i] = arr[minIndex];
+				arr[minIndex] = temp;
+			}
+			return arr;
+		}
+
+		var obj = {a:["1","2"],b:{name:"123"},c:"str"};
+		function clone(obj){
+			var ret,k,b;
+			if((b = (obj instanceof Array)) || obj instanceof Object){
+				ret = b?[]:{};
+				for(k in obj){
+					if(obj[k] instanceof Array || obj[k] instanceof Object){
+						ret[k] = clone(obj[k])	
+					}else{
+						ret[k] = obj[k];
+					}
+					
+				}
+			}
+			return ret;
+		}
+		//var result = clone(obj);
+		function result(){}
+		result.prototype = Object.create(obj)
+		var _result = new result();
+		//result.c = "outter";
+		console.log(_result);
+		console.log(obj);
+
+		function choose(arr){
+			for(var i = 0;i<arr.length-1;i++){
+				for(var j = i+1;j<arr.length;j++){
+					if(arr[i]>arr[j]){
+						var tmp = arr[i];
+						arr[i] = arr[j];
+						arr[j] = tmp;
+					}
+				}
+			}
+		}
+
+		import header from 'components/header/header.vue';
+		exoprt default {
+			data() {
+				return {
+					seller: {};
+				}
+			},
+			created() {
+				this.$http.get('/api/seller').then((response) => {
+					response = response.body;
+					if(response.errnor === ERR_ok){
+						this.seller = response.body
+					}
+				})
+			},
+			components(){
+				"v-header":header
+			}
+		}
+	</script>
+	<template>
+		<div class="header">
+			<div class="content-wrapper">
+				<div class="avatar">
+					<img width="64" height="64" :src="seller.avatar" alt="">
+				</div>
+			</div>
+			<div class="content">
+				<div class="title">
+					<span class="brand"></span>
+					<span class="name">{{seller.name}}</span>
+				</div>
+				<div class="description">
+					{{seller.description}}/{{seller.deliverTime}}
+				</div>
+				<div v-if="seller.supports" class="support">
+					<span class="icon"></span>
+				</div>
+			</div>
+			<div class="bullentin-wrapper"></div>
+		</div>
+		<script type="text/ecmascript-6">
+			export default {
+				props: {
+					seller: {
+						type
+					}
+				}
+			}
+		</script>
+	</template>>
+	<style>
+	@import "../../common/stylus.mixin"
+		bg-image($url){
+			background-image:url($url + "@2x.png");
+			@media (-webkit-min-device-pixel-ratio: 3),(min-decive-pixel-radio):3;{
+				background-image:url($url + "@3x.png");	
+			}
+		}
+	</style>
+</body>
+</html>

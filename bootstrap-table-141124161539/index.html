@@ -13,23 +13,17 @@
         <label>Rows: </label><input id="rows" type="text" placeholder="Rows" value="100">
         <button id="build" class="btn btn-default">Build</button>
     </div>
-    <table id="table"
-           data-toggle="table"
-           data-url="data/data1.json"
-           data-show-columns="true"
-           data-search="true"
-           data-show-refresh="true"
-           data-show-toggle="true"
-           data-pagination="true"
-           data-height="500">
-        <thead>
+    <table id="tb_departments" data-toggle="table"  data-height="246" data-url="../data.json" data-pagination="true">
+    <thead>
         <tr>
-            <th data-field="id" data-formatter="idFormatter">ID</th>
-            <th data-field="name">Item Name</th>
-            <th data-field="price">Item Price</th>
+            <th data-field="user" data-checkbox="true"></th>
+            <th data-field="user" data-align="right">Item ID</th>
+            <th data-field="user" data-align="center">Item Name</th>
+            <th data-field="user" data-align="">Item Price</th>
         </tr>
-        </thead>
+    </thead>
     </table>
+    <div id="topbar"></div>
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
