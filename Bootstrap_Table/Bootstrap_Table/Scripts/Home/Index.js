@@ -1,7 +1,5 @@
 ﻿
 $(function () {
-    Main.init();
-    TableExport.init();
     //1.初始化Table
     var oTable = new TableInit();
     oTable.Init();

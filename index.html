@@ -8,19 +8,41 @@
    <link href="bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="bootstrap-select.css">
    <link rel="stylesheet" type="text/css" href="css/bootstrap-table.css">
-   <link rel="stylesheet" type="text/css" href="css/index.css">
+   <link rel="stylesheet" type="text/less" href="css/index.less">
    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
    <style type="text/css">
 	.active{
 		background:blue;
 	}
    </style>
+   <script>
+	  less = {
+	    env: "development",
+	    async: false,
+	    fileAsync: false,
+	    poll: 1000,
+	    functions: {},
+	    dumpLineNumbers: "comments",
+	    relativeUrls: false,
+	    rootpath: ""
+	  };
+	</script>
 	<script src="jq1.9/jquery.js"></script>
+	<script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>
 	<script src="layer.js"></script>
 	<script src="laypage.js"></script>
 	<script src="bootstrap-3/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="bootstrap-select.js"></script>
 	
+	<script type="text/javascript" src="bootstrap-table.js"></script>
+	<!-- <script src="angular-1.5.8/angular.min.js"></script> -->
+	<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+	<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular-animate.min.js"></script>
+	<script src="angular-1.5.8/angular-cookies.js"></script>
+	<!-- <script src="https://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script> -->
+	<script src="ng-sanitize.js"></script>
+	<!-- <script src="https://cdn.bootcss.com/angular.js/1.4.6/angular-animate.min.js"></script> -->
+	<script type="text/javascript" src="Validform_v5.3.2_min.js"></script>
 
 </head>
 
@@ -451,16 +473,7 @@
         </div>
         <table id="tb_departments"></table>
 </div>
-<script type="text/javascript" src="bootstrap-table.js"></script>
-<!-- <script src="angular-1.5.8/angular.min.js"></script> -->
-<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
-<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular-animate.min.js"></script>
-<script src="angular-1.5.8/angular-cookies.js"></script>
-<!-- <script src="https://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script> -->
-<script src="ng-sanitize.js"></script>
-<!-- <script src="https://cdn.bootcss.com/angular.js/1.4.6/angular-animate.min.js"></script> -->
-<script type="text/javascript" src="Validform_v5.3.2_min.js"></script>
-<script>
+
 $(function () {
 
     //1.初始化Table
