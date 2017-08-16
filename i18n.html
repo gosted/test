@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="http://apps.bdimg.com/libs/angular.js/1.2.16/angular.min.js"></script>
+    <script src="angular-translate.min.js"></script>
+    <style type="text/css">
+		/* html,body{
+			height:100%;
+			background:#ccc;
+			width:100%;
+		} */
+		.box{
+			height:100%;
+			width:100%;
+			background:#eee;
+		}
+		.content1{
+			height:25%;
+			width:100%;
+		}
+		.content2{
+			height:25%;
+			width:100%;
+		}
+		.content3{
+			height:25%;
+			width:100%;
+		}
+		.content4{
+			height:25%;
+			width:100%;
+		}
+    </style>
+</head>
+<body>
+    <div ng-controller="box">
+        <h1>{{ 'TITLE' | translate }}</h1>
+        <span translate="FOO"></span>
+        <input type="password" placeholder="{{ 'TITLE' | translate }}"></input>
+    </div>
+    <!-- <div class="box">
+    	<div class="content1"></div>
+    	<div class="content1"></div>
+    	<div class="content1"></div>
+    	<div class="content1"></div>
+    </div> -->
+    <script type="text/javascript">
+    var app = angular.module("MyApp",['pascalprecht.translate']);
+    
+    app.config(['$translateProvider',function($translateProvider){
+          $translateProvider.translations('en',{
+            'TITLE':'Hello',
+            'FOO':'This is a paragraph'
+        });
+     
+          $translateProvider.translations('zh',{
+            'TITLE':'你好',
+            'FOO':'这是一幅图'
+        });	
+          $translateProvider.preferredLanguage(localStorage.lang || 'zh');
+    }]);
+    app.controller("box",function($scope,$translate){
+    	//$translate.use("en");
+    })
+    </script>
+</body>
+</html>

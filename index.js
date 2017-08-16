@@ -1,11 +1,94 @@
 (function(){
-angular.module("app",['ngSanitize','ngCookies','ngAnimate'])
+angular.module("app",['ngSanitize','ngCookies','ngAnimate','pascalprecht.translate'])
+.factory("Data",function(){
+	return {
+		name:"ht is so good",
+		template:"<p>ht is very good</p><a>hahahaha</a>"
+	}
+})
+.service("langData",function($http,$q){ //js中英文转换
+	    var deferred = $q.defer();
+	    this.lang = null;
+		this.data = function(){
+			$http.post("lang.json",{},{
+				headers : {'contentType' : 'application/json','url-mapping' : ''}	
+			}).success(function(Data,status,headers,config){
+				localStorage.lang == "en" ? Data = Data.eh : Data = Data.ch;
+				/*var data = null;
+				if(localStorage.lang == "en"){
+					data = Data.eh
+				}else{
+					data = Data.ch
+				}*/
+				deferred.resolve(Data);			
+			}).error(function(Data,status,headers,config){
+				promise.reject(data);
+			})
+			return deferred.promise;	
+		}	
+	
+})
+.provider("myFirst",function(){  
+    var id = 1;
+    var lang = null;
+    return {
+        setData:function(data){
+            lang = data;
+            return data;
+        },
+        getData:function(){
+        	var that = this;
+        	return $.ajax({
+		  	url:"lang.json",
+		  	method:"post",
+		  	dataType:"json",
+		  	success:function(data){
+		  	   return that.setData(data)
+			}})	
+        },
+        $get:function(){
+            return {
+                getData: function(){
+                    return lang
+                }
+            }
+        }
+    }
+}) 
+.config(function($translateProvider,myFirstProvider){
+
+		 var $tr = $translateProvider;
+		 var Data = null;
+		 $.ajax({
+		  	url:"lang.json",
+		  	method:"post",
+		  	async: false,
+		  	dataType:"json",
+		  	success:function(data){
+		  	   Data = data;
+		  }})
+		  $translateProvider.translations('en',Data.eh);
+          $translateProvider.translations('zh',Data.zh);	
+          $translateProvider.preferredLanguage(localStorage.lang || 'zh');
+		  /*myFirstProvider.getData().then(function(data){
+		    
+		  })*/
+		  
+		  
+		   
+})
+.controller("box",function($scope,langData,myFirst){
+	console.log(myFirst.getData())
+	langData.data().then(function(data){
+		//console.log(data[0].title)
+	})
+
+})
 .controller("myContral",function($scope){
 	$scope.name = "zhangsan";
 	$scope.showname = false;
 	$scope.change = function(){
 		$scope.showname = !$scope.showname;
-		console.log(1)
 	};
 	$scope.tap = 1;
 	$scope.data = {
@@ -16,12 +99,6 @@ angular.module("app",['ngSanitize','ngCookies','ngAnimate'])
 		$scope.$broadcast("changeData",data); //执行了绑定的事件
 	})	
 })
-.factory("Data",function(){
-	return {
-		name:"ht is so good",
-		template:"<p>ht is very good</p><a>hahahaha</a>"
-	}
-})
 .factory("getData",function($http,$q){
 	return {
 		getData:function(url,data){
@@ -31,7 +108,7 @@ angular.module("app",['ngSanitize','ngCookies','ngAnimate'])
 			// 	return $.reject(resp.data)
 			// })
 			return $http.post(url,data,{
-				headers : {'contentType' : 'application/json','url-mapping' : '/app/platform/modifypwd'}	
+				headers : {'contentType' : 'application/json','url-mapping' : ''}	
 			}).success(function(Data,status,headers,config){
 				var progress;
 				for(var i = 0;i < Data.length; i++){
@@ -88,6 +165,10 @@ angular.module("app",['ngSanitize','ngCookies','ngAnimate'])
 	Data.name  = $scope.name ;
 }])
 .controller("content",function($scope){
+	$scope.changeLang = function(val){
+		console.log(val)
+		localStorage.setItem("lang",val);
+	}
 	$scope.name = "lisi";
 	$scope.users = [
 					{name:'Jani',country:'Norway'},
