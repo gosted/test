@@ -1,0 +1,47 @@
+.pageBox{
+    position: relative;
+    width: 100%;
+    height: 88%;
+    margin:0;
+    padding: 0 15px;
+    overflow: auto;
+}
+.opStyle{
+    padding: 0 12px;
+}
+.glyphicon-asterisk{
+    color: orangered;
+}
+.userError{
+    color: #a94442;
+}
+/*
+.more{
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+.more a{
+    padding: 0 20px;
+}
+.more li:hover{
+    background-color: #eee;
+}*/
+/*ÉÏ´«*/
+.up{
+    position: relative;
+    display: inline-block;
+}
+#uploadExcel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.file{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 0;
+}

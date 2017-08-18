@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="跨境电商ERP，外贸电商ERP，外贸管理软件,Cross-Border Electronic Commerce ERP,Foreign trade electricity,TradeMail | TradeCRM"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../bootstrap-validator/dist/css/bootstrapValidator.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/login.css">
+	<script type="text/javascript" src="../../js/public/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="../../angular-1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="../../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../bootstrap-validator/dist/js/bootstrapValidator.min.js"></script>
+	<script type="text/javascript" src="../../angular-1.5.8/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="../../angular-1.5.8/angular-translate.min.js"></script>
+</head>
+
+<body ng-app="app">
+	<div class="login-wrap" ng-controller="loginCtrl">
+		<!-- 头部 -->
+
+		<div class="login-header">
+			<div class="main">
+			<div class="main-child">
+				<a id="home-link" href="javascript:void(0)">
+					<img src="../../image/login/logoapp.png">
+				</a>
+			</div>
+				<!-- <a id="home-link" href="javascript:void(0)">
+					<img src="../../image/login/logoapp.png">
+				</a> -->
+			</div>
+		</div>
+		<!-- 部分 -->
+		<div class="login-content">
+			<div class="main">
+				<!-- 登陆部分 -->
+				<div class="login-middle">
+					<!-- <div id="height"></div> -->
+					<!-- <ul>
+						<li>
+							<img src="../../image/login/iconuser.png">
+							<input type="text" placeholder="please input username"></input>
+						</li>
+						<li></li>
+					</ul> -->
+					<div id="blank"></div>
+					<form name="loginForm">
+						<ul>
+							<li>
+								<div class="li-middle">
+									<img src="../../image/login/iconuser.png">
+
+									<input autocomplete="off" type="text" name="username" placeholder="admin" ng-model="userName"></input>
+									<!-- <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid"> -->
+									  <span>用户名不存在</span>
+									  
+
+								</div>
+							</li>
+							<li id="login-user">
+								<div class="li-middle">
+									<img src="../../image/login/iconpassword.png">
+
+									<input autocomplete="off" type="password" name="password" placeholder="password" ng-model="password"></input>
+									<span class="pass-span">密码错误</span>
+
+								</div>
+							</li>
+						</ul>
+					</form>
+					<!-- 记住密码复选框 -->
+					<div class="rember-pass" ng-click="remberPass()">
+						<div id="rember-check">
+							<img ng-show='rember'  src="../../image/login/iconcheck.png">
+						</div>
+						<p>remember me</p>
+						<!-- <span id="rember-check">
+							<img src="../../image/login/iconcheck.png">
+						</span>
+						<span>remember me</span> -->
+						<!-- <input id="rember-check" type="checkbox"></input> -->
+					</div>
+					<!-- 登录按钮 -->
+					<div ng-click="login()" class="login-btn">
+						<div class="btn-parent">
+							<a href="javascript:void(0);">
+								Sign in
+							</a>
+						</div>
+					</div>
+					<div class="login-register">
+						<a id="register-link" href="javascript:void(0);">Register</a>
+						<a href="javascript:void(0);">forgot your password?</a>
+					</div>
+					<!-- 图片上面的间距 -->
+					<div id="blank1"></div>
+					<!-- 图片 -->
+					<div id="login-img">
+						<img src="../../image/login/ai1.png">
+					</div>
+				</div>
+				<!-- 尾部备案号 -->
+				<div class="login-footer">
+					<div id="footer-content">
+						<span>Privacy Policy</span>
+						<a href="javascript:void(0);">Help</a>
+						<span><span class="copyright-logo">©</span>2017 CJDropshipping.com.All Rights Reserved.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript" src="../../js/public/commen.js"></script>
+	<script type="text/javascript" src="../../js/login/login.js"></script>
+</body>
+</html>

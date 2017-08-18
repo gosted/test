@@ -1,0 +1,257 @@
+
+// 登陆页css
+body,html{
+  height: 100%;
+}
+.login-wrap{
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+}
+//元素水平居中
+.xauto{
+  margin: 0 auto;
+}
+.main{
+  margin: 0 auto;
+  width: 1200px;
+  text-align: center;
+}
+// 给元素添加border
+.border{
+  border:1px solid red;
+}
+.login-header{
+  width: 100%;
+  height: 9%;
+  background-color: #ffab49;
+  .main{
+    display: table;
+    text-align: left;
+    height: 100%;
+    margin: 0 auto;
+    width: 1200px;
+    .main-child{
+      display: table-cell;
+      vertical-align: middle;
+      a{
+        text-align: left;
+        display: inline-block;
+      }
+    }
+  }
+}
+//给内容部分添加纵向渐变
+#gradcontent {
+  background: -webkit-linear-gradient(#f8a34f, #ffc762);
+  background: -o-linear-gradient(#f8a34f, #ffc762);
+  background: -moz-linear-gradient(#f8a34f, #ffc762);
+  background: linear-gradient(#f8a34f, #ffc762);
+}
+// 行内块元素
+.inline-block{
+  display: inline-block;
+}
+// 中间部分
+.login-content{
+  height: 91%;
+  #gradcontent;
+  .main{
+    height: 100%;
+    .login-middle{
+      position: relative;
+      height: 81%;
+      #blank{
+        height: 28%;
+      }
+      form{
+        height: 14%;
+        ul{
+          width: 262px;
+          height: 100%;
+          border: 1px solid #fff;
+          border-radius: 4px;
+          .xauto;
+          li{
+            height: 50%;
+            display: table;
+            &:after{
+              width: 246px;
+              height: 1px;
+              background-color: #fff;
+            }
+            .li-middle{
+              display: table-cell;
+              vertical-align: middle;
+              box-sizing: border-box;
+              img{
+                padding: 0 10px;
+                border-right: 1px solid #fff;
+              }
+              input{
+                width: 220px;
+                background: none;
+                text-indent: 12px;
+                font-size: 16px;
+                color: #fff;
+                margin-left: -8px;
+              }
+              span{
+                position: absolute;
+                left: 62%;
+                top: 30%;
+                color: red;
+              }
+              .pass-span{
+                position: absolute;
+                left: 106%;
+                top: 32%;
+                display: table;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#login-user{
+  position: relative;
+  &:before{
+    position: absolute;
+    content: '';
+    width: 246px;
+    height: 1px;
+    display: inline-block;
+    background: #fff;
+    margin-left: 7px;
+  }
+}
+// 记住密码选框
+.rember-pass{
+  position: relative;
+  margin-top: 12px;
+  height: 3%;
+  display: inline-block;
+  width: 262px;
+  text-align: left;
+  #rember-check{
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    img{
+      position: absolute;
+      left: 2px;
+      top: 4px;
+    }
+  }
+  p{
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    height: 3%;
+    position: absolute;
+    left: 28px;
+    top: -4px;
+  }
+
+}
+// 登录按钮
+.login-btn{
+  height: 6%;
+  margin-top: 12px;
+  .btn-parent{
+    position: relative;
+    a{
+      position: absolute;
+      left: 470px;
+      width: 262px;
+      display: block;
+      line-height: 40px;
+      border-radius: 4px;
+      border: 1px solid #fff;
+      color: #f9a550;
+      font-size: 16px;
+      background-color: #fff;
+      &:hover{
+        background-color: #fde8cd;
+      }
+      &:active{
+        background-color: #f79c27;
+        color: #fff;
+      }
+    }
+  }
+  
+}
+// 注册 忘记密码
+@font-size: 14px;
+@font-color: #fff;
+.login-register{
+  height: 3%;
+  margin-top: 12px;
+  a{
+    font-size: @font-size;
+    color: @font-color;
+    padding: 0 16px;
+    display: inline-block;
+  }
+}
+#register-link{
+  border-right: 1px solid #fff;
+}
+#blank1{
+  height: 10%;
+}
+// 图片
+#login-img{
+  height: 31%;
+  img{
+    height: 100%;
+  }
+}
+// 底部备案号
+@footer-size:18px;
+.login-footer{
+  // height: 105px;
+  height: 19%;
+  text-align: center;
+  overflow: hidden;
+  #footer-content{
+    height: 100%;
+    margin-top: 7%;
+    span{
+      padding: 0 16px;
+      font-size: @footer-size;
+      color: @font-color;
+      .copyright-logo{
+        padding: 0 5px 0 0;
+        font-size: 22px;
+        vertical-align: middle;
+      }
+    }
+    a{
+      padding: 0 16px;
+      font-size: @footer-size;
+      color: @font-color;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
+    }
+  }
+}
+
+
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:#fff;
+}
+input::-moz-placeholder { /* WebKit, Blink, Edge */
+    color:#fff;
+}
+input::-ms-input-placeholder { /* WebKit, Blink, Edge */
+    color:#fff;
+}
+
+
