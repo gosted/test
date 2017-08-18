@@ -15,13 +15,13 @@ var TableInit = function () {
     var oTableInit = new Object();
     //初始化Table
     oTableInit.Init = function () {
-        $('#tb_departments').bootstrapTable({
+        $('#table').bootstrapTable('destroy').bootstrapTable({
             url: '../../../../data.json',         //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             toolbar: '#toolbar',                //工具按钮用哪个容器
             striped: true,                      //是否显示行间隔色
             cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
-            pagination: true,                   //是否显示分页（*）
+            pagination: true, //是否显示分页（*）            
             sortable: true,                     //是否启用排序
             sortOrder: "asc",                  //排序方式
             queryParams: oTableInit.queryParams,//传递参数（*）
@@ -75,7 +75,7 @@ var TableInit = function () {
                 //console.log(ele.attr("data-index"))
             },
             showExport:true,
-            exportDataType:'basic',
+            exportDataType:'selected',
             exportTypes:['excel'],  //导出文件类型    
         });
     };

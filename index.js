@@ -14,15 +14,9 @@ angular.module("app",['ngSanitize','ngCookies','ngAnimate','pascalprecht.transla
 				headers : {'contentType' : 'application/json','url-mapping' : ''}	
 			}).success(function(Data,status,headers,config){
 				localStorage.lang == "en" ? Data = Data.eh : Data = Data.ch;
-				/*var data = null;
-				if(localStorage.lang == "en"){
-					data = Data.eh
-				}else{
-					data = Data.ch
-				}*/
 				deferred.resolve(Data);			
 			}).error(function(Data,status,headers,config){
-				promise.reject(data);
+				deferred.reject(data);
 			})
 			return deferred.promise;	
 		}	
@@ -73,12 +67,10 @@ angular.module("app",['ngSanitize','ngCookies','ngAnimate','pascalprecht.transla
 		  /*myFirstProvider.getData().then(function(data){
 		    
 		  })*/
-		  
-		  
-		   
+		 		   
 })
 .controller("box",function($scope,langData,myFirst){
-	console.log(myFirst.getData())
+	//console.log(myFirst.getData())
 	langData.data().then(function(data){
 		//console.log(data[0].title)
 	})
@@ -274,7 +266,6 @@ angular.module("app",['ngSanitize','ngCookies','ngAnimate','pascalprecht.transla
 
 		
 		var ind = layer.load(); //
-
 		layer.open({
 		   type: 2 //此处以iframe举例
 		  ,title: " <a style='text-align:center;'>123<a/> "

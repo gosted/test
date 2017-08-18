@@ -1,4 +1,10 @@
 {
-	"zh":{"title":"中文"},
-	"eh":{"title":"English"}
+	"zh":{
+		"title":"中文",
+		"lay":"继续弹出"
+		},
+	"eh":{
+		"title":"English",
+		"lay":"Continue to pop up"
+	}
 }

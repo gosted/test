@@ -16,14 +16,37 @@
     <script src="../../Content/bootstrap-table/extensions/export/bootstrap-table-export.js"></script>
     <link href="../../Content/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
     <script src="../../Content/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
-    <!-- <script src="../../Content/bootstrap-table/tableExport.js"></script>
-    <script src="../../Content/bootstrap-table/table-export.js"></script>
+     <script src="../../Content/bootstrap-table/tableExport.js"></script>
+   <!-- <script src="../../Content/bootstrap-table/table-export.js"></script>
     <script src="../../Content/bootstrap-table/main.js"></script> -->
     
   
     <script src="../../Scripts/Home/Index.js"></script>
 </head>
 <body>
+<div class="container">
+        <h1>Export</h1>
+        <div id="toolbar">
+            <select class="form-control">
+                <option value="">Export Basic</option>
+                <option value="all">Export All</option>
+                <option value="selected">Export Selected</option>
+            </select>
+        </div>
+        <table id="table">
+            
+        </table>
+    </div>
+<script>
+      $("#toolbar select").change(function () {
+                $('#table').bootstrapTable('refreshOptions', {
+                    exportDataType: $(this).val()
+                });
+      });
+</script>
+
+
+
     <div class="panel-body" style="padding-bottom:0px;">
         <div class="panel panel-default">
             <div class="panel-heading">查询条件</div>
